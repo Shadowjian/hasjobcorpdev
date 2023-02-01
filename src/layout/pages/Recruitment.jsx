@@ -1,6 +1,9 @@
-import { Container } from "@mui/material"
-import React from "react"
+import React from 'react'
 
-export default function Recruitment() {
-  return <Container>Recruitment</Container>
+const Recruitment = () => {
+  return (
+    <div>Recruitment</div>
+  )
 }
+
+export default Recruitment

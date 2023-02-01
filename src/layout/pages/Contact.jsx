@@ -1,6 +1,9 @@
-import { Container } from "@mui/material"
-import React from "react"
+import React from 'react'
 
-export default function Contact() {
-  return <Container>Contact</Container>
+const Contact = () => {
+  return (
+    <div>Contact</div>
+  )
 }
+
+export default Contact

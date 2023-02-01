@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import Navbar from "./layout/Navbar"
-import Footer from "./layout/Footer"
+import Navbar from "./components/Navbar/Navbar"
+import Footer from "./components/Footer/Footer"
 import Home from "./layout/pages/Home"
 import Careers from "./layout/pages/Careers"
 import Recruitment from "./layout/pages/Recruitment"
