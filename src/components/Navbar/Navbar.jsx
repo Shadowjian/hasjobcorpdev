@@ -26,7 +26,6 @@ const Navbar = () => {
         color: '#D8AE5E'
       },  
     fontWeight: '100',
-    fontFamily: [ 'Zen Old Mincho']
    
   })
   const MenuTypeItem2 = styled(Typography)({
@@ -41,7 +40,6 @@ const Navbar = () => {
         color: '#D8AE5E'
       },  
     fontWeight: 'bold',
-    fontFamily: [ 'Zen Old Mincho'],
     margin: "50px"
    
   })
@@ -49,10 +47,12 @@ const Navbar = () => {
   const [open, SetOpen] = useState(false)
 
   return (
-    <AppBar position="sticky" sx={{backgroundColor:"#0B3749", padding:"20px"}}>
+    <AppBar position="sticky" sx={{backgroundColor:"#0B3749", padding:"20px",  opacity: "1",}}>
       <StyledToolbar>
         <Box >
-          Ha Solution
+          <Typography>
+        HAソリューション
+        </Typography>
         </Box>
         <MenuBox sx={{display:{xs:'none', sm:'none', md:'flex'}}}>
         <Link to="/">

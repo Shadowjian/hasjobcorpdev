@@ -6,9 +6,24 @@ import Careers from "./layout/pages/Careers"
 import Recruitment from "./layout/pages/Recruitment"
 import About from "./layout/pages/About"
 import Contact from "./layout/pages/Contact"
+import { ThemeProvider } from "@emotion/react"
+import { createTheme } from "@mui/material"
+
 
 function App() {
+
+  const theme = createTheme({
+    typography: {
+            fontFamily: [
+               'Zen Old Mincho', 
+               'serif'
+            ].join(','),
+          }
+
+  })
+
   return (
+    <ThemeProvider theme={theme}>
     <Router>
       <Navbar />
       <Routes>
@@ -20,6 +35,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </ThemeProvider>
   )
 }
 
