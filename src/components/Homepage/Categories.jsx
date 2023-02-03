@@ -31,9 +31,9 @@ const StyledTypography = styled(Typography)({
 
 const Categories = () => {
   return (
-    <Box sx={{ backgroundImage:` url(${JobOffer})`, backgroundRepeat:"no-repeat",backgroundPosition: "right bottom", }} >
+    <Box sx={{ backgroundImage:` url(${JobOffer})`, backgroundRepeat:"no-repeat",backgroundPosition: "right bottom", mt:"50px"}} >
       <Box>
-        <Typography variant="h3" margin="30px" align="center">
+        <Typography variant="h3" margin="100px" align="center">
           職種
         </Typography>
       </Box>

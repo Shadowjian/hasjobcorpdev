@@ -62,7 +62,7 @@ const Navbar = () => {
          <MenuTypeItem>キャリア</MenuTypeItem>
          </Link>
          <Link to="recruitment">
-         <MenuTypeItem>私たちに関して</MenuTypeItem>
+         <MenuTypeItem>採用情報</MenuTypeItem>
          </Link>
          <Link to="about">
          <MenuTypeItem>会社について</MenuTypeItem>

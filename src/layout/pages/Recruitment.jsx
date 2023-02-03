@@ -1,8 +1,8 @@
-import React from 'react'
+import RecruitmentPage from '../../components/Recruitmentpage'
 
 const Recruitment = () => {
   return (
-    <div>Recruitment</div>
+    <RecruitmentPage/>
   )
 }
 
