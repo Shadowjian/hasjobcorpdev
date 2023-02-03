@@ -1,14 +1,26 @@
 import styled from "@emotion/styled";
-import { Box, InputBase, Typography } from "@mui/material";
+import { Search } from "@mui/icons-material";
+import { Box, Button, InputBase, Typography } from "@mui/material";
 import React from "react";
 import HeroImage from "../../assets/images/cover.jpg";
 
 const Hero = () => {
   const SearchBox = styled(Box)({
-    display: "flex",
-    justifyContent: "center",
-    gap: 5,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin:"30px 30px"
+
   });
+
+  const SearchButton = styled(Button)({
+    backgroundColor:"#D8AE5E",
+    color:"black",
+    padding:"11px",
+    "&:hover": {
+      color:"#D8AE5E"
+    }
+  })
   return (
     <Box>
       <Box
@@ -21,17 +33,17 @@ const Hero = () => {
           width: "100%",
           display: "flex",
           justifyContent: "center",
+          
         }}
       >
    
-        <Box sx={{display:"flex",justifyContent:"center", flexDirection:"column"}}>
-        
+        <Box sx={{display:"flex",justifyContent:"center", flexDirection:"column", alignItems:"center  "}}>  
           <Box >
-        <Typography variant="h3" color="white"  >
-              <p>HAソリューションへようこそ</p>
+        <Typography variant="h3" color="white" textAlign="center" sx={{fontSize: {xs: "2rem", sm:"3rem", md:"4rem"}}} >
+              HAソリューションへようこそ
             </Typography>
-        <Typography variant="h6" color="white" textAlign="center" >
-               <p>求職者に力を与え, 雇用主をサポート</p>
+        <Typography variant="h6" color="white" textAlign="center" sx={{fontSize: {xs: ".9rem", sm:"2rem"}}}>
+              求職者に力を与え, 雇用主をサポート
             </Typography>
          </Box>
 
@@ -39,14 +51,15 @@ const Hero = () => {
             sx={{
               background: "#0B3749",
               opacity: "0.8",
-              margin: "50px",
-              width: "80%",
+              margin:"50px 30px",
+              width: {md:"70%", sm:"100%", xs:"100%"},
               borderRadius: "10px",
               padding: "30px 10px",
+            
             }}
           >
             <Typography variant="h6" color="white" textAlign="center">
-                <p>今すぐ仕事を検索!</p>
+                今すぐ仕事を検索!
             </Typography>
 
             <SearchBox>
@@ -54,13 +67,13 @@ const Hero = () => {
                 placeholder="検索 ..."
                 sx={{
                   color: "Black",
-                  border: "1px solid gray",
-                  padding: "4px",
+                  padding: "2px",
                   backgroundColor: "white",
-                  margin: "30px",
                   width: "70%",
-                }}
+                  borderRadius:"5px 0px 0px 5px",
+                }}  
               />
+                  <SearchButton startIcon={<Search/>}  sx= {{borderRadius:"0px 5px 5px 0px"}}></SearchButton>
             </SearchBox>
           </Box>
         </Box>
