@@ -28,6 +28,11 @@ const Navbar = () => {
     fontWeight: '100',
    
   })
+  const MenuLogo = styled(Typography)({
+    color:"white",
+    fontWeight: '100',
+   
+  })
   const MenuTypeItem2 = styled(Typography)({
     color:"#0B3749",
       "&:hover": {
@@ -50,9 +55,11 @@ const Navbar = () => {
     <AppBar position="sticky" sx={{backgroundColor:"#0B3749", padding:"20px",  opacity: "1",}}>
       <StyledToolbar>
         <Box >
-          <Typography>
+        <Link to="/">
+          <MenuLogo>
           ＨＡソリューション株式会社
-        </Typography>
+        </MenuLogo>
+        </Link>
         </Box>
         <MenuBox sx={{display:{xs:'none', sm:'none', md:'flex'}}}>
         <Link to="/">

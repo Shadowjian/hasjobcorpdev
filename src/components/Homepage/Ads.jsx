@@ -3,6 +3,7 @@ import {  Button, Container, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import React from "react";
 import AdsImage from "../../assets/images/ads.png";
+import { Link } from "react-router-dom";
 
 const StyledTypography = styled(Typography)({
   padding:"10px"
@@ -28,6 +29,7 @@ const Ads = () => {
           <StyledTypography textAlign="center" variant="h3" sx={{fontSize:{xs:"25px", sm:"50px", md:"50px"}}}>あなたにぴったりの</StyledTypography>
           <StyledTypography textAlign="center" variant="h4" sx={{fontSize:{xs:"20px",sm:"45px", md:"45px"}}}>仕事を見つけよう</StyledTypography>
           <Box align="center" mt="30px">
+          <Link to="https://forms.gle/ApjDVbAwWJfyKVgQ7" target="_blank">
           <Button  variant="contained"   
             sx={{
             borderColor: "#0B3749",
@@ -40,6 +42,7 @@ const Ads = () => {
               color: "#D8AE5E",
             },
           }}>今すぐ申し込む</Button>
+          </Link>
           </Box>
         </Box>
       </Stack>

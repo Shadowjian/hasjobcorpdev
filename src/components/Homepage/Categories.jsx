@@ -1,4 +1,5 @@
 import { Box, Button, Stack, styled, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import React from "react";
 import HealthCare from "../../assets/images/careworker.jpg";
@@ -86,6 +87,7 @@ const Categories = () => {
         </StyledBox>
       </Stack>
       <Box align="center">
+      <Link to="careers">
         <Button
           variant="outlined"
           sx={{
@@ -100,6 +102,7 @@ const Categories = () => {
         >
           もっと求人を見る
         </Button>
+        </Link>
       </Box>
     </Box>
   );
