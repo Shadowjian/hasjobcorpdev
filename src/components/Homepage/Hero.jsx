@@ -4,12 +4,14 @@ import { Box, Button, InputBase, Typography } from "@mui/material";
 import React from "react";
 import HeroImage from "../../assets/images/cover.png";
 
+
 const Hero = () => {
   const SearchBox = styled(Box)({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    margin:"30px 30px"
+    margin:"30px 30px",
+   
 
   });
 
@@ -18,7 +20,8 @@ const Hero = () => {
     color:"black",
     padding:"11px",
     "&:hover": {
-      color:"#D8AE5E"
+      color:"#D8AE5E",
+      backgroundColor:"#0B3749"
     }
   })
   return (
@@ -49,7 +52,7 @@ const Hero = () => {
 
           <Box
             sx={{
-              background: "#0B3749",
+              
               opacity: "0.8",
               margin:"50px 30px",
               width: {md:"70%", sm:"100%", xs:"100%"},
@@ -67,7 +70,7 @@ const Hero = () => {
                 placeholder="検索 ..."
                 sx={{
                   color: "Black",
-                  padding: "2px",
+                  padding: "2px 14px",
                   backgroundColor: "white",
                   width: "70%",
                   borderRadius:"5px 0px 0px 5px",
