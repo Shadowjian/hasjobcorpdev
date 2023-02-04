@@ -51,7 +51,7 @@ const Navbar = () => {
       <StyledToolbar>
         <Box >
           <Typography>
-        HAソリューション
+          ＨＡソリューション株式会社
         </Typography>
         </Box>
         <MenuBox sx={{display:{xs:'none', sm:'none', md:'flex'}}}>

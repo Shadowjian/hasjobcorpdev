@@ -159,8 +159,8 @@ const AboutUsPage = () => {
             margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
           }}
         >
-          <Typography>許可番号：</Typography>
-          <Typography>婆 40-301864</Typography>
+          <Typography>会社名:</Typography>
+          <Typography>HAソリューション株式会社</Typography>
         </StyledBox>
 
         <hr />
@@ -172,8 +172,8 @@ const AboutUsPage = () => {
             margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
           }}
         >
-          <Typography>更新日：</Typography>
-          <Typography>2022-10-07</Typography>
+          <Typography>代表者名:</Typography>
+          <Typography>牛島 寛将</Typography>
         </StyledBox>
 
         <hr />
@@ -184,21 +184,8 @@ const AboutUsPage = () => {
             margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
           }}
         >
-          <Typography>商号:</Typography>
-          <Typography>ＨＡソリューション株式会社</Typography>
-        </StyledBox>
-
-        <hr />
-
-        <StyledBox
-          sx={{
-            flexDirection: { xs: "column", sm: "column", md: "row" },
-            justifyContent: { xs: "center", sm: "center", md: "space-between" },
-            margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
-          }}
-        >
-          <Typography>商号カナ:</Typography>
-          <Typography>エイチエーソリューション</Typography>
+          <Typography>設立年月日:</Typography>
+          <Typography>2022年10月7日</Typography>
         </StyledBox>
 
         <hr />
@@ -210,21 +197,8 @@ const AboutUsPage = () => {
             margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
           }}
         >
-          <Typography>法人種別:</Typography>
-          <Typography>株式会社</Typography>
-        </StyledBox>
-        <br />
-        <hr />
-
-        <StyledBox
-          sx={{
-            flexDirection: { xs: "column", sm: "column", md: "row" },
-            justifyContent: { xs: "center", sm: "center", md: "space-between" },
-            margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
-          }}
-        >
-          <Typography>法人番号:</Typography>
-          <Typography>4290001099207</Typography>
+          <Typography>資本金:</Typography>
+          <Typography>2,200万</Typography>
         </StyledBox>
 
         <hr />
@@ -236,8 +210,20 @@ const AboutUsPage = () => {
             margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
           }}
         >
-          <Typography>会社法人等番号:</Typography>
-          <Typography>290001099207</Typography>
+          <Typography>事業内容:</Typography>
+          <Typography>労働者派遣事業</Typography>
+        </StyledBox>
+        <hr />
+
+        <StyledBox
+          sx={{
+            flexDirection: { xs: "column", sm: "column", md: "row" },
+            justifyContent: { xs: "center", sm: "center", md: "space-between" },
+            margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
+          }}
+        >
+          <Typography>許可番号:</Typography>
+          <Typography>派 40-301864</Typography>
         </StyledBox>
 
         <hr />
@@ -249,12 +235,39 @@ const AboutUsPage = () => {
             margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
           }}
         >
-          <Typography>本店所在地:</Typography>
+          <Typography>所在地:</Typography>
           <Box>
-            <Typography>〒8100062 </Typography>
-            <Typography>福岡県福岡市中央区荒戸 </Typography>
-            <Typography>３丁目２番４－１００３号 </Typography>
+            <Typography>〒810-0062 </Typography>
+            <Typography>福岡県福岡市中央区荒戸3-2-4-1003 </Typography>
+            <Typography>エステートモア大濠れんが通り</Typography>
           </Box>
+        </StyledBox>
+        <hr />
+        <StyledBox
+          sx={{
+            flexDirection: { xs: "column", sm: "column", md: "row" },
+            justifyContent: { xs: "center", sm: "center", md: "space-between" },
+            margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
+          }}
+        >
+          <Typography>お問い合わせ:</Typography>
+          <Box>
+            <Typography>電話番号 092-753-9522</Typography>
+            <Typography>メールアドレス has.corp.job@gmail.com</Typography>
+          </Box>
+        </StyledBox>
+
+        <hr />
+
+        <StyledBox
+          sx={{
+            flexDirection: { xs: "column", sm: "column", md: "row" },
+            justifyContent: { xs: "center", sm: "center", md: "space-between" },
+            margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" },
+          }}
+        >
+          <Typography>受付時間:</Typography>
+          <Typography>10:00～17:00</Typography>
         </StyledBox>
 
         <hr />

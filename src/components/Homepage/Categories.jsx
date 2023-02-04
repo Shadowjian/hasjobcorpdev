@@ -2,15 +2,17 @@ import { Box, Button, Stack, styled, Typography } from "@mui/material";
 
 import React from "react";
 import HealthCare from "../../assets/images/careworker.jpg";
-import Construction from "../../assets/images/construction.jpg";
+import Warehouse from "../../assets/images/warehouse.jpg";
 import Manufacturing from "../../assets/images/manufacturing.jpg";
 import JobOffer from "../../assets/images/joboffer.svg";
+import Housekeeping from "../../assets/images/housekeeping.jpg";
 
 const StyledBox = styled(Box)({
   height: 300,
   cursor: "pointer",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
+  backgroundSize:"cover",
   width: "320px",
   borderRadius: "10px",
   "&:hover": {
@@ -51,7 +53,7 @@ const Categories = () => {
           }}
         >
           <StyledTypography align="center" variant="h6">
-          健康管理
+          介護
           </StyledTypography>
         </StyledBox>
         <StyledBox
@@ -60,16 +62,26 @@ const Categories = () => {
           }}
         >
           <StyledTypography align="center" variant="h6">
-            製造業
+          工場内作業
+          </StyledTypography>
+        </StyledBox>
+
+        <StyledBox
+          sx={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Housekeeping})`,
+          }}
+        >
+          <StyledTypography align="center" variant="h6">
+          清掃
           </StyledTypography>
         </StyledBox>
         <StyledBox
           sx={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Construction})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Warehouse})`,
           }}
         >
           <StyledTypography align="center" variant="h6">
-          工事
+          倉庫内作業
           </StyledTypography>
         </StyledBox>
       </Stack>
