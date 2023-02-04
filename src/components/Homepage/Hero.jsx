@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Search } from "@mui/icons-material";
 import { Box, Button, InputBase, Typography } from "@mui/material";
 import React from "react";
-import HeroImage from "../../assets/images/cover.jpg";
+import HeroImage from "../../assets/images/cover.png";
 
 const Hero = () => {
   const SearchBox = styled(Box)({
