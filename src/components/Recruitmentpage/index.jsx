@@ -5,7 +5,7 @@ import React from 'react'
 const RecruitmentPage = () => {
   return (
     <Container>
-    <Box sx={{margin:"50px"}}>
+    <Box sx={{mt:"50px"}}>
       <Box>
       <Typography>Recruitment Information</Typography>
       <Typography></Typography>
