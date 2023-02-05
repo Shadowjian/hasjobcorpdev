@@ -43,10 +43,10 @@ const Hero = () => {
         <Box sx={{display:"flex",justifyContent:"center", flexDirection:"column", alignItems:"center  "}}>  
           <Box >
         <Typography variant="h3" color="white" textAlign="center" sx={{fontSize: {xs: "2rem", sm:"3rem", md:"4rem"}}} >
-              HAソリューションへようこそ
+             Welcome to HA Solution
             </Typography>
         <Typography variant="h6" color="white" textAlign="center" sx={{fontSize: {xs: ".9rem", sm:"2rem"}}}>
-              求職者に力を与え, 雇用主をサポート
+        Empower Job Seekers, Support Employers
             </Typography>
          </Box>
 
@@ -62,12 +62,12 @@ const Hero = () => {
             }}
           >
             <Typography variant="h6" color="white" textAlign="center">
-                今すぐ仕事を検索!
+            Search for jobs now!
             </Typography>
 
             <SearchBox>
               <InputBase
-                placeholder="検索 ..."
+                placeholder="Search ..."
                 sx={{
                   color: "Black",
                   padding: "2px 14px",

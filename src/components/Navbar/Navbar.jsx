@@ -63,19 +63,19 @@ const Navbar = () => {
         </Box>
         <MenuBox sx={{display:{xs:'none', sm:'none', md:'flex'}}}>
         <Link to="/">
-         <MenuTypeItem>ホームページ</MenuTypeItem>
+         <MenuTypeItem>Home</MenuTypeItem>
          </Link>
          <Link to="careers">
-         <MenuTypeItem>キャリア</MenuTypeItem>
+         <MenuTypeItem>Career</MenuTypeItem>
          </Link>
          <Link to="recruitment">
-         <MenuTypeItem>採用情報</MenuTypeItem>
+         <MenuTypeItem>Recruitment Information</MenuTypeItem>
          </Link>
          <Link to="about">
-         <MenuTypeItem>会社について</MenuTypeItem>
+         <MenuTypeItem>About Company</MenuTypeItem>
          </Link>
          <Link to="contact-us">
-         <MenuTypeItem>お問い合わせ</MenuTypeItem>   
+         <MenuTypeItem>Inquiry</MenuTypeItem>   
          </Link>   
         </MenuBox>
         <MenuIcon sx={{color: "white", display:{xs:'block', sm:'block', md:'none'}, }} onClick={() => SetOpen(!open)} />       
@@ -96,19 +96,19 @@ const Navbar = () => {
       >
         <Box sx={{width:350, height:"50vh", backgroundColor:"white"}}>
         <Link to="/">
-         <MenuTypeItem2>ホームページ</MenuTypeItem2>
+         <MenuTypeItem2>Home</MenuTypeItem2>
          </Link>
          <Link to="careers">
-         <MenuTypeItem2>キャリア</MenuTypeItem2>
+         <MenuTypeItem2>Career</MenuTypeItem2>
          </Link>
          <Link to="recruitment">
-         <MenuTypeItem2>採用情報</MenuTypeItem2>
+         <MenuTypeItem2>Recruitment Information</MenuTypeItem2>
          </Link>
          <Link to="about">
-         <MenuTypeItem2>会社について</MenuTypeItem2>
+         <MenuTypeItem2>About Company</MenuTypeItem2>
          </Link>
          <Link to="contact-us">
-         <MenuTypeItem2>お問い合わせ</MenuTypeItem2>   
+         <MenuTypeItem2>Inquiry</MenuTypeItem2>   
          </Link>   
         
         </Box>  
