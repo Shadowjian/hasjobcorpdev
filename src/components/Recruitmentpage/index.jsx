@@ -5,6 +5,7 @@ import React from 'react'
 const RecruitmentPage = () => {
   return (
     <Container>
+
     <Box sx={{marginTop:"50px"}}>
     
       <Typography variant='h2' align="center">Recruitment Information</Typography>
@@ -53,6 +54,7 @@ const RecruitmentPage = () => {
         
         <Typography variant="h5">工場スタッフの仕事</Typography>
         <Typography ml="20px" mb="10px" > 工場労働者は、適切な機械や設備を使用して製品を製造する責任があります。 工場労働者の義務には、必要な数量と仕様に基づいて製品を処理すること、商品にラベルを付けて安全に梱包すること、流通前に商品に欠陥がないことを確認すること、供給在庫を監視すること、欠陥のある機械や設備を報告すること、および清潔さを維持することが含まれます。 産地の。 工場労働者は、特定の時間枠内で高品質の製品を生産するための優れた時間管理スキルを備えている必要があります。</Typography>
+
       </Box>
     </Box>
   </Container>

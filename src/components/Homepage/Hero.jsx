@@ -4,12 +4,14 @@ import { Box, Button, InputBase, Typography } from "@mui/material";
 import React from "react";
 import HeroImage from "../../assets/images/cover.png";
 
+
 const Hero = () => {
   const SearchBox = styled(Box)({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    margin:"30px 30px"
+    margin:"30px 30px",
+   
 
   });
 
@@ -18,7 +20,8 @@ const Hero = () => {
     color:"black",
     padding:"11px",
     "&:hover": {
-      color:"#D8AE5E"
+      color:"#D8AE5E",
+      backgroundColor:"#0B3749"
     }
   })
   return (
@@ -40,16 +43,16 @@ const Hero = () => {
         <Box sx={{display:"flex",justifyContent:"center", flexDirection:"column", alignItems:"center  "}}>  
           <Box >
         <Typography variant="h3" color="white" textAlign="center" sx={{fontSize: {xs: "2rem", sm:"3rem", md:"4rem"}}} >
-              HAソリューションへようこそ
+             Welcome to HA Solution
             </Typography>
         <Typography variant="h6" color="white" textAlign="center" sx={{fontSize: {xs: ".9rem", sm:"2rem"}}}>
-              求職者に力を与え, 雇用主をサポート
+        Empower Job Seekers, Support Employers
             </Typography>
          </Box>
 
           <Box
             sx={{
-              background: "#0B3749",
+              
               opacity: "0.8",
               margin:"50px 30px",
               width: {md:"70%", sm:"100%", xs:"100%"},
@@ -59,15 +62,15 @@ const Hero = () => {
             }}
           >
             <Typography variant="h6" color="white" textAlign="center">
-                今すぐ仕事を検索!
+            Search for jobs now!
             </Typography>
 
             <SearchBox>
               <InputBase
-                placeholder="検索 ..."
+                placeholder="Search ..."
                 sx={{
                   color: "Black",
-                  padding: "2px",
+                  padding: "2px 14px",
                   backgroundColor: "white",
                   width: "70%",
                   borderRadius:"5px 0px 0px 5px",

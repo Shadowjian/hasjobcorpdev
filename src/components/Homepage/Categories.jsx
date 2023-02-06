@@ -1,4 +1,5 @@
 import { Box, Button, Stack, styled, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import React from "react";
 import HealthCare from "../../assets/images/careworker.jpg";
@@ -36,7 +37,7 @@ const Categories = () => {
     <Box sx={{ backgroundImage:`linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(${JobOffer}) `, backgroundRepeat:"no-repeat",backgroundPosition: "right bottom", mt:"50px" }} >
       <Box>
         <Typography variant="h3" margin="100px" align="center">
-          職種
+        Occupation
         </Typography>
       </Box>
       <Stack
@@ -53,7 +54,7 @@ const Categories = () => {
           }}
         >
           <StyledTypography align="center" variant="h6">
-          介護
+          Caregiver
           </StyledTypography>
         </StyledBox>
         <StyledBox
@@ -62,7 +63,7 @@ const Categories = () => {
           }}
         >
           <StyledTypography align="center" variant="h6">
-          工場内作業
+          Factory Work
           </StyledTypography>
         </StyledBox>
 
@@ -72,7 +73,7 @@ const Categories = () => {
           }}
         >
           <StyledTypography align="center" variant="h6">
-          清掃
+          Cleaning
           </StyledTypography>
         </StyledBox>
         <StyledBox
@@ -81,11 +82,12 @@ const Categories = () => {
           }}
         >
           <StyledTypography align="center" variant="h6">
-          倉庫内作業
+          Warehouse Work
           </StyledTypography>
         </StyledBox>
       </Stack>
       <Box align="center">
+      <Link to="careers">
         <Button
           variant="outlined"
           sx={{
@@ -98,8 +100,9 @@ const Categories = () => {
             },
           }}
         >
-          もっと求人を見る
+          See More Jobs
         </Button>
+        </Link>
       </Box>
     </Box>
   );
