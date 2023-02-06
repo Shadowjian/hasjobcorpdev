@@ -17,15 +17,18 @@ const AboutNavbar = () => {
         gap: "100px"
       }}
     >
-      <NavLink to="profile" className="nav-link">
-        <Typography>Company Profile</Typography>
+      <NavLink
+        to=""
+        style={({ isActive }) => (isActive ? activeStyle : undefined)}
+      >
+        <Typography>Overview</Typography>
       </NavLink>
       {/* <NavLink to="overview" className="nav-link"> */}
       <NavLink
         to="overview"
         style={({ isActive }) => (isActive ? activeStyle : undefined)}
       >
-        <Typography>Overview</Typography>
+        <Typography>Company Profile</Typography>
       </NavLink>
       <NavLink to="whatwedo" className="nav-link">
         {/* <NavLink
@@ -39,3 +42,5 @@ const AboutNavbar = () => {
 }
 
 export default AboutNavbar
+
+//TODO onload should set class' company profile to active

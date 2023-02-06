@@ -5,7 +5,7 @@ import Recruitment from "./pages/recruitment/Recruitment"
 // import About from "./pages/about/About"
 import Contact from "./pages/contact/Contact"
 import { ThemeProvider } from "@emotion/react"
-import { createTheme, dividerClasses } from "@mui/material"
+import { createTheme } from "@mui/material"
 
 // Setting up new Router
 import {
@@ -18,7 +18,6 @@ import AboutLayout from "./layouts/AboutLayout"
 import CompanyProfile from "./components/Aboutpage/components/CompanyProfile"
 import Overview from "./components/Aboutpage/components/Overview"
 import Whatcanwedo from "./components/Aboutpage/components/Whatcanwedo"
-import AdminDashboard from "./pages/admin/AdminDashboard"
 import AdminLayout from "./layouts/AdminLayout"
 
 const router = createBrowserRouter(
@@ -32,8 +31,8 @@ const router = createBrowserRouter(
         <Route path="tab1" />
 
         <Route path="about" element={<AboutLayout />}>
-          <Route path="profile" element={<CompanyProfile />} />
-          <Route path="overview" element={<Overview />} />
+          <Route index element={<Overview />} />
+          <Route path="overview" element={<CompanyProfile />} />
           <Route path="whatwedo" element={<Whatcanwedo />} />
         </Route>
 
