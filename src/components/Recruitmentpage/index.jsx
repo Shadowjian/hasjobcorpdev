@@ -56,6 +56,18 @@ const RecruitmentPage = () => {
         <Typography ml="20px" mb="10px" > 工場労働者は、適切な機械や設備を使用して製品を製造する責任があります。 工場労働者の義務には、必要な数量と仕様に基づいて製品を処理すること、商品にラベルを付けて安全に梱包すること、流通前に商品に欠陥がないことを確認すること、供給在庫を監視すること、欠陥のある機械や設備を報告すること、および清潔さを維持することが含まれます。 産地の。 工場労働者は、特定の時間枠内で高品質の製品を生産するための優れた時間管理スキルを備えている必要があります。</Typography>
 
       </Box>
+      <Box  sx={{
+          margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
+          backgroundColor: "#D8AE5E",
+          padding: { md: "50px", xs: "10px" },
+          borderRadius: "10px",
+          boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+        }}>
+        
+        <Typography variant="h5">介護者</Typography>
+        <Typography ml="20px" mb="10px" >入浴、着替え、身だしなみ、トイレ、移動、移動、移動、食事など、入居者の日常生活を個別のサービスプランに沿って支援します。</Typography>
+
+      </Box>
     </Box>
   </Container>
   )
