@@ -5,37 +5,28 @@ import React from "react"
 const RecruitmentPage = () => {
   return (
     <Container>
-      <Box sx={{ marginTop: "50px" }}>
-        <Typography variant="h2" align="center">
-          Recruitment Information
-        </Typography>
-        <Typography variant="h3">Job Information</Typography>
-        <Box
-          sx={{
-            margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
-            backgroundColor: "#D8AE5E",
-            padding: { md: "50px", xs: "10px" },
-            borderRadius: "10px",
-            boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"
-          }}
-        >
-          <Typography variant="h5">清掃員の仕事</Typography>
-          <Typography ml="20px" mb="10px">
-            住宅やオフィスビル周辺の基本的な清掃全般をお任せします。
-            床と部屋を掃除します。
-            ほこりの拭き取り、湿った拭き取り、掃き掃除、掃除機かけ、ほこり取り、床から大きな物体の拾い上げ、ガラスや窓のスポットクリーニングが含まれます。
-          </Typography>
-          <Typography fontWeight="bold" ml="20px">
-            クリーナーの責任には以下が含まれます。
-          </Typography>
-          <Box ml="30px">
-            <Typography>
-              🔘指定された施設エリアの清掃、備蓄、供給
-              (ほこり取り、掃き掃除、掃除機、モップ掛け、天井の換気口の清掃、トイレの清掃など)
-            </Typography>
-            <Typography>🔘定期的な検査と保守活動の実施と文書化。</Typography>
-            <Typography>🔘大掃除や特別なプロジェクトを実行します。</Typography>
-          </Box>
+
+
+    <Box sx={{marginTop:"50px"}}>
+    
+      <Typography variant='h2' align="center" sx={{fontSize:{xs:"25px", md:"60px"}}}>Recruitment Information</Typography>
+      <Typography variant="h3" align='center' sx={{fontSize:{xs:"22px", md:"60px"}}}>Job Information</Typography>
+      <Box  sx={{
+          margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
+          backgroundColor: "#D8AE5E",
+          padding: { md: "50px", xs: "10px" },
+          borderRadius: "10px",
+          boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+        }}>
+        
+        <Typography variant="h5">清掃員の仕事</Typography>
+        <Typography ml="20px" mb="10px" >住宅やオフィスビル周辺の基本的な清掃全般をお任せします。 床と部屋を掃除します。 ほこりの拭き取り、湿った拭き取り、掃き掃除、掃除機かけ、ほこり取り、床から大きな物体の拾い上げ、ガラスや窓のスポットクリーニングが含まれます。</Typography>
+        <Typography fontWeight="bold" ml="20px">クリーナーの責任には以下が含まれます。</Typography>
+        <Box ml="30px">
+        <Typography>🔘指定された施設エリアの清掃、備蓄、供給 (ほこり取り、掃き掃除、掃除機、モップ掛け、天井の換気口の清掃、トイレの清掃など)</Typography>
+        <Typography>🔘定期的な検査と保守活動の実施と文書化。</Typography>
+        <Typography>🔘大掃除や特別なプロジェクトを実行します。</Typography>
+
         </Box>
         <Box
           sx={{

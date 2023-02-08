@@ -40,7 +40,7 @@ const router = createBrowserRouter(
 
         <Route path="about" element={<AboutLayout />}>
           <Route index element={<Overview />} />
-          <Route path="overview" element={<CompanyProfile />} />
+          <Route path="profile" element={<CompanyProfile />} />
           <Route path="whatwedo" element={<Whatcanwedo />} />
         </Route>
 

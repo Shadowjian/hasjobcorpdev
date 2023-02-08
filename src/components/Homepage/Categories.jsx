@@ -42,9 +42,9 @@ const Categories = () => {
       }}
     >
       <Box>
-        <Typography variant="h3" margin="100px" align="center">
-          Occupation
-        </Typography>
+
+        <Typography variant="h3" align="center">Occupation</Typography>
+
       </Box>
       <Stack
         direction={{ xs: "column", sm: "column", md: "row" }}
