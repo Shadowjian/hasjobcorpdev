@@ -1,42 +1,50 @@
-import { Box, Button, Stack, styled, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Box, Button, Stack, styled, Typography } from "@mui/material"
+import { Link } from "react-router-dom"
 
-import React from "react";
-import HealthCare from "../../assets/images/careworker.jpg";
-import Warehouse from "../../assets/images/warehouse.jpg";
-import Manufacturing from "../../assets/images/manufacturing.jpg";
-import JobOffer from "../../assets/images/joboffer.svg";
-import Housekeeping from "../../assets/images/housekeeping.jpg";
+import React from "react"
+import HealthCare from "../../assets/images/careworker.jpg"
+import Warehouse from "../../assets/images/warehouse.jpg"
+import Manufacturing from "../../assets/images/manufacturing.jpg"
+import JobOffer from "../../assets/images/joboffer.svg"
+import Housekeeping from "../../assets/images/housekeeping.jpg"
 
 const StyledBox = styled(Box)({
   height: 300,
   cursor: "pointer",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
-  backgroundSize:"cover",
+  backgroundSize: "cover",
   width: "320px",
   borderRadius: "10px",
   "&:hover": {
     boxShadow:
-      "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
-  },
-});
+      "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px"
+  }
+})
 const StyledTypography = styled(Typography)({
   margin: "35% 50px 25% 50px",
   backgroundColor: "#D8AE5E",
   opacity: "0.8",
   padding: "5px",
   "&:hover": {
-    color: "white",
-  },
-});
-
+    color: "white"
+  }
+})
 
 const Categories = () => {
   return (
-    <Box sx={{ backgroundImage:`linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(${JobOffer}) `, backgroundRepeat:"no-repeat",backgroundPosition: "right bottom", mt:"50px" }} >
+    <Box
+      sx={{
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(${JobOffer}) `,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "right bottom",
+        mt: "50px"
+      }}
+    >
       <Box>
+
         <Typography variant="h3" align="center">Occupation</Typography>
+
       </Box>
       <Stack
         direction={{ xs: "column", sm: "column", md: "row" }}
@@ -48,62 +56,62 @@ const Categories = () => {
       >
         <StyledBox
           sx={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${HealthCare})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${HealthCare})`
           }}
         >
           <StyledTypography align="center" variant="h6">
-          Caregiver
+            Caregiver
           </StyledTypography>
         </StyledBox>
         <StyledBox
           sx={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Manufacturing})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Manufacturing})`
           }}
         >
           <StyledTypography align="center" variant="h6">
-          Factory Work
+            Factory Work
           </StyledTypography>
         </StyledBox>
 
         <StyledBox
           sx={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Housekeeping})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Housekeeping})`
           }}
         >
           <StyledTypography align="center" variant="h6">
-          Cleaning
+            Cleaning
           </StyledTypography>
         </StyledBox>
         <StyledBox
           sx={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Warehouse})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Warehouse})`
           }}
         >
           <StyledTypography align="center" variant="h6">
-          Warehouse Work
+            Warehouse Work
           </StyledTypography>
         </StyledBox>
       </Stack>
       <Box align="center">
-      <Link to="careers">
-        <Button
-          variant="outlined"
-          sx={{
-            borderColor: "#0B3749",
-            color: "#0B3749",
-            "&:hover": {
-              backgroundColor: "#0B3749",
-              borderColor: "white",
-              color: "#D8AE5E",
-            },
-          }}
-        >
-          See More Jobs
-        </Button>
+        <Link to="careers">
+          <Button
+            variant="outlined"
+            sx={{
+              borderColor: "#0B3749",
+              color: "#0B3749",
+              "&:hover": {
+                backgroundColor: "#0B3749",
+                borderColor: "white",
+                color: "#D8AE5E"
+              }
+            }}
+          >
+            See More Jobs
+          </Button>
         </Link>
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default Categories;
+export default Categories

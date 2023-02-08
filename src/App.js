@@ -19,16 +19,24 @@ import CompanyProfile from "./components/Aboutpage/components/CompanyProfile"
 import Overview from "./components/Aboutpage/components/Overview"
 import Whatcanwedo from "./components/Aboutpage/components/Whatcanwedo"
 import AdminLayout from "./layouts/AdminLayout"
+import AdminJobs, { careerLoader } from "./pages/admin/AdminJobs"
+import CareerDetails, {
+  careerDetailsLoader
+} from "./pages/careers/CareerDetails"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        <Route path="careers" element={<Careers />} />
+        <Route path="careers" element={<Careers />} loader={careerLoader} />
+        <Route
+          path="careers/:id"
+          element={<CareerDetails />}
+          loader={careerDetailsLoader}
+        />
 
         <Route path="recruitment" element={<Recruitment />} />
-        <Route path="tab1" />
 
         <Route path="about" element={<AboutLayout />}>
           <Route index element={<Overview />} />
@@ -38,7 +46,13 @@ const router = createBrowserRouter(
 
         <Route path="contact-us" element={<Contact />} />
       </Route>
-      <Route path="admin" element={<AdminLayout />} />
+      <Route path="admin" element={<AdminLayout />}>
+        <Route
+          path="/admin/adminjobs"
+          element={<AdminJobs />}
+          loader={careerLoader}
+        />
+      </Route>
     </>
   )
 )
