@@ -5,44 +5,51 @@ import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
-import { Container } from "@mui/material"
+import { Box, Container } from "@mui/material"
 import { Stack } from "@mui/system"
+import { Link, useLoaderData } from "react-router-dom"
 
 export default function Careers() {
+  const careers = useLoaderData()
   return (
     <Container>
-      <Stack alignItems="center" m={4}>
-        <Stack gap={3} direction="horizontal" flexWrap="wrap">
-          <MediaCard />
-          <MediaCard />
-          <MediaCard />
+      <Box>
+        <Stack
+          mt={3}
+          gap={3}
+          direction="horizontal"
+          flexWrap="wrap"
+          justifyContent="center"
+        >
+          {careers.map(career => (
+            <Link to={career.id.toString()} key={career.id}>
+              <MediaCard career={career} />
+            </Link>
+          ))}
         </Stack>
-      </Stack>
+      </Box>
     </Container>
   )
 }
 
-function MediaCard() {
+function MediaCard({ career }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
-        sx={{ height: 140 }}
-        image="https://static.vecteezy.com/system/resources/thumbnails/001/829/377/small/agents-who-find-jobs-for-job-seekers-and-companies-that-need-professional-workers-for-career-interview-flat-illustration-concept-for-landing-page-web-ui-banner-flyer-poster-template-background-free-vector.jpg"
-        title="green iguana"
+        sx={{ height: 140, width: 300 }}
+        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIEcnJt1Hw8ZrwezrdWT25ji8UGKUFMC77mI_vsGJxAddhKYVkMDKxsbtSGuwdbkYVQdM&usqp=CAU"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {career.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {career.salary}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {career.location}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   )
 }
