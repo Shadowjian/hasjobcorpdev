@@ -11,27 +11,15 @@ const StyledTypography = styled(Typography)({
 
 const Ads = () => {
   return (
-
-    <Container sx={{mt:"100px", mb:"50px", padding:"50px"}} >
-    <Box sx={{ width: "100%" }} >
-      <Stack direction={{ xs: "column", sm:"column", md:"row" }} justifyContent="center" alignItems="center" spacing={{xs:1, sm:2, md:15}}>
-        <Box
-          sx={{
-            backgroundImage: `url(${AdsImage})`,boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-            height: { md: "500px", xs: "300px", sm: "500px" },
-            width: { md: "500px", xs: "270px", sm: "500px" },
-            borderRadius: "10px",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        ></Box>
-        <Box>
-          <StyledTypography textAlign="center" variant="h3" sx={{fontSize:{xs:"25px", sm:"50px", md:"50px"}}}>Find a Job that is </StyledTypography>
-          <StyledTypography textAlign="center" variant="h4" sx={{fontSize:{xs:"20px",sm:"45px", md:"45px"}}}>Perfect for you</StyledTypography>
-          <Box align="center" mt="30px">
-          <Link to="/careers">
-          <Button  variant="contained"   
-
+    <Container sx={{ mt: "100px", mb: "50px", padding: "50px" }}>
+      <Box sx={{ width: "100%" }}>
+        <Stack
+          direction={{ xs: "column", sm: "column", md: "row" }}
+          justifyContent="center"
+          alignItems="center"
+          spacing={{ xs: 1, sm: 2, md: 15 }}
+        >
+          <Box
             sx={{
               backgroundImage: `url(${AdsImage})`,
               boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
@@ -58,7 +46,7 @@ const Ads = () => {
               Perfect for you
             </StyledTypography>
             <Box align="center" mt="30px">
-              <Link to="https://forms.gle/ApjDVbAwWJfyKVgQ7" target="_blank">
+              <Link to="/careers">
                 <Button
                   variant="contained"
                   sx={{
