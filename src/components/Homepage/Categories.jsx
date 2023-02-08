@@ -36,9 +36,7 @@ const Categories = () => {
   return (
     <Box sx={{ backgroundImage:`linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(${JobOffer}) `, backgroundRepeat:"no-repeat",backgroundPosition: "right bottom", mt:"50px" }} >
       <Box>
-        <Typography variant="h3" margin="100px" align="center">
-        Occupation
-        </Typography>
+        <Typography variant="h3" align="center">Occupation</Typography>
       </Box>
       <Stack
         direction={{ xs: "column", sm: "column", md: "row" }}

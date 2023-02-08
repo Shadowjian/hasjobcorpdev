@@ -3,39 +3,38 @@ import React from "react"
 import { NavLink } from "react-router-dom"
 
 const AboutNavbar = () => {
-  let activeStyle = { backgroundColor: "#d8ae5e" }
+//   let activeStyle = { backgroundColor: "#d8ae5e" }
   // let activeClassName = "nav-link"
+  const navlinkStyles = ({isActive}) =>{
+    return {
+      backgroundColor: isActive ? 'orange' : '',
+      borderRadius: isActive ? '10px' : '',
+      padding: isActive ? '5px 15px' : '',
+    }
+  }
 
   return (
     <AppBar
       sx={{
         backgroundColor: "#0B3749",
-        p: "10px",
+        p: "10px 15px",
         mt: "105px",
         flexDirection: "row",
         justifyContent: "center",
-        gap: "100px"
+        gap: "100px",
+        display:{xs:"none", md:"flex", sm:"flex"}
       }}
     >
-      <NavLink
-        to=""
-        style={({ isActive }) => (isActive ? activeStyle : undefined)}
-      >
-        <Typography>Overview</Typography>
+      <NavLink to="profile" style={navlinkStyles}>
+        <Typography color="white">Company Profile</Typography>
       </NavLink>
-      {/* <NavLink to="overview" className="nav-link"> */}
       <NavLink
-        to="overview"
-        style={({ isActive }) => (isActive ? activeStyle : undefined)}
-      >
-        <Typography>Company Profile</Typography>
+        to="" >
+        <Typography color="white">Overview</Typography>
       </NavLink>
-      <NavLink to="whatwedo" className="nav-link">
-        {/* <NavLink
-        to="whatwedo"
-        className={({ isActive }) => (isActive ? activeClassName : undefined)}
-      > */}
-        <Typography>What Can We Do</Typography>
+      <NavLink to="whatwedo" style={navlinkStyles}>
+
+        <Typography color="white">What Can We Do</Typography>
       </NavLink>
     </AppBar>
   )

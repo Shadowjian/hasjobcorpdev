@@ -29,7 +29,7 @@ const Ads = () => {
           <StyledTypography textAlign="center" variant="h3" sx={{fontSize:{xs:"25px", sm:"50px", md:"50px"}}}>Find a Job that is </StyledTypography>
           <StyledTypography textAlign="center" variant="h4" sx={{fontSize:{xs:"20px",sm:"45px", md:"45px"}}}>Perfect for you</StyledTypography>
           <Box align="center" mt="30px">
-          <Link to="https://forms.gle/ApjDVbAwWJfyKVgQ7" target="_blank">
+          <Link to="/careers">
           <Button  variant="contained"   
             sx={{
             borderColor: "#0B3749",

@@ -8,8 +8,8 @@ const RecruitmentPage = () => {
 
     <Box sx={{marginTop:"50px"}}>
     
-      <Typography variant='h2' align="center">Recruitment Information</Typography>
-      <Typography variant="h3">Job Information</Typography>
+      <Typography variant='h2' align="center" sx={{fontSize:{xs:"25px", md:"60px"}}}>Recruitment Information</Typography>
+      <Typography variant="h3" align='center' sx={{fontSize:{xs:"22px", md:"60px"}}}>Job Information</Typography>
       <Box  sx={{
           margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
           backgroundColor: "#D8AE5E",
