@@ -10,7 +10,7 @@ export default function CareerCard({ career }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardContent>
-        <Typography>{career.title}</Typography>
+        <Typography>{career.company_name}</Typography>
         <Typography>{career.salary}</Typography>
         <Typography>{career.location}</Typography>
       </CardContent>

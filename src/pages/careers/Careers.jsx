@@ -41,7 +41,7 @@ function MediaCard({ career }) {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {career.title}
+          {career.company_name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {career.salary}

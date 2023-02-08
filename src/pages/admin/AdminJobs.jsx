@@ -1,7 +1,7 @@
 import { Container } from "@mui/material"
 import React from "react"
 import { useLoaderData } from "react-router-dom"
-import CareerCard from "./CareerCard"
+import CareerCard from "../careers/CareerCard"
 
 export default function AdminJobs() {
   const careers = useLoaderData()
