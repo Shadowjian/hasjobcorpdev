@@ -1,19 +1,11 @@
-import styled from "@emotion/styled"
 import { ArrowForward } from "@mui/icons-material"
 import { Box, Button, Typography } from "@mui/material"
 import React from "react"
 import HeroImage from "../../assets/images/cover.png"
+import { NavLink } from "react-router-dom"
 
 const Hero = () => {
-  const SearchButton = styled(Button)({
-    backgroundColor: "#D8AE5E",
-    color: "black",
-    padding: "11px",
-    "&:hover": {
-      color: "#D8AE5E",
-      backgroundColor: "#0B3749"
-    }
-  })
+
 
   return (
     <Box>
@@ -66,6 +58,7 @@ const Hero = () => {
               margin: "30px"
             }}
           >
+            <NavLink to="employers">
             <Button
               variant="contained"
               endIcon={<ArrowForward />}
@@ -77,6 +70,8 @@ const Hero = () => {
             >
               Employers Information
             </Button>
+            </NavLink>
+            <NavLink to="recruitment">
             <Button
               variant="contained"
               endIcon={<ArrowForward />}
@@ -88,6 +83,7 @@ const Hero = () => {
             >
               Recruitment Information
             </Button>
+            </NavLink>
           </Box>
         </Box>
       </Box>

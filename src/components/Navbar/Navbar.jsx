@@ -78,6 +78,9 @@ const Navbar = () => {
             <NavLink style={navlinkStyles} to="recruitment">
               <MenuTypeItem>Recruitment Information</MenuTypeItem>
             </NavLink>
+            <NavLink style={navlinkStyles} to="employers">
+              <MenuTypeItem>Employers Information</MenuTypeItem>
+            </NavLink>
             <NavLink style={navlinkStyles} to="about">
               <MenuTypeItem>About Company</MenuTypeItem>
             </NavLink>
@@ -116,6 +119,9 @@ const Navbar = () => {
             </NavLink>
             <NavLink  to="recruitment">
               <MenuTypeItem2>Recruitment Information</MenuTypeItem2>
+            </NavLink>
+            <NavLink  to="employers">
+              <MenuTypeItem2>Employers Information</MenuTypeItem2>
             </NavLink>
             <NavLink  to="about">
               <MenuTypeItem2>About Company</MenuTypeItem2>
