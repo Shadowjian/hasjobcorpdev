@@ -23,6 +23,7 @@ import AdminJobs, { careerLoader } from "./pages/admin/AdminJobs"
 import CareerDetails, {
   careerDetailsLoader
 } from "./pages/careers/CareerDetails"
+import EmployersInfo from "./pages/employersInfo/EmployersInfo"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
         />
 
         <Route path="recruitment" element={<Recruitment />} />
+        <Route path="employers" element={<EmployersInfo />} />
 
         <Route path="about" element={<AboutLayout />}>
           <Route index element={<Overview />} />
