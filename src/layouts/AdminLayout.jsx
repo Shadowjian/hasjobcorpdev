@@ -1,7 +1,7 @@
 import { Container, Typography } from "@mui/material"
-import { bgcolor, Stack } from "@mui/system"
+import { Stack } from "@mui/system"
 import React from "react"
-import { NavLink, Outlet, userLoaderData } from "react-router-dom"
+import { NavLink, Outlet } from "react-router-dom"
 
 export default function AdminLayout() {
   let active = { backgroundColor: "red" }
@@ -18,10 +18,10 @@ export default function AdminLayout() {
           }}
         >
           <NavLink
-            to="adminjobs"
+            to="/admin/admincareers"
             style={({ isActive }) => (isActive ? active : undefined)}
           >
-            <Typography variant="h5">Jobs</Typography>
+            <Typography variant="h5">Careers</Typography>
           </NavLink>
           {/* <NavLink
             to="adminjobs"
