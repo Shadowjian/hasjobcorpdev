@@ -1,3 +1,5 @@
+
+
 import { AccessTime, ArrowBack, Business, CurrencyYen, Language, People, PeopleAlt, Place, Wc, Work, WorkspacePremium, Workspaces } from "@mui/icons-material";
 import { Button, Container, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
@@ -8,6 +10,7 @@ import AdsImage from "../../assets/images/img.png";
 export default function CareerDetails() {
   // const { id } = useParams()
   const career = useLoaderData();
+
   return (
     <Box>
     
@@ -165,25 +168,12 @@ export default function CareerDetails() {
   );
 }
 
-// <Link to="../careers">
-//         <ArrowBackIosIcon />
-//         Careers
-//       </Link>
-//       <Typography variant="h4">{career.company_name}</Typography>
-//       <Typography variant="h4">{career.occupation_title}</Typography>
-//       <Typography>Salary: {career.salary}</Typography>
-//       <Typography>Location: {career.location}</Typography>
-//       <Box className="details">
-//         <Typography>{career.job_desc}</Typography>
-//       </Box>
-//       <Button>Apply</Button>
-
-// loader function
-
 export const careerDetailsLoader = async ({ params }) => {
   const { id } = params;
 
-  const res = await fetch("http://localhost:4000/careers/" + id);
+
+  const res = await fetch("https://hasjobcorp-api.vercel.app/api/careers/" + id)
+
 
   if (!res.ok) {
     throw Error("Could not find that career");

@@ -19,11 +19,16 @@ import CompanyProfile from "./components/Aboutpage/components/CompanyProfile"
 import Overview from "./components/Aboutpage/components/Overview"
 import Whatcanwedo from "./components/Aboutpage/components/Whatcanwedo"
 import AdminLayout from "./layouts/AdminLayout"
-import AdminJobs, { careerLoader } from "./pages/admin/AdminJobs"
+import { careerLoader } from "./pages/admin/AdminCareers"
 import CareerDetails, {
   careerDetailsLoader
 } from "./pages/careers/CareerDetails"
+
+import AddCareerForm, { careerFormAction } from "./pages/admin/AddCareerForm"
+import AdminCareers from "./pages/admin/AdminCareers"
+
 import EmployersInfo from "./pages/employersInfo/EmployersInfo"
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -50,9 +55,14 @@ const router = createBrowserRouter(
       </Route>
       <Route path="admin" element={<AdminLayout />}>
         <Route
-          path="/admin/adminjobs"
-          element={<AdminJobs />}
+          path="/admin/admincareers"
+          element={<AdminCareers />}
           loader={careerLoader}
+        />
+        <Route
+          path="/admin/addcareers"
+          element={<AddCareerForm />}
+          action={careerFormAction}
         />
       </Route>
     </>

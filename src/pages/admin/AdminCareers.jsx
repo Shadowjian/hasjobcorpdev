@@ -1,13 +1,13 @@
-import { Container } from "@mui/material"
 import React from "react"
-import { useLoaderData } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 import CareerCard from "../careers/CareerCard"
 
-export default function AdminJobs() {
+export default function AdminCareers() {
   const careers = useLoaderData()
 
   return (
     <>
+      <Link to="../addcareers">Add Career</Link>
       {careers.map(career => (
         <CareerCard career={career} key={career.id} />
       ))}
@@ -16,7 +16,7 @@ export default function AdminJobs() {
 }
 
 export const careerLoader = async () => {
-  const res = await fetch("http://localhost:4000/careers")
+  const res = await fetch("https://hasjobcorp-api.vercel.app/api/careers")
 
   if (!res.ok) {
     throw Error("Could not fetch the careers")
