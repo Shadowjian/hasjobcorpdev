@@ -23,8 +23,12 @@ import { careerLoader } from "./pages/admin/AdminCareers"
 import CareerDetails, {
   careerDetailsLoader
 } from "./pages/careers/CareerDetails"
+
 import AddCareerForm, { careerFormAction } from "./pages/admin/AddCareerForm"
 import AdminCareers from "./pages/admin/AdminCareers"
+
+import EmployersInfo from "./pages/employersInfo/EmployersInfo"
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -39,6 +43,7 @@ const router = createBrowserRouter(
         />
 
         <Route path="recruitment" element={<Recruitment />} />
+        <Route path="employers" element={<EmployersInfo />} />
 
         <Route path="about" element={<AboutLayout />}>
           <Route index element={<Overview />} />
