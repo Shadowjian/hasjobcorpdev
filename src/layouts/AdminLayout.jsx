@@ -4,7 +4,7 @@ import React from "react"
 import { NavLink, Outlet } from "react-router-dom"
 
 export default function AdminLayout() {
-  let active = { backgroundColor: "red" }
+  let active = { backgroundColor: "lightGray" }
 
   return (
     <Container>
@@ -23,15 +23,11 @@ export default function AdminLayout() {
           >
             <Typography variant="h5">Careers</Typography>
           </NavLink>
-          {/* <NavLink
-            to="adminjobs"
-            style={({ isActive }) => (isActive ? active : undefined)}
-          >
-            <Typography variant="h5">Jobs</Typography>
-          </NavLink> */}
         </Stack>
-        <Container sx={{ bgcolor: "green", flex: 4 }}>
-          <Outlet />
+        <Container sx={{ bgcolor: "white", flex: 4 }}>
+          <Stack gap={2}>
+            <Outlet />
+          </Stack>
         </Container>
       </Stack>
     </Container>
