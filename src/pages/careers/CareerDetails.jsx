@@ -151,7 +151,6 @@ export default function CareerDetails() {
                   </Typography>
                 </Box>
                 <Typography variant="h5" fontSize="20px" paddingLeft="55px">
-                  {" "}
                   {career.salary_min} - {career.salary_max}
                 </Typography>
               </Box>
@@ -252,6 +251,9 @@ export default function CareerDetails() {
           <Box>
             <Typography variant="h4">Job Description</Typography>
             <Typography component="p">{career.job_desc}</Typography>
+            <a href={`http://${career.google_form_link}`} target="_blank">
+              Apply Now
+            </a>
           </Box>
         </Box>
 

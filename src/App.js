@@ -28,7 +28,7 @@ import AddCareerForm, { careerFormAction } from "./pages/admin/AddCareerForm"
 import AdminCareers from "./pages/admin/AdminCareers"
 
 import EmployersInfo from "./pages/employersInfo/EmployersInfo"
-
+import EditCareerForm from "./pages/admin/AdminEditForm"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -60,9 +60,15 @@ const router = createBrowserRouter(
           loader={careerLoader}
         />
         <Route
-          path="/admin/addcareers"
+          path="/admin/addcareer"
           element={<AddCareerForm />}
           action={careerFormAction}
+        />
+        <Route
+          path="/admin/admincareers/:id/edit"
+          element={<EditCareerForm />}
+          loader={careerDetailsLoader}
+          // action={careerFormAction}
         />
       </Route>
     </>
