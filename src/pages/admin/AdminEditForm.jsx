@@ -10,14 +10,14 @@ import TextField from "@mui/material/TextField"
 import { Button, CardActions } from "@mui/material"
 import { Container, Stack } from "@mui/system"
 
-export default function EditCareerForm() {
+export default function AddCareerForm() {
   const career = useLoaderData()
   // const errors = useActionData()
   // console.log(errors)
 
   return (
     <Container>
-      <Form method="post" action="/admin/addcareer">
+      <Form method="post">
         <Stack gap={2}>
           <TextField
             size="small"
@@ -25,7 +25,7 @@ export default function EditCareerForm() {
             defaultValue={career.company_name}
             type="text"
             name="company_name"
-            required
+            // required
           />
           <TextField
             size="small"
@@ -33,7 +33,7 @@ export default function EditCareerForm() {
             defaultValue={career.cat_of_industry}
             type="text"
             name="cat_of_industry"
-            required
+            // required
           />
           <TextField
             size="small"
@@ -41,7 +41,7 @@ export default function EditCareerForm() {
             defaultValue={career.occupation_title}
             type="text"
             name="occupation_title"
-            required
+            // required
           />
           <TextField
             size="small"
@@ -49,7 +49,7 @@ export default function EditCareerForm() {
             defaultValue={career.job_desc}
             type="text"
             name="job_desc"
-            required
+            // required
           />
           <Stack gap={2} direction="horizontal">
             <TextField
@@ -72,14 +72,14 @@ export default function EditCareerForm() {
           <TextField
             size="small"
             label="No Of Employees"
-            defaultValue={career.required_no_of_employees}
+            defaultValue={career.req_no_of_employees}
             type="number"
             InputProps={{
               inputProps: {
                 min: 0
               }
             }}
-            name="required_no_of_employees"
+            name="req_no_of_employees"
           />
           <TextField
             size="small"
@@ -133,9 +133,9 @@ export default function EditCareerForm() {
           <TextField
             size="small"
             label="Contact Number"
-            defaultValue={career.contact_number}
+            defaultValue={career.contact_no}
             type="text"
-            name="contact_number"
+            name="contact_no"
           />
           <TextField
             size="small"
@@ -168,8 +168,8 @@ export default function EditCareerForm() {
           <TextField
             size="small"
             label="Open"
+            defaultValue={career.is_open}
             type="Boolean"
-            defaultValue={true}
             name="is_open"
           />
           {/* {errors?.email && errors.email} */}
@@ -185,58 +185,21 @@ export default function EditCareerForm() {
   )
 }
 
-// export async function careerFormAction({ request }) {
-//   const careerForm = await request.formData()
-//   const errors = {}
-//   const newCareer = {
-//     company_name: careerForm.get("company_name"),
-//     cat_of_industry: careerForm.get("cat_of_industry"),
-//     occupation_title: careerForm.get("occupation_title"),
-//     job_desc: careerForm.get("job_desc"),
-//     salary_min: careerForm.get("salary_min"),
-//     salary_max: careerForm.get("salary_max"),
-//     required_no_of_employees: careerForm.get("required_no_of_employees"),
-//     location: careerForm.get("location"),
-//     duration_of_employment: careerForm.get("duration_of_employment"),
-//     qualifications_work_exp: careerForm.get("qualifications_work_exp"),
-//     experience_level: careerForm.get("experience_level"),
-//     japanese_language_level: careerForm.get("japanese_language_level"),
-//     preferred_sex_or_gender: careerForm.get("preferred_sex_or_gender"),
-//     sector_of_vacancy: careerForm.get("sector_of_vancancy"),
-//     contact_number: careerForm.get("contact_number"),
-//     job_type: careerForm.get("job_type"),
-//     job_tags: careerForm.get("job_tags"),
-//     company_email: careerForm.get("company_email"),
-//     google_form_link: careerForm.get("google_form_link"),
-//     is_open: careerForm.get("is_open")
-//   }
+export async function editAction({ request, params }) {
+  const { id } = params
+  console.log(id)
+  const formData = await request.formData()
+  const updates = Object.fromEntries(formData)
+  console.log(updates)
 
-// console.log(newCareer)
+  await fetch("https://hasjobcorp-api.vercel.app/api/careers/" + id, {
+    method: "PATCH",
+    body: JSON.stringify(updates),
+    headers: {
+      "Content-type": "application/json"
+    }
+  })
 
-//career form validation
-
-// if (
-//   typeof newCareer.company_email !== "string" ||
-//   !newCareer.company_email.includes("@")
-// ) {
-//   errors.email = "fix your email"
-// }
-
-// if (Object.keys(errors).length) {
-//   return errors
-// }
-
-// will add career to db
-//   await fetch("https://hasjobcorp-api.vercel.app/api/careers", {
-//     method: "POST",
-//     body: JSON.stringify(newCareer),
-//     headers: {
-//       "Content-type": "application/json"
-//     }
-//   })
-
-//   // if all is well redirect to jobs
-//   return redirect("../admincareers")
-// }
-
-//
+  // if all is well redirect to careers
+  return redirect("../admincareers")
+}

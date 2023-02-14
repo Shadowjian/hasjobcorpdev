@@ -23,7 +23,7 @@ export default function AdminLayout() {
           }}
         >
           <NavLink
-            to="/admin/admincareers"
+            to="admincareers"
             style={({ isActive }) => (isActive ? active : undefined)}
           >
             <Typography variant="h5">Careers</Typography>

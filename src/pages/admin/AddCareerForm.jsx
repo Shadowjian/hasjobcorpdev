@@ -10,35 +10,35 @@ export default function AddCareerForm() {
 
   return (
     <Container>
-      <Form method="post" action="/admin/addcareer">
+      <Form method="post">
         <Stack gap={2}>
           <TextField
             size="small"
             label="Company Name"
             type="text"
             name="company_name"
-            required
+            // required
           />
           <TextField
             size="small"
             label="Industry"
             type="text"
             name="cat_of_industry"
-            required
+            // required
           />
           <TextField
             size="small"
             label="Job Title"
             type="text"
             name="occupation_title"
-            required
+            // required
           />
           <TextField
             size="small"
             label="Job Description"
             type="text"
             name="job_desc"
-            required
+            // required
           />
           <Stack gap={2} direction="horizontal">
             <TextField
@@ -46,7 +46,7 @@ export default function AddCareerForm() {
               size="small"
               label="Min Salary"
               type="text"
-              name="company_name"
+              name="salary_min"
             />
             <TextField
               sx={{ flex: "1" }}

@@ -199,7 +199,7 @@ export default function CareerDetails() {
                   </Typography>
                 </Box>
                 <Typography variant="h6" fontSize="16px" paddingLeft="55px">
-                  {career.experienced_level}
+                  {career.experience_level}
                 </Typography>
               </Box>
               <Box>
