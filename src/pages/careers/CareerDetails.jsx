@@ -1,8 +1,10 @@
 import {
   AccessTime,
   ArrowBack,
+  BeachAccess,
   Business,
   CurrencyYen,
+  Image,
   Language,
   People,
   PeopleAlt,
@@ -12,7 +14,7 @@ import {
   WorkspacePremium,
   Workspaces
 } from "@mui/icons-material"
-import { Button, Container, Typography } from "@mui/material"
+import { Avatar, Button, Container, List, ListItem, ListItemAvatar, ListItemText, Typography } from "@mui/material"
 import { Box, Stack } from "@mui/system"
 import { Link, useLoaderData, useParams } from "react-router-dom"
 import HeroImage from "../../assets/images/jobcoverdetails.png"
@@ -21,6 +23,8 @@ import AdsImage from "../../assets/images/img.png"
 export default function CareerDetails() {
   // const { id } = useParams()
   const career = useLoaderData()
+
+  
 
   return (
     <Box>
@@ -44,14 +48,21 @@ export default function CareerDetails() {
           sx={{ gap: "5px", alignContent: "center" }}
         >
           <Link to="../careers">
+         <Box sx={{display:"flex"}}>
+         <ArrowBack sx={{color:"white", "&:hover":{color:"#D8AE5E"}}} />
+
+          
             <Typography sx={{ color: "#fff" }}>Careers</Typography>
+            </Box>
           </Link>
+       
+        
           <Typography sx={{ color: "gray" }}>/Job Details</Typography>
         </Box>
       </Box>
 
-      <Container sx={{ marginTop: "50px" }}>
-        <Box maxWidth="80%">
+      <Container sx={{ marginTop: "50px", display:"flex", gap:"30px" }}>
+        <Box maxWidth="80%" width="100%">
           <Box
             sx={{
               backgroundImage: `url(${AdsImage})`,
@@ -82,7 +93,7 @@ export default function CareerDetails() {
                   </Typography>
                 </Box>
                 <Typography variant="h5" fontSize="20px" paddingLeft="55px">
-                  {" "}
+              
                   {career.company_name}
                 </Typography>
               </Box>
@@ -105,7 +116,7 @@ export default function CareerDetails() {
                   </Typography>
                 </Box>
                 <Typography variant="h5" fontSize="20px" paddingLeft="55px">
-                  {" "}
+       
                   {career.job_type}
                 </Typography>
               </Box>
@@ -151,7 +162,10 @@ export default function CareerDetails() {
                   </Typography>
                 </Box>
                 <Typography variant="h5" fontSize="20px" paddingLeft="55px">
-                  {career.salary_min} - {career.salary_max}
+
+             
+                  {career.salary_min} - {career.salary_max} / hour
+
                 </Typography>
               </Box>
             </Container>
@@ -255,42 +269,151 @@ export default function CareerDetails() {
               Apply Now
             </a>
           </Box>
+
+          <Button href="https://forms.gle/HdafsVVzWQ418cXv8" target="_blank" variant="contained"  sx={{width:"100%", height:"8%"}}>Apply Now!</Button>
         </Box>
+{/* rightPane */}
+        <Box maxWidth="25%" width="100%" sx={{  boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", padding:"20px"}}>
+          <Button href="https://forms.gle/HdafsVVzWQ418cXv8" target="_blank" variant="contained" align="center"  sx={{width:"100%", height:"8%"}}>Apply Now!</Button>
+        <List>
+          <Typography variant="h5">Job Overview</Typography>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <Work />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Occupation Title" secondary={
+            <>
+              <Typography
+                sx={{ display: 'inline', fontSize:"20px" }}
+                component="span"
+                variant="h5"
+                color="text.primary"
+              >
+               {career.occupation_title}
+              </Typography>
+            </>
+          }/>
+        
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <Place />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Location" secondary={
+            <>
+              <Typography
+                sx={{ display: 'inline', fontSize:"20px" }}
+                component="span"
+                variant="h5"
+                color="text.primary"
+              >
+               {career.location}
+              </Typography>
+            </>
+          }/>
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <CurrencyYen />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Salary" secondary={
+            <>
+              <Typography
+                sx={{ display: 'inline', fontSize:"17px" }}
+                component="span"
+                variant="h5"
+                color="text.primary"
+              >
+                {career.salary_min} ~ {career.salary_max} / hr
+              </Typography>
+            </>
+          }/>
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <AccessTime />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Job Type" secondary={
+            <>
+              <Typography
+                sx={{ display: 'inline', fontSize:"17px" }}
+                component="span"
+                variant="h5"
+                color="text.primary"
+              >
+                {career.job_type}
+              </Typography>
+            </>
+          }/>
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <Wc />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Gender" secondary={
+            <>
+              <Typography
+                sx={{ display: 'inline', fontSize:"17px" }}
+                component="span"
+                variant="h5"
+                color="text.primary"
+              >
+                {career.preferred_sex_or_gender}
+              </Typography>
+            </>
+          }/>
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <Language />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Japanese Language" secondary={
+            <>
+              <Typography
+                sx={{ display: 'inline', fontSize:"17px" }}
+                component="span"
+                variant="h5"
+                color="text.primary"
+              >
+                {career.japanese_language_level}
+              </Typography>
+            </>
+          }/>
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <WorkspacePremium />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary="Experience" secondary={
+            <>
+              <Typography
+                sx={{ display: 'inline', fontSize:"17px" }}
+                component="span"
+                variant="h5"
+                color="text.primary"
+              >
+                {career.experienced_level}
+              </Typography>
+            </>
+          }/>
+      </ListItem>
+    </List>
 
-        <Box maxWidth="20%"></Box>
-
-        {/* career details */}
-        {/* <Stack>
-          <Typography variant="h4">{career.occupation_title}</Typography>
-          <Typography>posting date</Typography>
-        </Stack>
-        <Button>Apply Now</Button>
-        <Stack>
-          <hr />
-          <Box>company image here</Box>
-          <hr />
-          <Typography>Industry: {career.cat_of_industry}</Typography>
-          <Typography>Job Level: {career.job_level}</Typography>
-          <Typography>Salary: {career.salary}</Typography>
-          <Typography>Experience: {career.experienced_level}</Typography>
-          <Typography>Job Level: {career.job_type}</Typography>
-          <Typography>Updated: to fix the TS</Typography>
-          <Typography>Location: {career.location}</Typography>
-        </Stack>
-        <hr /> */}
-        {/* employer details */}
-        {/* <Stack>
-          <Typography>{career.company_name}</Typography>
-          <Typography>{career.req_no_of_employees} Open Job</Typography>
-          <Typography>{career.location}</Typography>
-          <Typography>{career.company_contact_no}</Typography>
-          <Typography>{career.company_email}</Typography>
-        </Stack> */}
-        {/* <hr /> */}
-        {/* <Stack>
-          <Typography>{career.job_desc}</Typography>
-        </Stack>
-        <Button>Apply Now</Button> */}
+        </Box>
       </Container>
     </Box>
   )

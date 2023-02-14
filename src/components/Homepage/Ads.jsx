@@ -36,14 +36,14 @@ const Ads = () => {
               variant="h3"
               sx={{ fontSize: { xs: "25px", sm: "50px", md: "50px" } }}
             >
-              Find a Job that is{" "}
+              あなたにぴったりの
             </StyledTypography>
             <StyledTypography
               textAlign="center"
               variant="h4"
               sx={{ fontSize: { xs: "20px", sm: "45px", md: "45px" } }}
             >
-              Perfect for you
+              仕事を見つけよう
             </StyledTypography>
             <Box align="center" mt="30px">
               <Link to="/careers">
@@ -61,7 +61,7 @@ const Ads = () => {
                     }
                   }}
                 >
-                  Apply Now
+                  今すぐ申し込む
                 </Button>
               </Link>
             </Box>

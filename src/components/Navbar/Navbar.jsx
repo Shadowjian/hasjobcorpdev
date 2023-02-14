@@ -70,22 +70,22 @@ const Navbar = () => {
           </Box>
           <MenuBox sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
             <NavLink style={navlinkStyles} to="/">
-              <MenuTypeItem>Home</MenuTypeItem>
+              <MenuTypeItem>ホームページ</MenuTypeItem>
             </NavLink>
             <NavLink style={navlinkStyles} to="careers">
-              <MenuTypeItem>Career</MenuTypeItem>
+              <MenuTypeItem>キャリア</MenuTypeItem>
             </NavLink>
             <NavLink style={navlinkStyles} to="recruitment">
-              <MenuTypeItem>Recruitment Information</MenuTypeItem>
+              <MenuTypeItem>採用情報</MenuTypeItem>
             </NavLink>
             <NavLink style={navlinkStyles} to="employers">
-              <MenuTypeItem>Employers Information</MenuTypeItem>
+              <MenuTypeItem>雇用主の情報</MenuTypeItem>
             </NavLink>
             <NavLink style={navlinkStyles} to="about">
-              <MenuTypeItem>About Company</MenuTypeItem>
+              <MenuTypeItem>会社について</MenuTypeItem>
             </NavLink>
             <NavLink style={navlinkStyles} to="contact-us">
-              <MenuTypeItem>Inquiry</MenuTypeItem>
+              <MenuTypeItem>お問い合わせ</MenuTypeItem>
             </NavLink>
           </MenuBox>
           <MenuIcon
@@ -110,24 +110,24 @@ const Navbar = () => {
             horizontal: "left"
           }}
         >
-          <Box sx={{ width: 350, height: "50vh", backgroundColor: "white" }}>
+          <Box sx={{ width: 350, height: "60vh", backgroundColor: "white" }}>
             <NavLink  to="/">
-              <MenuTypeItem2>Home</MenuTypeItem2>
+              <MenuTypeItem2>ホームページ</MenuTypeItem2>
             </NavLink>
             <NavLink  to="careers">
-              <MenuTypeItem2>Career</MenuTypeItem2>
+              <MenuTypeItem2>キャリア</MenuTypeItem2>
             </NavLink>
             <NavLink  to="recruitment">
-              <MenuTypeItem2>Recruitment Information</MenuTypeItem2>
+              <MenuTypeItem2>採用情報</MenuTypeItem2>
             </NavLink>
             <NavLink  to="employers">
-              <MenuTypeItem2>Employers Information</MenuTypeItem2>
+              <MenuTypeItem2>雇用主の情報</MenuTypeItem2>
             </NavLink>
             <NavLink  to="about">
-              <MenuTypeItem2>About Company</MenuTypeItem2>
+              <MenuTypeItem2>会社について</MenuTypeItem2>
             </NavLink>
             <NavLink  to="contact-us">
-              <MenuTypeItem2>Inquiry</MenuTypeItem2>
+              <MenuTypeItem2>お問い合わせ</MenuTypeItem2>
             </NavLink>
           </Box>
         </Menu>
