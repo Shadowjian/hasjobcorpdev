@@ -265,9 +265,9 @@ export default function CareerDetails() {
           <Box>
             <Typography variant="h4">Job Description</Typography>
             <Typography component="p">{career.job_desc}</Typography>
-            <a href={`http://${career.google_form_link}`} target="_blank">
+            {/* <a href={`http://${career.google_form_link}`} target="_blank">
               Apply Now
-            </a>
+            </a> */}
           </Box>
 
           <Button href="https://forms.gle/HdafsVVzWQ418cXv8" target="_blank" variant="contained"  sx={{width:"100%", height:"8%"}}>Apply Now!</Button>
