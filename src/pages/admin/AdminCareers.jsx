@@ -1,16 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, useLoaderData } from "react-router-dom"
 import CareerCard from "../careers/CareerCard"
+import TextField from "@mui/material/TextField"
 
 export default function AdminCareers() {
+  const [loggedIn, setLoggedIn] = useState(true)
   const careers = useLoaderData()
+
+  if (!loggedIn) {
+    return (
+      <form>
+        <TextField label="UserName" />
+        <TextField label="Password" />
+      </form>
+    )
+  }
 
   return (
     <>
-      <Link to="../addcareers">Add Career</Link>
+      <Link to="../addcareer">Add Career</Link>
       {careers.map(career => (
-        <CareerCard career={career} key={career.id} />
+        <CareerCard career={career} key={career._id} />
       ))}
+      {/* {careers.map(career => (
+        <CareerCard career={career} key={career.id} />
+      ))} */}
     </>
   )
 }
