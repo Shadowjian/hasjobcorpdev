@@ -162,8 +162,10 @@ export default function CareerDetails() {
                   </Typography>
                 </Box>
                 <Typography variant="h5" fontSize="20px" paddingLeft="55px">
+
              
                   {career.salary_min} - {career.salary_max} / hour
+
                 </Typography>
               </Box>
             </Container>
@@ -211,7 +213,7 @@ export default function CareerDetails() {
                   </Typography>
                 </Box>
                 <Typography variant="h6" fontSize="16px" paddingLeft="55px">
-                  {career.experienced_level}
+                  {career.experience_level}
                 </Typography>
               </Box>
               <Box>
@@ -263,6 +265,9 @@ export default function CareerDetails() {
           <Box>
             <Typography variant="h4">Job Description</Typography>
             <Typography component="p">{career.job_desc}</Typography>
+            <a href={`http://${career.google_form_link}`} target="_blank">
+              Apply Now
+            </a>
           </Box>
 
           <Button href="https://forms.gle/HdafsVVzWQ418cXv8" target="_blank" variant="contained"  sx={{width:"100%", height:"8%"}}>Apply Now!</Button>
