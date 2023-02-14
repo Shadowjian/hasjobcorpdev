@@ -36,7 +36,7 @@ const Hero = () => {
               textAlign="center"
               sx={{ fontSize: { xs: "2rem", sm: "3rem", md: "4rem" } }}
             >
-              Welcome to HA Solution
+              HAソリューションへようこそ
             </Typography>
 
             <Typography
@@ -45,7 +45,7 @@ const Hero = () => {
               textAlign="center"
               sx={{ fontSize: { xs: ".9rem", sm: "2rem" } }}
             >
-              Empower Job Seekers, Support Employers
+              求職者に力を与え, 雇用主をサポート
             </Typography>
           </Box>
 
@@ -63,12 +63,14 @@ const Hero = () => {
               variant="contained"
               endIcon={<ArrowForward />}
               sx={{
+                fontSize:"25px",
+                padding:" 10px 50px",
                 backgroundColor: "#0B3749",
                 color: "#fff",
                 "&:hover": { backgroundColor: "#D8AE5E", color: "#0B3749" }
               }}
             >
-              Employers Information
+             会社について
             </Button>
             </NavLink>
             <NavLink to="recruitment">
@@ -76,12 +78,14 @@ const Hero = () => {
               variant="contained"
               endIcon={<ArrowForward />}
               sx={{
+                fontSize:"25px",
+                padding:" 10px 50px",
                 backgroundColor: "#0B3749",
                 color: "#fff",
                 "&:hover": { backgroundColor: "#D8AE5E", color: "#0B3749" }
               }}
             >
-              Recruitment Information
+              採用情報
             </Button>
             </NavLink>
           </Box>

@@ -43,7 +43,7 @@ const Categories = () => {
     >
       <Box>
 
-        <Typography variant="h3" align="center">Occupation</Typography>
+        <Typography variant="h3" align="center">職種</Typography>
 
       </Box>
       <Stack
@@ -60,7 +60,7 @@ const Categories = () => {
           }}
         >
           <StyledTypography align="center" variant="h6">
-            Caregiver
+          介護者
           </StyledTypography>
         </StyledBox>
         <StyledBox
@@ -69,7 +69,7 @@ const Categories = () => {
           }}
         >
           <StyledTypography align="center" variant="h6">
-            Factory Work
+          工場内作業
           </StyledTypography>
         </StyledBox>
 
@@ -79,7 +79,7 @@ const Categories = () => {
           }}
         >
           <StyledTypography align="center" variant="h6">
-            Cleaning
+          清掃
           </StyledTypography>
         </StyledBox>
         <StyledBox
@@ -88,7 +88,7 @@ const Categories = () => {
           }}
         >
           <StyledTypography align="center" variant="h6">
-            Warehouse Work
+          倉庫内作業
           </StyledTypography>
         </StyledBox>
       </Stack>
@@ -106,7 +106,7 @@ const Categories = () => {
               }
             }}
           >
-            See More Jobs
+            もっと求人を見る
           </Button>
         </Link>
       </Box>
