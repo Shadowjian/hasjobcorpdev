@@ -23,7 +23,7 @@ export default function ErrorPage() {
         </Typography>
         <Typography variant="h4">
           <i>
-            {`Page ${error.statusText}`} || {error.message}
+            {error.statusText} {error.message}
           </i>
         </Typography>
         <Link to="/">{`<< Go back home`}</Link>

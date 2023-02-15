@@ -57,7 +57,11 @@ const router = createBrowserRouter(
         <Route path="contact-us" element={<Contact />} />
       </Route>
 
-      <Route path="admin" element={<AdminLayout />}>
+      <Route
+        path="admin"
+        element={<AdminLayout />}
+        errorElement={<ErrorPage />}
+      >
         <Route
           path="admincareers"
           element={<AdminCareers />}
