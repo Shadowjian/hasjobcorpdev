@@ -2,10 +2,9 @@ import * as React from "react"
 import Card from "@mui/material/Card"
 import CardActions from "@mui/material/CardActions"
 import CardContent from "@mui/material/CardContent"
-import CardMedia from "@mui/material/CardMedia"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
-import { Form, Link, redirect } from "react-router-dom"
+import { Form, redirect } from "react-router-dom"
 
 export default function CareerCard({ career }) {
   return (
@@ -41,6 +40,7 @@ export default function CareerCard({ career }) {
   )
 }
 
+// params gets access to (:string) on the url
 export async function destroyAction({ params }) {
   const { id } = params
 
@@ -48,6 +48,6 @@ export async function destroyAction({ params }) {
     method: "DELETE"
   })
 
-  // if all is well redirect to careers
+  // if all is well redirect to careers page
   return redirect("../admincareers")
 }

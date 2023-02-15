@@ -30,12 +30,14 @@ import AdminCareers from "./pages/admin/AdminCareers"
 import EmployersInfo from "./pages/employersInfo/EmployersInfo"
 import EditCareerForm, { editAction } from "./pages/admin/AdminEditForm"
 import { destroyAction } from "./pages/careers/CareerCard"
+import ErrorBoundary from "./pages/error/ErrorBoundary"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<RootLayout />}>
+      <Route path="/" element={<RootLayout />} errorElement={<ErrorBoundary />}>
         <Route index element={<Home />} />
+
         <Route path="careers" element={<Careers />} loader={careerLoader} />
         <Route
           path="careers/:id"
