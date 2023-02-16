@@ -7,15 +7,16 @@ const OwnerGreeting = () => {
     <Container
       sx={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: {md:"row",sm:"column",xs:"column"},
         justifyContent: "center",
         alignItems: "center",
+        paddingBottom: "100px",
       }}
     >
       <Box>
         <Avatar
           sx={{ width: 200, height: 200 }}
-          src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+          src=""
         />
       </Box>
       <Box>
