@@ -15,7 +15,7 @@ import {
 
 function MediaCard({ career }) {
   return (
-    <Container>
+    <Container sx={{marginBottom:"300px"}}>
       <Card
         sx={{
           maxWidth: 345,

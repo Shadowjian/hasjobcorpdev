@@ -16,13 +16,13 @@ const Footer = () => {
 
 
   return (
-    <Paper sx={{marginTop: 'calc(10% + 60px)',
+    <Paper sx={{
     width: '100%',
     position: 'relative',
     bottom: 0,
     backgroundColor: "#0B3749" }} component="footer" square variant="outlined">
       <Container maxWidth="lg" >
-        <Box sx={{display: 'flex', justifyContent:'space-between',flexDirection:{xs:"column", sm:"column", md:"row"},textAlign:"center" }}  my="30px" color="#fff">
+        <Box sx={{display: 'flex', justifyContent:'space-between',flexDirection:{xs:"column", sm:"column", md:"row"} }}  my="30px" color="#fff">
           
           <Box width="300px">
             <Typography>ＨＡソリューション株式会社</Typography>
@@ -33,31 +33,34 @@ const Footer = () => {
     
           <Box>
             <NavLink style={navlinkStyle} to="careers">
-            <Typography>Careers</Typography>
+            <Typography>キャリア</Typography>
             </NavLink>
             <NavLink style={navlinkStyle} to="recruitment">
-            <Typography>Recruitment Information</Typography>
+            <Typography>採用情報</Typography>
+            </NavLink>
+            <NavLink style={navlinkStyle} to="employers">
+            <Typography>雇用主の情報</Typography>
             </NavLink>
             <NavLink style={navlinkStyle} to="contact-us">
-            <Typography>Inquiries</Typography>
+            <Typography>お問い合わせ</Typography>
             </NavLink>
           </Box>
           <Box>
             <NavLink style={navlinkStyle} to="about">
-          <Typography>About the Company</Typography>
+          <Typography>会社について</Typography>
           </NavLink>
           <Box marginLeft="20px">
             <NavLink style={navlinkStyle} to="about/profile">
-            <Typography>Company Profile</Typography>
+            <Typography>会社概要</Typography>
             </NavLink>
             <NavLink style={navlinkStyle} to="about/whatwedo">
-            <Typography>What can we do?</Typography>
+            <Typography>私たちは何ができる</Typography>
             </NavLink>
             </Box>
           </Box>
           <Box >
             <Typography>Socials</Typography>
-            <Box display="flex" justifyContent="center" gap={1}>
+            <Box display="flex"  gap={1}>
             <Link  href="https://www.facebook.com/profile.php?id=100089559129010"><Facebook/></Link>
             </Box>
           </Box>
