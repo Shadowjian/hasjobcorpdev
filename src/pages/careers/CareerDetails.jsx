@@ -27,7 +27,7 @@ export default function CareerDetails() {
   
 
   return (
-    <Box>
+    <Box sx={{marginBottom:"100px"}}>
       <Box
         sx={{
           backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${HeroImage})`,
