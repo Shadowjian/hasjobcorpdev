@@ -11,7 +11,7 @@ const StyledTypography = styled(Typography)({
 
 const Ads = () => {
   return (
-    <Container sx={{ mt: "100px", mb: "50px", padding: "50px" }}>
+    <Container  sx={{ mt: "100px", mb: "50px", padding: "50px", overflow: "hidden" }}>
       <Box sx={{ width: "100%" }}>
         <Stack
           direction={{ xs: "column", sm: "column", md: "row" }}
@@ -20,8 +20,6 @@ const Ads = () => {
           spacing={{ xs: 1, sm: 2, md: 15 }}
         >
           <Box data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine"
             sx={{
               backgroundImage: `url(${AdsImage})`,
               boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
@@ -32,9 +30,7 @@ const Ads = () => {
               backgroundSize: "cover"
             }}
           ></Box>
-          <Box data-aos="fade-left"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+          <Box data-aos="fade-left">
             <StyledTypography
               textAlign="center"
               variant="h3"

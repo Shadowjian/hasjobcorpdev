@@ -4,7 +4,7 @@ import React from "react"
 
 const RecruitmentPage = () => {
   return (
-    <Container>
+    <Container sx={{ overflow: "hidden"}}>
       <Box  sx={{ marginTop: "50px" }}>
         <Typography
           variant="h2"

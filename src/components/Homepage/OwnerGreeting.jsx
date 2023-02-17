@@ -5,14 +5,13 @@ import React from "react";
 const OwnerGreeting = () => {
   return (
     <Container data-aos="fade-up"
-    data-aos-offset="300"
-    data-aos-easing="ease-in-sine"
       sx={{
         display: "flex",
         flexDirection: {md:"row",sm:"column",xs:"column"},
         justifyContent: "center",
         alignItems: "center",
         paddingBottom: "100px",
+        overflow: "hidden"
       }}
     >
       <Box>
