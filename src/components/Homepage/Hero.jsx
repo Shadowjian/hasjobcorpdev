@@ -29,7 +29,7 @@ const Hero = () => {
             alignItems: "center  "
           }}
         >
-          <Box>
+          <Box data-aos="fade-up" data-aos-duration="3000">
             <Typography
               variant="h3"
               color="white"
@@ -38,7 +38,8 @@ const Hero = () => {
             >
               HAソリューションへようこそ
             </Typography>
-
+          </Box>
+          <Box  data-aos="fade-down" data-aos-duration="3000" >
             <Typography
               variant="h6"
               color="white"
@@ -49,7 +50,7 @@ const Hero = () => {
             </Typography>
           </Box>
 
-          <Box
+          <Box 
             align="center"
             sx={{
               display: "flex",
@@ -58,6 +59,9 @@ const Hero = () => {
               margin: "30px"
             }}
           >
+            <Box data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
             <NavLink to="employers">
             <Button
               variant="contained"
@@ -73,6 +77,10 @@ const Hero = () => {
              会社について
             </Button>
             </NavLink>
+            </Box>
+            <Box data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
             <NavLink to="recruitment">
             <Button
               variant="contained"
@@ -88,6 +96,7 @@ const Hero = () => {
               採用情報
             </Button>
             </NavLink>
+            </Box>
           </Box>
         </Box>
       </Box>

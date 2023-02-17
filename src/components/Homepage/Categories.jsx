@@ -1,5 +1,7 @@
 import { Box, Button, Stack, styled, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import React from "react"
 import HealthCare from "../../assets/images/careworker.jpg"
@@ -7,6 +9,8 @@ import Warehouse from "../../assets/images/warehouse.jpg"
 import Manufacturing from "../../assets/images/manufacturing.jpg"
 import JobOffer from "../../assets/images/joboffer.svg"
 import Housekeeping from "../../assets/images/housekeeping.jpg"
+
+AOS.init();
 
 const StyledBox = styled(Box)({
   height: 300,
@@ -41,9 +45,9 @@ const Categories = () => {
         mt: "50px"
       }}
     >
-      <Box>
+      <Box data-aos="fade-up">
 
-        <Typography variant="h3" align="center">職種</Typography>
+        <Typography  variant="h3" align="center">職種</Typography>
 
       </Box>
       <Stack
@@ -54,7 +58,8 @@ const Categories = () => {
         mt={5}
         mb={5}
       >
-        <StyledBox
+     
+        <StyledBox data-aos="fade-right"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${HealthCare})`
           }}
@@ -63,7 +68,8 @@ const Categories = () => {
           介護者
           </StyledTypography>
         </StyledBox>
-        <StyledBox
+      
+        <StyledBox data-aos="fade-right"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Manufacturing})`
           }}
@@ -73,7 +79,7 @@ const Categories = () => {
           </StyledTypography>
         </StyledBox>
 
-        <StyledBox
+        <StyledBox data-aos="fade-left"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Housekeeping})`
           }}
@@ -82,7 +88,7 @@ const Categories = () => {
           清掃
           </StyledTypography>
         </StyledBox>
-        <StyledBox
+        <StyledBox data-aos="fade-left" 
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Warehouse})`
           }}
@@ -92,7 +98,7 @@ const Categories = () => {
           </StyledTypography>
         </StyledBox>
       </Stack>
-      <Box align="center">
+      <Box data-aos="fade-up" align="center">
         <Link to="careers">
           <Button
             variant="outlined"

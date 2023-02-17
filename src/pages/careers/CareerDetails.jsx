@@ -68,8 +68,8 @@ export default function CareerDetails() {
         </Box>
       </Box>
 
-      <Container sx={{ marginTop: "50px", display: "flex", gap: "30px" }}>
-        <Box maxWidth="80%" width="100%">
+      <Container sx={{ marginTop: "50px", display: "flex", flexDirection:{md:"row", xs:"column"}, gap: "30px" }}>
+        <Box sx={{maxWidth:{md:"80%"}, width:"100%"}}>
           <Box
             sx={{
               backgroundImage: `url(${AdsImage})`,
@@ -82,7 +82,7 @@ export default function CareerDetails() {
             }}
           ></Box>
 
-          <Box sx={{ display: "flex", marginTop: "30px" }}>
+          <Box sx={{ display: "flex",flexDirection:{md:"row", xs:"column"},marginTop: "30px" }}>
             <Container>
               <Box>
                 <Box
@@ -94,12 +94,12 @@ export default function CareerDetails() {
                   <Typography
                     variant="h5"
                     fontSize="24px"
-                    sx={{ color: "gray" }}
+                    sx={{ color: "gray",fontSize:{xs:"18px"} }}
                   >
                     Company Name:
                   </Typography>
                 </Box>
-                <Typography variant="h5" fontSize="20px" paddingLeft="55px">
+                <Typography variant="h5" fontSize="20px" paddingLeft="55px" sx={{fontSize:{xs:"15px"}}}>
                   {career.company_name}
                 </Typography>
               </Box>
@@ -116,7 +116,7 @@ export default function CareerDetails() {
                   <Typography
                     variant="h5"
                     fontSize="24px"
-                    sx={{ color: "gray" }}
+                    sx={{ color: "gray",fontSize:{xs:"18px"} }}
                   >
                     Job Type:
                   </Typography>
@@ -131,14 +131,14 @@ export default function CareerDetails() {
                 >
                   <Typography
                     variant="h5"
-                    sx={{ color: "gray", marginTop: "10px" }}
+                    sx={{ color: "gray", marginTop: "10px",fontSize:{xs:"18px"} }}
                   >
                     <Place fontSize="small" />
                   </Typography>
                   <Typography
                     variant="h5"
                     fontSize="24px"
-                    sx={{ color: "gray" }}
+                    sx={{ color: "gray",fontSize:{xs:"18px"} }}
                   >
                     Location:
                   </Typography>
@@ -154,14 +154,14 @@ export default function CareerDetails() {
                 >
                   <Typography
                     variant="h5"
-                    sx={{ color: "gray", marginTop: "10px" }}
+                    sx={{ color: "gray", marginTop: "10px",fontSize:{xs:"18px"} }}
                   >
                     <CurrencyYen fontSize="small" />
                   </Typography>
                   <Typography
                     variant="h5"
                     fontSize="24px"
-                    sx={{ color: "gray" }}
+                    sx={{ color: "gray",fontSize:{xs:"18px"} }}
                   >
                     Salary:
                   </Typography>
@@ -179,14 +179,14 @@ export default function CareerDetails() {
                 >
                   <Typography
                     variant="h5"
-                    sx={{ color: "gray", marginTop: "10px" }}
+                    sx={{ color: "gray", marginTop: "10px",fontSize:{xs:"18px"} }}
                   >
                     <Language fontSize="small" />
                   </Typography>
                   <Typography
                     variant="h5"
                     fontSize="24px"
-                    sx={{ color: "gray" }}
+                    sx={{ color: "gray",fontSize:{xs:"18px"} }}
                   >
                     Japanese Language Level:
                   </Typography>
@@ -202,7 +202,7 @@ export default function CareerDetails() {
                 >
                   <Typography
                     variant="h5"
-                    sx={{ color: "gray", marginTop: "10px" }}
+                    sx={{ color: "gray", marginTop: "10px",fontSize:{xs:"18px"} }}
                   >
                     <WorkspacePremium fontSize="small" />
                   </Typography>
@@ -224,14 +224,14 @@ export default function CareerDetails() {
                 >
                   <Typography
                     variant="h5"
-                    sx={{ color: "gray", marginTop: "10px" }}
+                    sx={{ color: "gray", marginTop: "10px",fontSize:{xs:"18px"} }}
                   >
                     <Wc fontSize="small" />
                   </Typography>
                   <Typography
                     variant="h5"
                     fontSize="24px"
-                    sx={{ color: "gray" }}
+                    sx={{ color: "gray",fontSize:{xs:"18px"} }}
                   >
                     Preferred Gender:
                   </Typography>
@@ -246,14 +246,14 @@ export default function CareerDetails() {
                 >
                   <Typography
                     variant="h5"
-                    sx={{ color: "gray", marginTop: "10px" }}
+                    sx={{ color: "gray", marginTop: "10px",fontSize:{xs:"18px"} }}
                   >
                     <People fontSize="small" />
                   </Typography>
                   <Typography
                     variant="h5"
                     fontSize="24px"
-                    sx={{ color: "gray" }}
+                    sx={{ color: "gray",fontSize:{xs:"18px"} }}
                   >
                     Required # of Employees:
                   </Typography>
@@ -264,12 +264,11 @@ export default function CareerDetails() {
               </Box>
             </Container>
           </Box>
-          <Box>
-            <Typography variant="h4">Job Description</Typography>
-            <Typography component="p">{career.job_desc}</Typography>
-          </Box>
-
-          <Button
+          <Box sx={{marginTop:"30px"}}>
+            <Typography variant="h4" sx={{fontSize:{xs:"30px"}}}>Job Description</Typography>
+            <Box sx={{boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",}}>
+            <Typography component="p" sx={{fontSize:{xs:"17px"}, padding: "20px"}}>{career.job_desc}</Typography>
+            <Button
             href="https://forms.gle/HdafsVVzWQ418cXv8"
             target="_blank"
             variant="contained"
@@ -277,12 +276,14 @@ export default function CareerDetails() {
           >
             Apply Now!
           </Button>
+            </Box>
+          </Box>
+
+         
         </Box>
         {/* rightPane */}
         <Box
-          maxWidth="25%"
-          width="100%"
-          sx={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", padding: "20px" }}
+          sx={{maxWidth:{md:"25%"} ,width:"100%", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", padding: "20px" }}
         >
           <Button
             href="https://forms.gle/HdafsVVzWQ418cXv8"
