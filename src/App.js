@@ -29,13 +29,14 @@ import AdminCareers from "./pages/admin/AdminCareers"
 
 import EmployersInfo from "./pages/employersInfo/EmployersInfo"
 import EditCareerForm, { editAction } from "./pages/admin/AdminEditForm"
-import { destroyAction } from "./pages/careers/CareerCard"
-import ErrorBoundary from "./pages/error/ErrorBoundary"
+import { destroyAction } from "./pages/admin/CareerCard"
+import ErrorPage from "./pages/error/ErrorPage"
+import AdminSandbox from "./pages/admin/AdminSandbox"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<RootLayout />} errorElement={<ErrorBoundary />}>
+      <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
         <Route index element={<Home />} />
 
         <Route path="careers" element={<Careers />} loader={careerLoader} />
@@ -57,7 +58,12 @@ const router = createBrowserRouter(
         <Route path="contact-us" element={<Contact />} />
       </Route>
 
-      <Route path="admin" element={<AdminLayout />}>
+      <Route
+        path="admin"
+        element={<AdminLayout />}
+        errorElement={<ErrorPage />}
+      >
+        <Route index element={<AdminCareers />} loader={careerLoader} />
         <Route
           path="admincareers"
           element={<AdminCareers />}
