@@ -16,7 +16,8 @@ const CompanyProfile = () => {
         backgroundColor: "#D8AE5E",
         borderRadius: "10px",
         pt: "50px",
-        pb: "50px"
+        pb: "50px",
+        marginBottom:"100px"
       }}
     >
       <Typography

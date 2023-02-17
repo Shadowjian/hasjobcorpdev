@@ -12,7 +12,7 @@ import React from "react"
 
 const Whatcanwedo = () => {
   return (
-    <Container>
+    <Container sx={{marginBottom:"100px"}}>
       <Typography
         variant="h2"
         mt="50px"
