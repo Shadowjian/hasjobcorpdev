@@ -5,7 +5,7 @@ import React from "react"
 const RecruitmentPage = () => {
   return (
     <Container>
-      <Box sx={{ marginTop: "50px" }}>
+      <Box  sx={{ marginTop: "50px" }}>
         <Typography
           variant="h2"
           align="center"
@@ -20,7 +20,9 @@ const RecruitmentPage = () => {
         >
           Job Information
         </Typography>
-        <Box
+        <Box data-aos="fade-up"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"
           sx={{
             margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
             backgroundColor: "#D8AE5E",
@@ -38,7 +40,7 @@ const RecruitmentPage = () => {
           <Typography fontWeight="bold" ml="20px">
             クリーナーの責任には以下が含まれます。
           </Typography>
-          <Box ml="30px">
+          <Box  ml="30px">
             <Typography>
               🔘指定された施設エリアの清掃、備蓄、供給
               (ほこり取り、掃き掃除、掃除機、モップ掛け、天井の換気口の清掃、トイレの清掃など)
@@ -47,7 +49,9 @@ const RecruitmentPage = () => {
             <Typography>🔘大掃除や特別なプロジェクトを実行します。</Typography>
           </Box>
         </Box>
-        <Box
+        <Box data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"
           sx={{
             margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
             backgroundColor: "#D8AE5E",
@@ -75,7 +79,9 @@ const RecruitmentPage = () => {
             </Typography>
           </Box>
         </Box>
-        <Box
+        <Box data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"
           sx={{
             margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
             backgroundColor: "#D8AE5E",
@@ -86,14 +92,16 @@ const RecruitmentPage = () => {
         >
           <Typography variant="h5">工場スタッフの仕事</Typography>
           <Typography ml="20px" mb="10px">
-            {" "}
+      
             工場労働者は、適切な機械や設備を使用して製品を製造する責任があります。
             工場労働者の義務には、必要な数量と仕様に基づいて製品を処理すること、商品にラベルを付けて安全に梱包すること、流通前に商品に欠陥がないことを確認すること、供給在庫を監視すること、欠陥のある機械や設備を報告すること、および清潔さを維持することが含まれます。
             産地の。
             工場労働者は、特定の時間枠内で高品質の製品を生産するための優れた時間管理スキルを備えている必要があります。
           </Typography>
         </Box>
-        <Box
+        <Box data-aos="fade-up"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"
           sx={{
             margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
             backgroundColor: "#D8AE5E",
