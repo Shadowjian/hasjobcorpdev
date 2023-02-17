@@ -23,6 +23,7 @@ const EmployersInfoPage = () => {
           borderRadius: "10px",
           boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
           justifyContent: "center",
+          overflow: "hidden"
         }}
       >
         <Box mb="50px">

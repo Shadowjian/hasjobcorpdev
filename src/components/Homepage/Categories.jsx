@@ -1,8 +1,5 @@
 import { Box, Button, Stack, styled, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
-import AOS from "aos"
-import "aos/dist/aos.css"
-
 import React from "react"
 import HealthCare from "../../assets/images/careworker.jpg"
 import Warehouse from "../../assets/images/warehouse.jpg"
@@ -10,7 +7,7 @@ import Manufacturing from "../../assets/images/manufacturing.jpg"
 import JobOffer from "../../assets/images/joboffer.svg"
 import Housekeeping from "../../assets/images/housekeeping.jpg"
 
-AOS.init();
+
 
 const StyledBox = styled(Box)({
   height: 300,
@@ -42,7 +39,8 @@ const Categories = () => {
         backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(${JobOffer}) `,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "right bottom",
-        mt: "50px"
+        mt: "50px",
+        overflow: "hidden"
       }}
     >
       <Box data-aos="fade-up">
