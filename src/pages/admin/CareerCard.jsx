@@ -5,14 +5,33 @@ import CardContent from "@mui/material/CardContent"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import { Form, redirect } from "react-router-dom"
+import { CurrencyYen } from "@mui/icons-material"
 
 export default function CareerCard({ career }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: "335px" }}>
       <CardContent>
-        <Typography>{career.company_name}</Typography>
-        <Typography>{career.salary}</Typography>
-        <Typography>{career.location}</Typography>
+        <Typography>
+          Company:{" "}
+          <Typography variant="p" component="i">
+            {career.company_name}
+          </Typography>
+        </Typography>
+        <Typography>
+          Job Opening: <i>{career.occupation_title}</i>
+        </Typography>
+        <Typography>
+          Openings: <i>{career.req_no_of_employees}</i>
+        </Typography>
+        <Typography>
+          Salary Range: <CurrencyYen />
+          <i>
+            {career.salary_min} - {career.salary_min} / hr
+          </i>
+        </Typography>
+        <Typography>
+          Location: <i>{career.location}</i>
+        </Typography>
       </CardContent>
       <CardActions>
         <Form action={`${career._id.toString()}/edit`}>

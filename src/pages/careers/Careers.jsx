@@ -19,66 +19,67 @@ import SearchIcon from "@mui/icons-material/Search"
 
 export default function Careers() {
   const fetchedCareers = useLoaderData()
-  // const [searchInput, setSearchInput] = useState()
+  const [searchInput, setSearchInput] = useState()
   const [careers, setCareers] = useState([])
-  const [filters, setFilters] = useState({
-    searchInput: "",
-    salaryMin: "",
-    salaryMax: "",
-    jobType: "",
-    showResult: false
-  })
+  // const [filters, setFilters] = useState({
+  //   searchInput: "",
+  //   salaryMin: "",
+  //   salaryMax: "",
+  //   jobType: "",
+  //   showResult: false
+  // })
 
   useEffect(() => {
-    !filters.searchInput &&
-      setCareers(fetchedCareers) &&
-      setFilters({ ...filters, showResult: false })
-  }, [filters])
+    !searchInput && setCareers(fetchedCareers)
+    // setFilters({ ...filters, showResult: false })
+  }, [searchInput])
 
-  const handleFilters = e => {
-    const { name, value } = e.target
-    setFilters({ ...filters, [name]: value })
-  }
+  // const handleFilters = e => {
+  //   const { name, value } = e.target
+  //   setFilters({ ...filters, [name]: value })
+  // }
 
-  const searchCareers = () => {
-    setFilters({ ...filters, showResult: true })
+  const searchCareers = e => {
+    // setFilters({ ...filters, showResult: true })
+    setSearchInput(e.target.value)
     setCareers(
-      careers.filter(
-        career =>
-          parseInt(career.salary_min) === filters.salaryMin &&
-          parseInt(career.salary_max) === filters.salaryMax &&
-          career.occupation_title
-            .toLowerCase()
-            .includes(filters.searchInput.toLowerCase())
+      careers.filter(career =>
+        // parseInt(career.salary_min) === filters.salaryMin &&
+        // parseInt(career.salary_max) === filters.salaryMax &&
+        career.occupation_title
+          .toLowerCase()
+          .includes(searchInput.toLowerCase())
       )
     )
   }
 
-  console.log(filters.searchInput)
+  // console.log(filters.searchInput)
 
   // console.log(careers.map(career => career.salary_min))
 
   return (
     <Container sx={{ marginTop: "50px" }}>
       {/* <form> */}
-      <TextField
-        size="small"
-        type="search"
-        name="searchInput"
-        value={filters.searchInput}
-        onChange={handleFilters}
-        placeholder="Search careers"
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <SearchIcon onClick={searchCareers} />
-            </InputAdornment>
-          )
-        }}
-      />
-      <Button onClick={searchCareers}>Search</Button>
-      <Stack>
-        {/* <FormControl fullWidth> */}
+      <Stack gap={2}>
+        <TextField
+          mx="auto"
+          size="small"
+          type="search"
+          name="searchInput"
+          value={searchInput}
+          onChange={searchCareers}
+          placeholder="Search careers"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <SearchIcon onClick={searchCareers} />
+              </InputAdornment>
+            )
+          }}
+          sx={{ width: "90%", alignSelf: "center" }}
+        />
+        {/* <Button onClick={searchCareers}>Search</Button> */}
+        {/* <Stack>
         <InputLabel id="salaryMin">Minimum Salary</InputLabel>
         <Select
           size="small"
@@ -111,31 +112,30 @@ export default function Careers() {
           <MenuItem value={5000}>5000</MenuItem>
           <MenuItem value={6000}>6000</MenuItem>
         </Select>
-        {/* </FormControl> */}
+      </Stack> */}
+        {searchInput && (
+          <Typography variant="h6">
+            Search Results for <i>({searchInput})</i> : {careers.length}
+          </Typography>
+        )}
+        {/* <p>{filters.salaryMin}</p> */}
+        {/* <p>{filters.salaryMax}</p> */}
+        <Box>
+          <Stack
+            mt={3}
+            gap={3}
+            direction="horizontal"
+            flexWrap="wrap"
+            justifyContent="center"
+          >
+            {careers.map(career => (
+              <Link to={career._id.toString()} key={career._id}>
+                <MediaCard career={career} />
+              </Link>
+            ))}
+          </Stack>
+        </Box>
       </Stack>
-      {/* </form> */}
-      {filters.showResult && (
-        <Typography variant="h6">
-          Search Results for <i>({filters.searchInput})</i> : {careers.length}
-        </Typography>
-      )}
-      {/* <p>{filters.salaryMin}</p> */}
-      {/* <p>{filters.salaryMax}</p> */}
-      <Box>
-        <Stack
-          mt={3}
-          gap={3}
-          direction="horizontal"
-          flexWrap="wrap"
-          justifyContent="center"
-        >
-          {careers.map(career => (
-            <Link to={career._id.toString()} key={career._id}>
-              <MediaCard career={career} />
-            </Link>
-          ))}
-        </Stack>
-      </Box>
     </Container>
   )
 }

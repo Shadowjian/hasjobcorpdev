@@ -29,8 +29,9 @@ import AdminCareers from "./pages/admin/AdminCareers"
 
 import EmployersInfo from "./pages/employersInfo/EmployersInfo"
 import EditCareerForm, { editAction } from "./pages/admin/AdminEditForm"
-import { destroyAction } from "./pages/careers/CareerCard"
+import { destroyAction } from "./pages/admin/CareerCard"
 import ErrorPage from "./pages/error/ErrorPage"
+import AdminSandbox from "./pages/admin/AdminSandbox"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -62,6 +63,7 @@ const router = createBrowserRouter(
         element={<AdminLayout />}
         errorElement={<ErrorPage />}
       >
+        <Route index element={<AdminCareers />} loader={careerLoader} />
         <Route
           path="admincareers"
           element={<AdminCareers />}

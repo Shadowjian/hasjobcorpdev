@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link, useLoaderData } from "react-router-dom"
-import CareerCard from "../careers/CareerCard"
+import CareerCard from "./CareerCard"
 import TextField from "@mui/material/TextField"
 
 export default function AdminCareers() {
@@ -18,7 +18,6 @@ export default function AdminCareers() {
 
   return (
     <>
-      <Link to="../addcareer">Add Career</Link>
       {careers.map(career => (
         <CareerCard career={career} key={career._id} />
       ))}
