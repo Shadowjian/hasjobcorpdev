@@ -5,6 +5,7 @@ import {
   Button,
   Container,
   FormControl,
+  InputAdornment,
   InputLabel,
   MenuItem,
   Select,
@@ -14,6 +15,7 @@ import {
 import { Stack } from "@mui/system"
 import { Link, useLoaderData } from "react-router-dom"
 import MediaCard from "./MediaCard"
+import SearchIcon from "@mui/icons-material/Search"
 
 export default function Careers() {
   const fetchedCareers = useLoaderData()
@@ -23,11 +25,14 @@ export default function Careers() {
     searchInput: "",
     salaryMin: "",
     salaryMax: "",
-    jobType: ""
+    jobType: "",
+    showResult: false
   })
 
   useEffect(() => {
-    !filters.searchInput && setCareers(fetchedCareers)
+    !filters.searchInput &&
+      setCareers(fetchedCareers) &&
+      setFilters({ ...filters, showResult: false })
   }, [filters])
 
   const handleFilters = e => {
@@ -36,7 +41,7 @@ export default function Careers() {
   }
 
   const searchCareers = () => {
-    // setSearchInput(e.target.value)
+    setFilters({ ...filters, showResult: true })
     setCareers(
       careers.filter(
         career =>
@@ -49,24 +54,34 @@ export default function Careers() {
     )
   }
 
+  console.log(filters.searchInput)
+
   // console.log(careers.map(career => career.salary_min))
 
   return (
     <Container sx={{ marginTop: "50px" }}>
       {/* <form> */}
       <TextField
-        type="text"
         size="small"
+        type="search"
         name="searchInput"
         value={filters.searchInput}
         onChange={handleFilters}
         placeholder="Search careers"
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon onClick={searchCareers} />
+            </InputAdornment>
+          )
+        }}
       />
       <Button onClick={searchCareers}>Search</Button>
       <Stack>
         {/* <FormControl fullWidth> */}
         <InputLabel id="salaryMin">Minimum Salary</InputLabel>
         <Select
+          size="small"
           labelId="salaryMin"
           id="salaryMin"
           name="salaryMin"
@@ -81,6 +96,7 @@ export default function Careers() {
         </Select>
         <InputLabel id="salaryMax">Maximum Salary</InputLabel>
         <Select
+          size="small"
           labelId="salaryMax"
           name="salaryMax"
           id="salaryMax"
@@ -98,13 +114,13 @@ export default function Careers() {
         {/* </FormControl> */}
       </Stack>
       {/* </form> */}
-      {filters.searchInput && (
+      {filters.showResult && (
         <Typography variant="h6">
           Search Results for <i>({filters.searchInput})</i> : {careers.length}
         </Typography>
       )}
-      <p>{filters.salaryMin}</p>
-      <p>{filters.salaryMax}</p>
+      {/* <p>{filters.salaryMin}</p> */}
+      {/* <p>{filters.salaryMax}</p> */}
       <Box>
         <Stack
           mt={3}
