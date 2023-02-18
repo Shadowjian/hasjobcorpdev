@@ -58,6 +58,7 @@ const Categories = () => {
       >
      
         <StyledBox data-aos="fade-right"
+         data-aos-duration="3000"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${HealthCare})`
           }}
@@ -68,6 +69,7 @@ const Categories = () => {
         </StyledBox>
       
         <StyledBox data-aos="fade-right"
+         data-aos-duration="3000"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Manufacturing})`
           }}
@@ -78,6 +80,7 @@ const Categories = () => {
         </StyledBox>
 
         <StyledBox data-aos="fade-left"
+         data-aos-duration="3000"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Housekeeping})`
           }}
@@ -87,6 +90,7 @@ const Categories = () => {
           </StyledTypography>
         </StyledBox>
         <StyledBox data-aos="fade-left" 
+         data-aos-duration="3000"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Warehouse})`
           }}
@@ -96,7 +100,8 @@ const Categories = () => {
           </StyledTypography>
         </StyledBox>
       </Stack>
-      <Box data-aos="fade-up" align="center">
+      <Box data-aos="fade-up" align="center"
+       data-aos-duration="3000">
         <Link to="careers">
           <Button
             variant="outlined"

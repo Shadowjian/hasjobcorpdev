@@ -21,8 +21,8 @@ const RecruitmentPage = () => {
           Job Information
         </Typography>
         <Box data-aos="fade-up"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine"
+   data-aos-duration="3000"
+
           sx={{
             margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
             backgroundColor: "#D8AE5E",
@@ -50,8 +50,7 @@ const RecruitmentPage = () => {
           </Box>
         </Box>
         <Box data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine"
+     data-aos-duration="3000"
           sx={{
             margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
             backgroundColor: "#D8AE5E",
@@ -80,8 +79,7 @@ const RecruitmentPage = () => {
           </Box>
         </Box>
         <Box data-aos="fade-left"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine"
+   data-aos-duration="3000"
           sx={{
             margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
             backgroundColor: "#D8AE5E",
@@ -100,8 +98,7 @@ const RecruitmentPage = () => {
           </Typography>
         </Box>
         <Box data-aos="fade-up"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine"
+   data-aos-duration="3000"
           sx={{
             margin: { md: "50px 0px", xs: "20px 0", sm: "30px 0" },
             backgroundColor: "#D8AE5E",

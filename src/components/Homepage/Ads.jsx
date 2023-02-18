@@ -19,7 +19,8 @@ const Ads = () => {
           alignItems="center"
           spacing={{ xs: 1, sm: 2, md: 15 }}
         >
-          <Box data-aos="fade-right"
+          <Box data-aos="fade-right" 
+           data-aos-duration="3000"
             sx={{
               backgroundImage: `url(${AdsImage})`,
               boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
@@ -30,7 +31,8 @@ const Ads = () => {
               backgroundSize: "cover"
             }}
           ></Box>
-          <Box data-aos="fade-left">
+          <Box data-aos="fade-left"
+           data-aos-duration="3000">
             <StyledTypography
               textAlign="center"
               variant="h3"

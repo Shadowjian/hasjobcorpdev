@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 const Information = () => {
   return (
     <Container sx={{ display: { md: "flex", sm: "row", xs: "row" ,  overflow: "hidden"} }}>
-      <Box data-aos="fade-up"
+      <Box data-aos="fade-up"  data-aos-duration="3000"
 
         backgroundColor="#D8AE5E"
         padding="30px"
