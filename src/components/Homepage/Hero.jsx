@@ -29,7 +29,7 @@ const Hero = () => {
             alignItems: "center  "
           }}
         >
-          <Box data-aos="fade-up" data-aos-duration="1500">
+          <Box data-aos="fade-up" data-aos-duration="500">
             <Typography
               variant="h3"
               color="white"
@@ -39,7 +39,7 @@ const Hero = () => {
               HAソリューションへようこそ
             </Typography>
           </Box>
-          <Box  data-aos="fade-down"  data-aos-duration="1500" >
+          <Box  data-aos="fade-down"  data-aos-duration="500" >
             <Typography
               variant="h6"
               color="white"
@@ -59,7 +59,7 @@ const Hero = () => {
               margin: "30px"
             }}
           >
-            <Box data-aos="fade-right"   data-aos-duration="1500">
+            <Box data-aos="fade-right"   data-aos-duration="500">
             <NavLink to="employers">
             <Button
               variant="contained"
@@ -76,7 +76,7 @@ const Hero = () => {
             </Button>
             </NavLink>
             </Box>
-            <Box data-aos="fade-left"   data-aos-duration="1500">
+            <Box data-aos="fade-left"   data-aos-duration="500">
             <NavLink to="recruitment">
             <Button
               variant="contained"

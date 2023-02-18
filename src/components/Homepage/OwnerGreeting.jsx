@@ -14,13 +14,13 @@ const OwnerGreeting = () => {
         overflow: "hidden"
       }}
     >
-      <Box  data-aos="fade-right" data-aos-duration="1500">
+      <Box  data-aos="fade-right" data-aos-duration="500">
         <Avatar
           sx={{ width: 200, height: 200 }}
           src=""
         />
       </Box>
-      <Box data-aos="fade-left" data-aos-duration="1500">
+      <Box data-aos="fade-left" data-aos-duration="500">
         <Typography>
           我々はクライアントの皆様のニーズを、私たちの多種多様な雇用サービスによって実現致します。
           どのような形態(短期、長期、契約)の雇用であっても、適切な人材をご紹介致します。
