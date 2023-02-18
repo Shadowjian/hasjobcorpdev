@@ -15,11 +15,12 @@ import {
 
 function MediaCard({ career }) {
   return (
-    <Container sx={{marginBottom:"300px"}}>
+    <Container>
       <Card
         sx={{
           maxWidth: 345,
-          "&:hover": { boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }
+          "&:hover": { boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" },
+          marginBottom:"50px"
         }}
       >
         <CardMedia

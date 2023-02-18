@@ -1,18 +1,17 @@
 import {
   AccessTime,
   ArrowBack,
-  BeachAccess,
+
   Business,
   CurrencyYen,
-  Image,
   Language,
   People,
-  PeopleAlt,
+
   Place,
   Wc,
   Work,
   WorkspacePremium,
-  Workspaces
+
 } from "@mui/icons-material"
 import {
   Avatar,
@@ -24,8 +23,8 @@ import {
   ListItemText,
   Typography
 } from "@mui/material"
-import { Box, Stack } from "@mui/system"
-import { Link, useLoaderData, useParams } from "react-router-dom"
+import { Box } from "@mui/system"
+import { Link, useLoaderData } from "react-router-dom"
 import HeroImage from "../../assets/images/jobcoverdetails.png"
 import AdsImage from "../../assets/images/img.png"
 
@@ -166,7 +165,7 @@ export default function CareerDetails() {
                   </Typography>
                 </Box>
                 <Typography variant="h5" fontSize="20px" paddingLeft="55px">
-                  {" "}
+               
                   {career.location}
                 </Typography>
               </Box>
@@ -306,6 +305,7 @@ export default function CareerDetails() {
               </Box>
             </Container>
           </Box>
+
           <Box sx={{ marginTop: "30px" }}>
             <Typography variant="h4" sx={{ fontSize: { xs: "30px" } }}>
               Job Description

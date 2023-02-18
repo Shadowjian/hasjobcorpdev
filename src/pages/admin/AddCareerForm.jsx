@@ -1,5 +1,5 @@
 import React from "react"
-import { Form, Link, redirect, useActionData } from "react-router-dom"
+import { Form, Link, redirect } from "react-router-dom"
 import TextField from "@mui/material/TextField"
 import { Button, CardActions } from "@mui/material"
 import { Container, Stack } from "@mui/system"
@@ -34,6 +34,8 @@ export default function AddCareerForm() {
             // required
           />
           <TextField
+            multiline
+            rows={10}
             size="small"
             label="Job Description"
             multiline
@@ -162,7 +164,7 @@ export default function AddCareerForm() {
 
 export async function careerFormAction({ request }) {
   const careerForm = await request.formData()
-  const errors = {}
+  // const errors = {}
   const newCareer = {
     company_name: careerForm.get("company_name"),
     cat_of_industry: careerForm.get("cat_of_industry"),
