@@ -59,7 +59,7 @@ const Hero = () => {
               margin: "30px"
             }}
           >
-            <Box data-aos="fade-right">
+            <Box data-aos="fade-right"  data-aos-duration="3000">
             <NavLink to="employers">
             <Button
               variant="contained"
@@ -76,7 +76,7 @@ const Hero = () => {
             </Button>
             </NavLink>
             </Box>
-            <Box data-aos="fade-left">
+            <Box data-aos="fade-left"  data-aos-duration="3000">
             <NavLink to="recruitment">
             <Button
               variant="contained"
