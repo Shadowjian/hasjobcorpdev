@@ -12,7 +12,7 @@ const StyledBox = styled(Box)({
 const CompanyProfile = () => {
   return (
     <Container
-    data-aos="fade-up" data-aos-duration="1500"
+    data-aos="fade-up"data-aos-duration="500"
       sx={{
         backgroundColor: "#D8AE5E",
         borderRadius: "10px",
