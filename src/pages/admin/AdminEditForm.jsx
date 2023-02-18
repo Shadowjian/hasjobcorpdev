@@ -47,6 +47,7 @@ export default function AddCareerForm() {
             size="small"
             label="Job Description"
             defaultValue={career.job_desc}
+            multiline
             type="text"
             name="job_desc"
             // required

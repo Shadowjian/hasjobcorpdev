@@ -36,6 +36,7 @@ export default function AddCareerForm() {
           <TextField
             size="small"
             label="Job Description"
+            multiline
             type="text"
             name="job_desc"
             // required
