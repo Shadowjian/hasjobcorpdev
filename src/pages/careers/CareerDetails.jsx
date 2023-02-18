@@ -306,17 +306,16 @@ export default function CareerDetails() {
             </Container>
           </Box>
 
-          <Box sx={{ marginTop: "30px" }}>
+          <Box sx={{ marginTop: "10px" }}>
             <Typography variant="h4" sx={{ fontSize: { xs: "30px" } }}>
               Job Description
             </Typography>
-            <Box sx={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <pre
-              // component="p"
-              // sx={{ fontSize: { xs: "17px" }, padding: "20px" }}
-              >
+            <Box sx={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px", padding:"20px"}}>
+              <Box sx={{marginBottom:"30px"}}>
+              <pre className="jobDesc">
                 {career.job_desc}
               </pre>
+              </Box>
               <Button
                 href="https://forms.gle/HdafsVVzWQ418cXv8"
                 target="_blank"
