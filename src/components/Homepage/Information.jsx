@@ -6,10 +6,9 @@ import { Link } from "react-router-dom"
 
 const Information = () => {
   return (
-    <Container sx={{ display: { md: "flex", sm: "row", xs: "row" } }}>
-      <Box data-aos="fade-up"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine"
+    <Container sx={{ display: { md: "flex", sm: "row", xs: "row" ,  overflow: "hidden"} }}>
+      <Box data-aos="fade-up" data-aos-duration="500"
+
         backgroundColor="#D8AE5E"
         padding="30px"
         borderRadius="10px"

@@ -4,24 +4,23 @@ import React from "react";
 
 const OwnerGreeting = () => {
   return (
-    <Container data-aos="fade-up"
-    data-aos-offset="300"
-    data-aos-easing="ease-in-sine"
+    <Container
       sx={{
         display: "flex",
         flexDirection: {md:"row",sm:"column",xs:"column"},
         justifyContent: "center",
         alignItems: "center",
         paddingBottom: "100px",
+        overflow: "hidden"
       }}
     >
-      <Box>
+      <Box  data-aos="fade-right"data-aos-duration="500">
         <Avatar
           sx={{ width: 200, height: 200 }}
           src=""
         />
       </Box>
-      <Box>
+      <Box data-aos="fade-left"data-aos-duration="500">
         <Typography>
           我々はクライアントの皆様のニーズを、私たちの多種多様な雇用サービスによって実現致します。
           どのような形態(短期、長期、契約)の雇用であっても、適切な人材をご紹介致します。

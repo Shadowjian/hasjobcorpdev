@@ -4,6 +4,10 @@ import Categories from '../../components/Homepage/Categories'
 import Hero from '../../components/Homepage/Hero'
 import Information from '../../components/Homepage/Information'
 import OwnerGreeting from '../../components/Homepage/OwnerGreeting'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 const Home = () => {

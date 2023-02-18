@@ -22,7 +22,7 @@ const Overview = () => {
         boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"
       }}
     >
-      <Box mb="50px">
+      <Box mb="50px" data-aos="fade-up"data-aos-duration="500">
         <Typography variant="h2" align="center">
           概要
         </Typography>
@@ -48,7 +48,7 @@ const Overview = () => {
         </StyledTypography>
       </Box>
 
-      <Box mb="50px">
+      <Box mb="50px" data-aos="fade-right"data-aos-duration="500">
         <TitleTypography variant="h2">ミッション</TitleTypography>
         <StyledTypography>
           クライアントとその顧客の両方が信頼し、喜んで選択できる採用パートナーになること。
@@ -61,7 +61,7 @@ const Overview = () => {
         </StyledTypography>
       </Box>
 
-      <Box mb="50px">
+      <Box mb="50px" data-aos="fade-left"data-aos-duration="500">
         <TitleTypography variant="h2">ヴィジョン</TitleTypography>
         <StyledTypography>
           私たちのビジョンは、サービスの範囲と品質に基づいて、お客様に選ばれる人材紹介会社になることです。
@@ -77,9 +77,9 @@ const Overview = () => {
         </StyledTypography>
       </Box>
 
-      <Box>
+      <Box data-aos="fade-right"data-aos-duration="500">
         <TitleTypography variant="h2">価値</TitleTypography>
-        <Box mb="50px">
+        <Box mb="50px" data-aos="fade-up"data-aos-duration="500">
           <Typography variant="h4">人</Typography>
           <Typography>
             私たちは人々とその生活における仕事の役割を気にかけています。
@@ -94,7 +94,7 @@ const Overview = () => {
           </Typography>
         </Box>
 
-        <Box mb="50px">
+        <Box mb="50px" data-aos="fade-up"data-aos-duration="500">
           <Typography variant="h4">知識</Typography>
           <Typography>
             私たちは知識、専門知識、リソースを共有して、仕事の世界で今何が重要で、次に何が起こっているのかを誰もが
