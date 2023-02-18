@@ -20,7 +20,7 @@ const Ads = () => {
           spacing={{ xs: 1, sm: 2, md: 15 }}
         >
           <Box data-aos="fade-right" 
-           data-aos-duration="3000"
+           data-aos-duration="1500"
             sx={{
               backgroundImage: `url(${AdsImage})`,
               boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
@@ -32,7 +32,7 @@ const Ads = () => {
             }}
           ></Box>
           <Box data-aos="fade-left"
-           data-aos-duration="3000">
+           data-aos-duration="1500">
             <StyledTypography
               textAlign="center"
               variant="h3"

@@ -27,7 +27,7 @@ const EmployersInfoPage = () => {
         }}
       >
         <Box mb="50px" data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
           <Typography variant="h2" align="center">
             派遣の流れ
           </Typography>
@@ -59,7 +59,7 @@ const EmployersInfoPage = () => {
         </Box>
 
         <Box mb="50px" data-aos="fade-right"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
           <TitleTypography variant="h2">●派遣法</TitleTypography>
           <br />
           <StyledTypography>・労働者派遣事業の許可</StyledTypography>
@@ -76,7 +76,7 @@ const EmployersInfoPage = () => {
         </Box>
 
         <Box mb="50px" data-aos="fade-left"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
           <TitleTypography variant="h2">
             〇派遣労働者の同一労働同一賃金
           </TitleTypography>
@@ -107,7 +107,7 @@ const EmployersInfoPage = () => {
 
         <Box>
           <Box mb="50px" data-aos="fade-right"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
             <TitleTypography variant="h2">
               ◎派遣通知書と呼ばれる書類で派遣先に伝えるべきものは、
             </TitleTypography>
@@ -128,7 +128,7 @@ const EmployersInfoPage = () => {
           </Box>
 
           <Box mb="50px" data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
             <TitleTypography variant="h2">●禁止事項</TitleTypography>
             <StyledTypography>
               派遣先による派遣労働者を特定することを目的とする行為
@@ -140,7 +140,7 @@ const EmployersInfoPage = () => {
           </Box>
 
           <Box mb="50px" data-aos="fade-down"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
             <TitleTypography variant="h2">●労働法</TitleTypography>
             <StyledTypography>
               ・1日8時間、週40時間までが原則(基本残業出来ない)
@@ -158,7 +158,7 @@ const EmployersInfoPage = () => {
           </Box>
         </Box>
         <Box data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
         <StyledTypography>
           ↓これをクリックすると情報が表示されます
         </StyledTypography>
@@ -170,7 +170,7 @@ const EmployersInfoPage = () => {
         <br />
 
         <Box mb="50px" data-aos="fade-right"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
           <TitleTypography variant="h2">ビザについて</TitleTypography>
           <StyledTypography>・留学生ビザ</StyledTypography>
           <StyledTypography>資格外活動許可有り</StyledTypography>
@@ -184,7 +184,7 @@ const EmployersInfoPage = () => {
           <StyledTypography>日本人と同条件</StyledTypography>
         </Box>
         <Box data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
         <StyledTypography>
           ↓これをクリックすると情報が表示されます
         </StyledTypography>
@@ -204,11 +204,11 @@ const EmployersInfoPage = () => {
       >
       
       <Box data-aos="fade-right"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
         <TitleTypography variant="h2" marginBottom="20px"> 介護福祉士の資格</TitleTypography>
         </Box>
         <Box data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
         <StyledTypography fontWeight="bold">🟡養成施設ルート(外国人留学生)</StyledTypography>
         <StyledTypography>日本語学校</StyledTypography>
         <StyledTypography>↓↓↓</StyledTypography>
@@ -220,7 +220,7 @@ const EmployersInfoPage = () => {
         </Box>
         <br/>
         <Box data-aos="fade-down"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
         <StyledTypography fontWeight="bold">●国家試験時期</StyledTypography>
         <StyledTypography>年に１回</StyledTypography>
         <StyledTypography>例年、試験の申し込み時期は8月～9月頃となっています。</StyledTypography>
@@ -230,7 +230,7 @@ const EmployersInfoPage = () => {
         <br/>
         <br/>
         <Box data-aos="fade-right"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
         <StyledTypography fontWeight="bold">🟡実務経験ルート</StyledTypography>
         <StyledTypography>実務経験ルートでは、3年以上の経験（従業期間3年以上、従事日数540日以上）と合わせて実務者研修の修了が国家試験受験の際の条件</StyledTypography>
         <StyledTypography>従事日数と従業期間は両方満さなくてはいけません。実務経験3年（1,095日）以上、かつ従事日数540日以上というのが受験資格の条件です。</StyledTypography>
@@ -238,7 +238,7 @@ const EmployersInfoPage = () => {
         </Box>
         <br/>
         <Box data-aos="fade-up"
-     data-aos-duration="3000">
+     data-aos-duration="1500">
         <StyledTypography fontWeight="bold">●実務者研修(資格)</StyledTypography>
         <StyledTypography>450時間のカリキュラム修了するには、民間の資格学校に通って講座を受講。</StyledTypography>
         <StyledTypography>スクールは多数あるため、スクーリングや通信教育形式など、自分に合った学び方を選べる。</StyledTypography>

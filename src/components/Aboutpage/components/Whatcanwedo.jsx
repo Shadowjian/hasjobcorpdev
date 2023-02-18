@@ -13,14 +13,14 @@ import React from "react"
 const Whatcanwedo = () => {
   return (
     <Container sx={{marginBottom:"100px"}}>
-      <Typography data-aos="fade-right" data-aos-duration="3000"
+      <Typography data-aos="fade-right" data-aos-duration="1500"
         variant="h2"
         mt="50px"
         fontSize={{ xs: "50px", sm: "60px", md: "70  px" }}
       >
         私たちは何ができる？
       </Typography>
-      <Box data-aos="fade-up" data-aos-duration="3000"
+      <Box data-aos="fade-up" data-aos-duration="1500"
         backgroundColor="#0B3749"
         padding="40px"
         borderRadius="10px"
@@ -121,7 +121,7 @@ const Whatcanwedo = () => {
       </Box>
       <br />
 
-      <Box data-aos="fade-up" data-aos-duration="3000"
+      <Box data-aos="fade-up" data-aos-duration="1500"
         backgroundColor="#0B3749"
         padding="40px"
         borderRadius="10px"
