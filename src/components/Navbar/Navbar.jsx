@@ -60,7 +60,7 @@ const Navbar = () => {
       >
         <StyledToolbar>
           <Box>
-            <NavLink to="/" >
+            <NavLink to="/"  >
               <Box sx={{display:"flex", flexDirection:"row", alignItems:"center"}}>
                <Avatar alt="hasolution" src={LogoGif} sx={{ width: 60, height: 60 }}/>
               <MenuLogo>ソリューション株式会社</MenuLogo>
@@ -69,22 +69,22 @@ const Navbar = () => {
             </NavLink>
           </Box>
           <MenuBox sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
-            <NavLink style={navlinkStyles} to="/">
+            <NavLink style={navlinkStyles} to="/" >
               <MenuTypeItem>ホームページ</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="careers">
+            <NavLink style={navlinkStyles} to="careers" >
               <MenuTypeItem>キャリア</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="recruitment">
+            <NavLink style={navlinkStyles} to="recruitment" >
               <MenuTypeItem>採用情報</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="employers">
+            <NavLink style={navlinkStyles} to="employers" >
               <MenuTypeItem>雇用主の情報</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="about">
+            <NavLink style={navlinkStyles} to="about" >
               <MenuTypeItem>会社について</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="contact-us">
+            <NavLink style={navlinkStyles} to="contact-us" >
               <MenuTypeItem>お問い合わせ</MenuTypeItem>
             </NavLink>
           </MenuBox>

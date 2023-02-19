@@ -63,7 +63,12 @@ const Footer = () => {
             <Box display="flex"  gap={1}>
             <Link  href="https://www.facebook.com/profile.php?id=100089559129010"><Facebook/></Link>
             </Box>
+            <div id="google_translate_element"></div>
+
+           
+       
           </Box>
+        
         </Box>
         <Typography align='center' fontSize="15px" color="#fff">
             Copyright ©2023. ＨＡソリューション株式会社
