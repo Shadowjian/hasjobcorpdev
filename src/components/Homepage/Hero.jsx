@@ -5,10 +5,9 @@ import HeroImage from "../../assets/images/cover.png"
 import { NavLink } from "react-router-dom"
 
 const Hero = () => {
-
-
   return (
     <Box sx={{ overflow: "hidden"}}>
+    
       <Box
         sx={{
           backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${HeroImage})`,
