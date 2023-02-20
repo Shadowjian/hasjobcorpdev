@@ -44,9 +44,10 @@ export default function AddCareerForm() {
             // required
           />
           <TextField
+            multiline
+            rows={10}
             size="small"
             label="Job Description"
-            multiline
             type="text"
             name="job_desc"
             // required
@@ -172,7 +173,7 @@ export default function AddCareerForm() {
 
 export async function careerFormAction({ request }) {
   const careerForm = await request.formData()
-  const errors = {}
+  // const errors = {}
   const newCareer = {
     company_name: careerForm.get("company_name"),
     cat_of_industry: careerForm.get("cat_of_industry"),
