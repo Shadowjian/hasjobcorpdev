@@ -5,11 +5,11 @@ import { Container, Typography } from "@mui/material"
 
 export default function Loader() {
   return (
-    <LoadingProgress />
     // <Container sx={{ height: "70vh", pt: 2 }}>
     //   <Typography variant="h5" sx={{ color: "#D8AE5E" }}>
     //     Loading...
     //   </Typography>
+    <LoadingProgress />
     // </Container>
   )
 }

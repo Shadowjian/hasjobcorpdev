@@ -1,13 +1,11 @@
 import { Box, Button, Stack, styled, Typography } from "@mui/material"
-import { Link } from "react-router-dom"
+import { Link, redirect } from "react-router-dom"
 import React from "react"
 import HealthCare from "../../assets/images/careworker.jpg"
 import Warehouse from "../../assets/images/warehouse.jpg"
 import Manufacturing from "../../assets/images/manufacturing.jpg"
 import JobOffer from "../../assets/images/joboffer.svg"
 import Housekeeping from "../../assets/images/housekeeping.jpg"
-
-
 
 const StyledBox = styled(Box)({
   height: 300,
@@ -44,9 +42,9 @@ const Categories = () => {
       }}
     >
       <Box data-aos="fade-up">
-
-        <Typography  variant="h3" align="center">職種</Typography>
-
+        <Typography variant="h3" align="center">
+          職種
+        </Typography>
       </Box>
       <Stack
         direction={{ xs: "column", sm: "column", md: "row" }}
@@ -56,52 +54,102 @@ const Categories = () => {
         mt={5}
         mb={5}
       >
-     
-        <StyledBox data-aos="fade-right"
-       data-aos-duration="500"
+        {[
+          {
+            cat: "HealthCare",
+            jap: "介護者",
+            bg: HealthCare,
+            animate: "fade-right"
+          },
+          {
+            cat: "Manufacturing",
+            jap: "工場内作業",
+            bg: Manufacturing,
+            animate: "fade-right"
+          },
+          {
+            cat: "Housekeeping",
+            jap: "清掃",
+            bg: Housekeeping,
+            animate: "fade-left"
+          },
+          {
+            cat: "Warehouse",
+            jap: "倉庫内作業",
+            bg: Warehouse,
+            animate: "fade-left"
+          }
+        ].map(el => (
+          <StyledBox
+            data-aos={el.animate}
+            data-aos-duration="500"
+            sx={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${el.bg})`
+            }}
+          >
+            <StyledTypography
+              align="center"
+              variant="h6"
+              // onClick={handleCategory}
+            >
+              <Link to="careers">{el.jap}</Link>
+              {/* 介護者 */}
+            </StyledTypography>
+          </StyledBox>
+        ))}
+
+        {/* <StyledBox
+          data-aos="fade-right"
+          data-aos-duration="500"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${HealthCare})`
           }}
         >
           <StyledTypography align="center" variant="h6">
-          介護者
+            HealthCare
+            介護者
           </StyledTypography>
         </StyledBox>
-      
-        <StyledBox data-aos="fade-right"
-       data-aos-duration="500"
+
+        <StyledBox
+          data-aos="fade-right"
+          data-aos-duration="500"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Manufacturing})`
           }}
         >
           <StyledTypography align="center" variant="h6">
-          工場内作業
+            Manufacturing
+            工場内作業
           </StyledTypography>
         </StyledBox>
 
-        <StyledBox data-aos="fade-left"
-  data-aos-duration="500"
+        <StyledBox
+          data-aos="fade-left"
+          data-aos-duration="500"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Housekeeping})`
           }}
         >
           <StyledTypography align="center" variant="h6">
-          清掃
+            Housekeeping
+            清掃
           </StyledTypography>
         </StyledBox>
-        <StyledBox data-aos="fade-left" 
-        data-aos-duration="500"
+        <StyledBox
+          data-aos="fade-left"
+          data-aos-duration="500"
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Warehouse})`
           }}
         >
           <StyledTypography align="center" variant="h6">
-          倉庫内作業
+            Warehouse
+            倉庫内作業
           </StyledTypography>
-        </StyledBox>
+        </StyledBox> */}
       </Stack>
-      <Box data-aos="fade-up" align="center"
-      data-aos-duration="500">
+      <Box data-aos="fade-up" align="center" data-aos-duration="500">
         <Link to="careers">
           <Button
             variant="outlined"
