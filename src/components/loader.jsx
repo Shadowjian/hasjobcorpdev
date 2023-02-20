@@ -1,6 +1,6 @@
 import Backdrop from "@mui/material/Backdrop"
 import CircularProgress from "@mui/material/CircularProgress"
-import { Box } from "@mui/system"
+
 import { Container, Typography } from "@mui/material"
 
 export default function Loader() {
