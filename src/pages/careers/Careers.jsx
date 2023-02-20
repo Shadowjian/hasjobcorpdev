@@ -4,11 +4,7 @@ import {
   Box,
   Button,
   Container,
-  FormControl,
   InputAdornment,
-  InputLabel,
-  MenuItem,
-  Select,
   TextField,
   Typography
 } from "@mui/material"
@@ -16,6 +12,7 @@ import { Stack } from "@mui/system"
 import { Link, useLoaderData, useNavigation } from "react-router-dom"
 import MediaCard from "./MediaCard"
 import SearchIcon from "@mui/icons-material/Search"
+import ClearIcon from "@mui/icons-material/Clear"
 import Loader from "../../components/loader"
 
 export default function Careers() {
@@ -47,12 +44,35 @@ export default function Careers() {
       careers.filter(career =>
         // parseInt(career.salary_min) === filters.salaryMin &&
         // parseInt(career.salary_max) === filters.salaryMax &&
-        career.occupation_title
-          .toLowerCase()
-          .includes(searchInput.toLowerCase())
+        career.job_tags.some(element =>
+          element.toLowerCase().includes(searchInput.toLowerCase())
+        )
       )
     )
   }
+
+  // const cat = ["Health", "Cleaning", "Factory", "Warehouse"]
+
+  function handleCategory(e) {
+    const input = e.target.value
+    setCareers(
+      careers.filter(career =>
+        career.job_tags.some(element =>
+          element.toLowerCase().includes(input.toLowerCase())
+        )
+      )
+    )
+  }
+
+  const resetFilter = () => {
+    setCareers(fetchedCareers)
+    setSearchInput("")
+  }
+
+  // setSellers(Sellers.filter((seller)=>{
+  //   // chaining some and includes method to filter array
+  //   return seller.skills.some((element)=>element.includes(searchInput.toLowerCase()))
+  // }))
 
   // loading UI
   // const navigation = useNavigation()
@@ -85,6 +105,38 @@ export default function Careers() {
           }}
           sx={{ width: "90%", alignSelf: "center" }}
         />
+
+        <Stack
+          direction="horizontal"
+          gap={2}
+          justifyContent="center"
+          alignItems="center"
+        >
+          {["HealthCare", "Manufacturing", "Housekeeping", "Warehouse"].map(
+            el => (
+              <Button
+                variant="contained"
+                size="small"
+                onClick={handleCategory}
+                value={el}
+                sx={{
+                  bgcolor: "#D8AE5E",
+                  color: "#0B3749",
+                  "&:hover": { bgcolor: "#0B3749", color: "#D8AE5E" }
+                }}
+              >
+                {el}
+              </Button>
+            )
+          )}
+          <ClearIcon
+            onClick={resetFilter}
+            sx={{
+              "&:hover": { cursor: "pointer", color: "red" },
+              color: "#0B3749"
+            }}
+          />
+        </Stack>
         {/* <Button onClick={searchCareers}>Search</Button> */}
         {/* <Stack>
         <InputLabel id="salaryMin">Minimum Salary</InputLabel>
