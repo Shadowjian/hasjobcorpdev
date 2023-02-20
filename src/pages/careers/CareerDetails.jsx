@@ -327,7 +327,7 @@ export default function CareerDetails() {
               Job Description
             </Typography>
             <Box sx={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <pre
+              <pre className="jobDesc"
               // component="p"
               // sx={{ fontSize: { xs: "17px" }, padding: "20px" }}
               >
