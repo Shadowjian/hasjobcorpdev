@@ -9,7 +9,7 @@ import { CurrencyYen } from "@mui/icons-material"
 
 export default function CareerCard({ career }) {
   return (
-    <Card sx={{ maxWidth: "335px" }}>
+    <Card sx={{ minWidth: "300px", maxWidth: "335px" }}>
       <CardContent>
         <Typography>
           Company:{" "}

@@ -16,7 +16,9 @@ import {
 } from "@mui/icons-material"
 import {
   Avatar,
+  Backdrop,
   Button,
+  CircularProgress,
   Container,
   List,
   ListItem,
@@ -25,13 +27,26 @@ import {
   Typography
 } from "@mui/material"
 import { Box, Stack } from "@mui/system"
-import { Link, useLoaderData, useParams } from "react-router-dom"
+import { Link, useLoaderData, useNavigation, useParams } from "react-router-dom"
 import HeroImage from "../../assets/images/jobcoverdetails.png"
 import AdsImage from "../../assets/images/img.png"
+import Loader from "../../components/loader"
 
 export default function CareerDetails() {
   // const { id } = useParams()
   const career = useLoaderData()
+  const navigation = useNavigation()
+
+  if (navigation.state === "loading") {
+    return <Loader />
+  }
+  // if (navigation.state === "loading") {
+  //   return (
+  //     <Container sx={{ background: "rgba(0,0,0,0.7)", height: "70vh" }}>
+  //       <CircularProgress sx={{ color: "#D8AE5E" }} />
+  //     </Container>
+  //   )
+  // }
 
   return (
     <Box sx={{ marginBottom: "100px" }}>

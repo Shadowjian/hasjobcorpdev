@@ -13,9 +13,10 @@ import {
   Typography
 } from "@mui/material"
 import { Stack } from "@mui/system"
-import { Link, useLoaderData } from "react-router-dom"
+import { Link, useLoaderData, useNavigation } from "react-router-dom"
 import MediaCard from "./MediaCard"
 import SearchIcon from "@mui/icons-material/Search"
+import Loader from "../../components/loader"
 
 export default function Careers() {
   const fetchedCareers = useLoaderData()
@@ -51,6 +52,12 @@ export default function Careers() {
           .includes(searchInput.toLowerCase())
       )
     )
+  }
+
+  // loading UI
+  const navigation = useNavigation()
+  if (navigation.state === "loading") {
+    return <Loader />
   }
 
   // console.log(filters.searchInput)

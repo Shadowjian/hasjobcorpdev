@@ -1,7 +1,7 @@
 // import { Button, Container, TextField, Typography } from "@mui/material"
 import { Stack } from "@mui/system"
-import React, { useState } from "react"
-import { NavLink, Outlet } from "react-router-dom"
+import React, { Suspense, useState } from "react"
+import { NavLink, Outlet, useNavigation } from "react-router-dom"
 import AdminPortal from "../pages/admin/AdminPortal"
 
 import Box from "@mui/material/Box"
@@ -22,6 +22,8 @@ import AddCardIcon from "@mui/icons-material/AddCard"
 import HomeIcon from "@mui/icons-material/Home"
 import MailIcon from "@mui/icons-material/Mail"
 import { AlignVerticalBottom } from "@mui/icons-material"
+import { Backdrop, CircularProgress } from "@mui/material"
+import Loader from "../components/loader"
 
 const drawerWidth = 240
 
