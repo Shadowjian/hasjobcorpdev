@@ -1,14 +1,14 @@
 import { Avatar, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
-import Owner from "../../assets/images/hasolution_owner.jpg"
+import Owner from "../../assets/images/owner_hascorpjob.jpg"
 
 const OwnerGreeting = () => {
   return (
     <Container
       sx={{
         display: "flex",
-        flexDirection: {md:"column",sm:"column",xs:"column"},
+        flexDirection: {md:"row",sm:"column",xs:"column"},
         justifyContent: "center",
         alignItems: "center",
         paddingBottom: "100px",
@@ -17,11 +17,13 @@ const OwnerGreeting = () => {
     >
       <Box  data-aos="fade-right"data-aos-duration="500">
         <Avatar
-          sx={{ width: 200, height: 200 }}
+          sx={{ width: 400, height: 300, }}
           src={Owner}
+          variant="square"
         />
+         
       </Box>
-      <Typography align="center">   代表取締役   牛島寛将</Typography>
+     
       <Box data-aos="fade-left"data-aos-duration="500">
         <Typography>
           我々はクライアントの皆様のニーズを、私たちの多種多様な雇用サービスによって実現致します。
@@ -31,6 +33,7 @@ const OwnerGreeting = () => {
         <Typography>企業理念</Typography>
         <Typography>「人をつなぎ、笑顔と幸せをつくる」</Typography>
         <Typography>あなたを満足させる人材を供給できる、あなたの一番のパートナーです。</Typography> <br/>
+        <Typography align="right">   代表取締役   牛島寛将</Typography>
         
       </Box>
     </Container>
