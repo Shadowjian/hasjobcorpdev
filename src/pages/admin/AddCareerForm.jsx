@@ -15,8 +15,8 @@ export default function AddCareerForm() {
   // const errors = useActionData()
   // console.log(errors)
 
-  const navigation = useNavigation()
-  if (navigation.state === "loading") return <Loader />
+  // const navigation = useNavigation()
+  // if (navigation.state === "loading") return <Loader />
 
   return (
     <Container>

@@ -55,10 +55,10 @@ export default function Careers() {
   }
 
   // loading UI
-  const navigation = useNavigation()
-  if (navigation.state === "loading") {
-    return <Loader />
-  }
+  // const navigation = useNavigation()
+  // if (navigation.state === "loading") {
+  //   return <Loader />
+  // }
 
   // console.log(filters.searchInput)
 
