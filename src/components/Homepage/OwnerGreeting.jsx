@@ -1,7 +1,7 @@
 import { Avatar, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
-import Owner from "../../assets/images/owner_hascorpjob.jpg"
+import Owner from "../../assets/images/owner_has.png"
 
 const OwnerGreeting = () => {
   return (
