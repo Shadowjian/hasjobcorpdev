@@ -31,6 +31,8 @@ export default function AdminLayout() {
   const [loggedIn, setLoggedIn] = useState(false)
   let active = { backgroundColor: "#D8AE5E", color: "#0B3749" }
 
+  const navigation = useNavigation()
+
   if (!loggedIn) {
     return <AdminPortal loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
   }
@@ -100,6 +102,7 @@ export default function AdminLayout() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Toolbar />
+        {navigation.state === "loading" && <Loader />}
         <Stack gap={2} direction="horizontal" flexWrap="wrap">
           <Outlet />
         </Stack>

@@ -8,8 +8,8 @@ export default function AdminCareers() {
   const [loggedIn, setLoggedIn] = useState(true)
   const careers = useLoaderData()
 
-  const navigation = useNavigation()
-  if (navigation.state === "loading") return <Loader />
+  // const navigation = useNavigation()
+  // if (navigation.state === "loading") return <Loader />
 
   if (!loggedIn) {
     return (

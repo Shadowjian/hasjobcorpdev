@@ -4,8 +4,8 @@ import ContactPage from "../../components/Contactpage"
 import Loader from "../../components/loader"
 
 const Contact = () => {
-  const navigation = useNavigation()
-  if (navigation.state === "loading") return <Loader />
+  // const navigation = useNavigation()
+  // if (navigation.state === "loading") return <Loader />
   return <ContactPage />
 }
 

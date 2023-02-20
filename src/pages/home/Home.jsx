@@ -13,10 +13,10 @@ AOS.init()
 
 const Home = () => {
   // loading UI
-  const navigation = useNavigation()
-  if (navigation.state === "loading") {
-    return <Loader />
-  }
+  // const navigation = useNavigation()
+  // if (navigation.state === "loading") {
+  //   return <Loader />
+  // }
   return (
     <>
       <Hero />
