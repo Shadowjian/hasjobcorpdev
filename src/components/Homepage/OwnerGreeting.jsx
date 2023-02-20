@@ -15,7 +15,7 @@ const OwnerGreeting = () => {
         overflow: "hidden"
       }}
     >
-      <Box  data-aos="fade-right"data-aos-duration="500">
+     <Box sx={{display:{md:"none", xs:"block", sm:"block"}}} data-aos="fade-right"data-aos-duration="500">
         <Avatar
           sx={{ width: 400, height: 300, }}
           src={Owner}
@@ -34,7 +34,17 @@ const OwnerGreeting = () => {
         <Typography>「人をつなぎ、笑顔と幸せをつくる」</Typography>
         <Typography>あなたを満足させる人材を供給できる、あなたの一番のパートナーです。</Typography> <br/>
         <Typography align="right">   代表取締役   牛島寛将</Typography>
+
         
+        
+      </Box>
+      <Box sx={{display:{md:"block", xs:"none", sm:"none"}}} data-aos="fade-right"data-aos-duration="500">
+        <Avatar
+          sx={{ width: 400, height: 300, }}
+          src={Owner}
+          variant="square"
+        />
+         
       </Box>
     </Container>
   );
