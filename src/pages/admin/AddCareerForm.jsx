@@ -1,12 +1,22 @@
 import React from "react"
-import { Form, Link, redirect } from "react-router-dom"
+import {
+  Form,
+  Link,
+  redirect,
+  useActionData,
+  useNavigation
+} from "react-router-dom"
 import TextField from "@mui/material/TextField"
 import { Button, CardActions } from "@mui/material"
 import { Container, Stack } from "@mui/system"
+import Loader from "../../components/loader"
 
 export default function AddCareerForm() {
   // const errors = useActionData()
   // console.log(errors)
+
+  const navigation = useNavigation()
+  if (navigation.state === "loading") return <Loader />
 
   return (
     <Container>

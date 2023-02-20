@@ -1,9 +1,11 @@
-import RecruitmentPage from '../../components/Recruitmentpage'
+import { useNavigation } from "react-router-dom"
+import Loader from "../../components/loader"
+import RecruitmentPage from "../../components/Recruitmentpage"
 
 const Recruitment = () => {
-  return (
-    <RecruitmentPage/>
-  )
+  const navigation = useNavigation()
+  if (navigation.state === "loading") return <Loader />
+  return <RecruitmentPage />
 }
 
 export default Recruitment

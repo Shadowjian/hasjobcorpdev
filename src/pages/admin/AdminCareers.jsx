@@ -1,11 +1,15 @@
 import React, { useState } from "react"
-import { Link, useLoaderData } from "react-router-dom"
+import { Link, useLoaderData, useNavigation } from "react-router-dom"
 import CareerCard from "./CareerCard"
 import TextField from "@mui/material/TextField"
+import Loader from "../../components/loader"
 
 export default function AdminCareers() {
   const [loggedIn, setLoggedIn] = useState(true)
   const careers = useLoaderData()
+
+  const navigation = useNavigation()
+  if (navigation.state === "loading") return <Loader />
 
   if (!loggedIn) {
     return (
