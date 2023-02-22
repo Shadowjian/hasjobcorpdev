@@ -1,9 +1,16 @@
 import { Menu as MenuIcon } from "@mui/icons-material"
-import { AppBar, Toolbar, Typography, styled, Menu, Avatar } from "@mui/material"
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  styled,
+  Menu,
+  Avatar
+} from "@mui/material"
 import { Box } from "@mui/system"
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
-import LogoGif from "../../assets/images/hasolution.png";
+import LogoGif from "../../assets/images/hasolution.png"
 
 const Navbar = () => {
   const StyledToolbar = styled(Toolbar)({
@@ -43,12 +50,11 @@ const Navbar = () => {
 
   const [open, SetOpen] = useState(false)
 
-  const navlinkStyles = ({isActive}) =>{
+  const navlinkStyles = ({ isActive }) => {
     return {
-      backgroundColor: isActive ? 'orange' : '',
-      borderRadius: isActive ? '10px' : '',
-      padding: isActive ? '5px 15px' : '',
-      
+      backgroundColor: isActive ? "orange" : "",
+      borderRadius: isActive ? "10px" : "",
+      padding: isActive ? "5px 15px" : ""
     }
   }
 
@@ -56,35 +62,44 @@ const Navbar = () => {
     <>
       <AppBar
         position="sticky"
-        sx={{ backgroundColor: "#0B3749", padding: "20px", opacity: "1"}}
+        sx={{ backgroundColor: "#0B3749", padding: "20px", opacity: "1" }}
       >
         <StyledToolbar>
           <Box>
-            <NavLink to="/"  >
-              <Box sx={{display:"flex", flexDirection:"row", alignItems:"center"}}>
-               <Avatar alt="hasolution" src={LogoGif} sx={{ width: 60, height: 60 }}/>
-              <MenuLogo>ソリューション株式会社</MenuLogo>
+            <NavLink to="/">
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center"
+                }}
+              >
+                <Avatar
+                  alt="hasolution"
+                  src={LogoGif}
+                  sx={{ width: 60, height: 60 }}
+                />
+                <MenuLogo>ソリューション株式会社</MenuLogo>
               </Box>
-             
             </NavLink>
           </Box>
           <MenuBox sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
-            <NavLink style={navlinkStyles} to="/" >
+            <NavLink style={navlinkStyles} to="/">
               <MenuTypeItem>ホームページ</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="careers" >
+            <NavLink style={navlinkStyles} to="careers">
               <MenuTypeItem>キャリア</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="recruitment" >
+            <NavLink style={navlinkStyles} to="recruitment">
               <MenuTypeItem>採用情報</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="employers" >
+            <NavLink style={navlinkStyles} to="employers">
               <MenuTypeItem>派遣の流れ</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="about" >
+            <NavLink style={navlinkStyles} to="about">
               <MenuTypeItem>会社について</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="contact-us" >
+            <NavLink style={navlinkStyles} to="contact-us">
               <MenuTypeItem>お問い合わせ</MenuTypeItem>
             </NavLink>
           </MenuBox>
@@ -111,22 +126,22 @@ const Navbar = () => {
           }}
         >
           <Box sx={{ width: 350, height: "60vh", backgroundColor: "white" }}>
-            <NavLink  to="/">
+            <NavLink to="/">
               <MenuTypeItem2>ホームページ</MenuTypeItem2>
             </NavLink>
-            <NavLink  to="careers">
+            <NavLink to="careers">
               <MenuTypeItem2>キャリア</MenuTypeItem2>
             </NavLink>
-            <NavLink  to="recruitment">
+            <NavLink to="recruitment">
               <MenuTypeItem2>採用情報</MenuTypeItem2>
             </NavLink>
-            <NavLink  to="employers">
+            <NavLink to="employers">
               <MenuTypeItem2>派遣の流れ</MenuTypeItem2>
             </NavLink>
-            <NavLink  to="about">
+            <NavLink to="about">
               <MenuTypeItem2>会社について</MenuTypeItem2>
             </NavLink>
-            <NavLink  to="contact-us">
+            <NavLink to="contact-us">
               <MenuTypeItem2>お問い合わせ</MenuTypeItem2>
             </NavLink>
           </Box>
