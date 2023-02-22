@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-
+import noResult from "../../assets/images/feeling-sorry-rafiki.svg"
 import {
   Box,
   Button,
@@ -209,15 +209,35 @@ export default function Careers() {
           <MenuItem value={6000}>6000</MenuItem>
         </Select>
       </Stack> */}
-        {searchInput && (
-          <Typography variant="h6" textAlign="center">
+        {searchInput && careers.length ? (
+          <Typography variant="h5" textAlign="center">
             Search Results for <i>({searchInput})</i> : {careers.length}
           </Typography>
+        ) : (
+          searchInput &&
+          !careers.length && (
+            <Stack alignItems="center">
+              <Typography variant="h5" align="center">
+                No Results for {searchInput}
+              </Typography>
+              <img src={noResult} width="500" height="600" />
+            </Stack>
+          )
         )}
-        {catFilter && !searchInput && (
-          <Typography variant="body2" textAlign="center">
-            {catFilter.toUpperCase()} has {careers.length} Job Opening
+        {catFilter && !searchInput && careers.length ? (
+          <Typography variant="h5" textAlign="center">
+            {catFilter} has {careers.length} Job Opening
           </Typography>
+        ) : (
+          catFilter &&
+          !careers.length && (
+            <Stack alignItems="center">
+              <Typography variant="h5" align="center">
+                No Results for {catFilter}
+              </Typography>
+              <img src={noResult} width="500" height="600" />
+            </Stack>
+          )
         )}
         {/* <p>{filters.salaryMax}</p> */}
         <Box>
