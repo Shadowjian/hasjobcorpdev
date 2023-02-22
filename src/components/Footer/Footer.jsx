@@ -1,7 +1,7 @@
 import { Facebook } from "@mui/icons-material"
 import { Box, Container, Link, Paper, Typography } from "@mui/material"
 import { NavLink } from "react-router-dom"
-import React from "react"
+import React, { useEffect } from "react"
 
 const Footer = () => {
   const navlinkStyle = () => {
@@ -9,6 +9,25 @@ const Footer = () => {
       color: "white"
     }
   }
+
+  const googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement(
+      {
+        defaultLanguage: "jp",
+        pageLanguage: "jp"
+      },
+      "google_translate_element"
+    )
+  }
+  useEffect(() => {
+    var addScript = document.createElement("script")
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    )
+    document.body.appendChild(addScript)
+    window.googleTranslateElementInit = googleTranslateElementInit
+  }, [])
 
   return (
     <Paper
