@@ -48,7 +48,7 @@ const Navbar = () => {
     margin: "50px"
   })
 
-  const [open, SetOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
   const navlinkStyles = ({ isActive }) => {
     return {
@@ -56,6 +56,10 @@ const Navbar = () => {
       borderRadius: isActive ? "10px" : "",
       padding: isActive ? "5px 15px" : ""
     }
+  }
+
+  const handleClose = () => {
+    setOpen(!open)
   }
 
   return (
@@ -108,14 +112,14 @@ const Navbar = () => {
               color: "white",
               display: { xs: "block", sm: "block", md: "none" }
             }}
-            onClick={() => SetOpen(!open)}
+            onClick={() => setOpen(!open)}
           />
         </StyledToolbar>
         <Menu
           id="demo-positioned-menu"
           aria-labelledby="demo-positioned-button"
           open={open}
-          onClose={() => SetOpen(!open)}
+          onClose={handleClose}
           anchorOrigin={{
             vertical: "top",
             horizontal: "right"
@@ -126,24 +130,18 @@ const Navbar = () => {
           }}
         >
           <Box sx={{ width: 350, height: "60vh", backgroundColor: "white" }}>
-            <NavLink to="/">
-              <MenuTypeItem2>ホームページ</MenuTypeItem2>
-            </NavLink>
-            <NavLink to="careers">
-              <MenuTypeItem2>キャリア</MenuTypeItem2>
-            </NavLink>
-            <NavLink to="recruitment">
-              <MenuTypeItem2>採用情報</MenuTypeItem2>
-            </NavLink>
-            <NavLink to="employers">
-              <MenuTypeItem2>派遣の流れ</MenuTypeItem2>
-            </NavLink>
-            <NavLink to="about">
-              <MenuTypeItem2>会社について</MenuTypeItem2>
-            </NavLink>
-            <NavLink to="contact-us">
-              <MenuTypeItem2>お問い合わせ</MenuTypeItem2>
-            </NavLink>
+            {[
+              { path: "/", link: "ホームページ" },
+              { path: "careers", link: "キャリア" },
+              { path: "recruitment", link: "採用情報" },
+              { path: "employers", link: "派遣の流れ" },
+              { path: "about", link: "会社について" },
+              { path: "contact-us", link: "お問い合わせ" }
+            ].map(el => (
+              <NavLink to={el.path} onClick={handleClose}>
+                <MenuTypeItem2>{el.link}</MenuTypeItem2>
+              </NavLink>
+            ))}
           </Box>
         </Menu>
       </AppBar>

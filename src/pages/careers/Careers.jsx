@@ -128,6 +128,7 @@ export default function Careers() {
         </Typography>
         <Stack
           direction="horizontal"
+          flexWrap="wrap"
           gap={2}
           justifyContent="center"
           alignItems="center"
