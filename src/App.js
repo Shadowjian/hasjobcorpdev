@@ -40,7 +40,12 @@ import HasContract from "./components/Employerspage/pdf/HasContract"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
+      <Route
+        path="/"
+        element={<RootLayout />}
+        errorElement={<ErrorPage />}
+        loader={careerLoader}
+      >
         <Route index element={<Home />} />
         <Route path="careers" element={<Careers />} loader={careerLoader} />
         <Route
@@ -93,24 +98,6 @@ const router = createBrowserRouter(
 )
 
 function App() {
-  const googleTranslateElementInit = () => {
-    new window.google.translate.TranslateElement(
-      {
-        defaultLanguage: "jp",
-        pageLanguage: "jp"
-      },
-      "google_translate_element"
-    )
-  }
-  useEffect(() => {
-    var addScript = document.createElement("script")
-    addScript.setAttribute(
-      "src",
-      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    )
-    document.body.appendChild(addScript)
-    window.googleTranslateElementInit = googleTranslateElementInit
-  }, []);
 
   const theme = createTheme({
     typography: {
