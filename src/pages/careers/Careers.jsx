@@ -10,18 +10,11 @@ import {
   Typography
 } from "@mui/material"
 import { Stack } from "@mui/system"
-import {
-  Link,
-  useLoaderData,
-  useNavigation,
-  useOutletContext
-} from "react-router-dom"
+import { Link, useLoaderData, useOutletContext } from "react-router-dom"
 import MediaCard from "./MediaCard"
 import SearchIcon from "@mui/icons-material/Search"
-import ClearIcon from "@mui/icons-material/Clear"
 import Loader from "../../components/loader"
 import { Clear } from "@mui/icons-material"
-import SearchOffIcon from "@mui/icons-material/SearchOff"
 
 export default function Careers() {
   const fetchedCareers = useLoaderData()
