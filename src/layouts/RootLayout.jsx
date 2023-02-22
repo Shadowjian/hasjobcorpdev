@@ -12,6 +12,17 @@ import Navbar from "../components/Navbar/Navbar"
 const RootLayout = () => {
   const fetchedCareers = useLoaderData()
   const [careers, setCareers] = useState(fetchedCareers)
+  const [catFilter, setCatFilter] = useState("")
+
+  const states = {
+    careers,
+    catFilter
+  }
+
+  const dispatchers = {
+    setCareers,
+    setCatFilter
+  }
 
   const navigation = useNavigation()
   return (
@@ -19,7 +30,7 @@ const RootLayout = () => {
       <Navbar />
       <ScrollRestoration />
       {navigation.state === "loading" && <Loader />}
-      <Outlet context={[careers, setCareers]} />
+      <Outlet context={{ states, dispatchers }} />
       <Footer />
     </>
   )

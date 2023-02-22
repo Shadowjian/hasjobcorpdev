@@ -7,7 +7,15 @@ import {
   useNavigation
 } from "react-router-dom"
 import TextField from "@mui/material/TextField"
-import { Button, CardActions } from "@mui/material"
+import {
+  Button,
+  CardActions,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Tooltip
+} from "@mui/material"
 import { Container, Stack } from "@mui/system"
 import Loader from "../../components/loader"
 
@@ -27,21 +35,24 @@ export default function AddCareerForm() {
             label="Company Name"
             type="text"
             name="company_name"
-            // required
+            required
           />
-          <TextField
-            size="small"
-            label="Industry"
-            type="text"
-            name="cat_of_industry"
-            // required
-          />
+
+          <FormControl size="small">
+            <InputLabel>Industry</InputLabel>
+            <Select label="Industry" name="cat_of_industry">
+              <MenuItem value="Manufacturing">Manufacturing</MenuItem>
+              <MenuItem value="HealthCare">Healthcare</MenuItem>
+              <MenuItem value="Housekeeping">Housekeeping</MenuItem>
+              <MenuItem value="Warehouse">Warehouse</MenuItem>
+            </Select>
+          </FormControl>
           <TextField
             size="small"
             label="Job Title"
             type="text"
             name="occupation_title"
-            // required
+            required
           />
           <TextField
             multiline
@@ -103,42 +114,58 @@ export default function AddCareerForm() {
             type="text"
             name="experience_level"
           />
-          <TextField
-            size="small"
-            label="Language Proficiency"
-            type="text"
-            name="japanese_language_level"
-          />
-          <TextField
-            size="small"
-            label="Gender Preferrence"
-            type="text"
-            name="preferred_sex_or_gender"
-          />
-          <TextField
-            size="small"
-            label="Sector Vacancy"
-            type="text"
-            name="sector_of_vancancy"
-          />
+
+          <FormControl size="small">
+            <InputLabel>Japanese Proficiency</InputLabel>
+            <Select label="Japanese Proficiency" name="japanese_language_level">
+              <MenuItem value="Basic Japanese">Basic Japanese</MenuItem>
+              <MenuItem value="N1">N1</MenuItem>
+              <MenuItem value="N2">N2</MenuItem>
+              <MenuItem value="N3">N3</MenuItem>
+              <MenuItem value="N4">N4</MenuItem>
+              <MenuItem value="N5">N5</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl size="small">
+            <InputLabel>Preferred Gender</InputLabel>
+            <Select label="Preferred Gender" name="preferred_sex_or_gender">
+              <MenuItem value="Male">Male</MenuItem>
+              <MenuItem value="Female">Female</MenuItem>
+              <MenuItem value="No Preference">No Preference</MenuItem>
+            </Select>
+          </FormControl>
+
+          <FormControl size="small">
+            <InputLabel>Sector Vacancy</InputLabel>
+            <Select label="Sector Vacancy" name="sector_of_vancancy">
+              <MenuItem value="Available">Available</MenuItem>
+              <MenuItem value="Not Available">Not Available</MenuItem>
+            </Select>
+          </FormControl>
           <TextField
             size="small"
             label="Contact Number"
             type="text"
             name="contact_no"
           />
-          <TextField
-            size="small"
-            label="Job Type"
-            type="text"
-            name="job_type"
-          />
-          <TextField
-            size="small"
-            label="Job Tags"
-            type="text"
-            name="job_tags"
-          />
+
+          <FormControl size="small">
+            <InputLabel>Job Type</InputLabel>
+            <Select label="Job Type" name="job_type">
+              <MenuItem value="Full Time">Full Time</MenuItem>
+              <MenuItem value="Part Time">Part Time</MenuItem>
+            </Select>
+          </FormControl>
+          <Tooltip title="separate tags by comma (,)">
+            <TextField
+              size="small"
+              label="Job Tags"
+              type="text"
+              name="job_tags"
+              required
+            />
+          </Tooltip>
           <TextField
             size="small"
             label="Company Email"
@@ -150,6 +177,7 @@ export default function AddCareerForm() {
             label="Google Form"
             type="text"
             name="google_form_link"
+            // required
           />
           <TextField
             size="small"
@@ -196,8 +224,6 @@ export async function careerFormAction({ request }) {
     google_form_link: careerForm.get("google_form_link"),
     is_open: careerForm.get("is_open")
   }
-
-  console.log(newCareer)
 
   //career form validation
 

@@ -25,7 +25,9 @@ import { Clear } from "@mui/icons-material"
 export default function Careers() {
   const fetchedCareers = useLoaderData()
   const [searchInput, setSearchInput] = useState()
-  const [careers, setCareers] = useOutletContext()
+  const { states, dispatchers } = useOutletContext()
+  const { careers, catFilter } = states
+  const { setCareers, setCatFilter } = dispatchers
   // const [filters, setFilters] = useState({
   //   searchInput: "",
   //   salaryMin: "",
@@ -34,10 +36,9 @@ export default function Careers() {
   //   showResult: false
   // })
 
-  // useEffect(() => {
-  //   !searchInput && setCareers(fetchedCareers)
-  //   setFilters({ ...filters, showResult: false })
-  // }, [searchInput])
+  useEffect(() => {
+    !searchInput && !catFilter && setCareers(fetchedCareers)
+  }, [searchInput])
 
   // const handleFilters = e => {
   //   const { name, value } = e.target
@@ -63,7 +64,7 @@ export default function Careers() {
 
   function handleCategory(e) {
     const input = e.target.value
-
+    setCatFilter(input)
     setCareers(
       careers.filter(career =>
         career.job_tags.some(element =>
@@ -76,6 +77,7 @@ export default function Careers() {
   const resetFilter = () => {
     setCareers(fetchedCareers)
     setSearchInput("")
+    setCatFilter("")
   }
 
   // setSellers(Sellers.filter((seller)=>{
@@ -143,9 +145,11 @@ export default function Careers() {
                 size="small"
                 onClick={handleCategory}
                 value={el}
+                disabled={catFilter && catFilter !== el && "true"}
                 sx={{
-                  bgcolor: "#D8AE5E",
-                  color: "#0B3749",
+                  // bgcolor: "#D8AE5E",
+                  bgcolor: el === catFilter ? "#0B3749" : "#D8AE5E",
+                  color: el === catFilter ? "#D8AE5E" : "#0B3749",
                   "&:hover": { bgcolor: "#0B3749", color: "#D8AE5E" }
                 }}
               >
@@ -163,7 +167,7 @@ export default function Careers() {
               "&:hover": { bgcolor: "#0B3749", color: "#D8AE5E" }
             }}
           >
-            All
+            Clear
           </Button>
         </Stack>
         {/* <Button onClick={searchCareers}>Search</Button> */}
@@ -206,7 +210,11 @@ export default function Careers() {
             Search Results for <i>({searchInput})</i> : {careers.length}
           </Typography>
         )}
-        {/* <p>{filters.salaryMin}</p> */}
+        {catFilter && !searchInput && (
+          <Typography variant="body2" textAlign="center">
+            {catFilter.toUpperCase()} has {careers.length} Job Opening
+          </Typography>
+        )}
         {/* <p>{filters.salaryMax}</p> */}
         <Box>
           <Stack

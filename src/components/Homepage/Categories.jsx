@@ -37,11 +37,14 @@ const StyledButton = styled(Button)({
 })
 
 const Categories = () => {
-  const [careers, setCareers] = useOutletContext()
+  const { states, dispatchers } = useOutletContext()
+  const { careers, catFilter } = states
+  const { setCareers, setCatFilter } = dispatchers
   const navigate = useNavigate()
 
   function handleCategory(e) {
     const input = e.target.value
+    setCatFilter(input)
 
     setCareers(
       careers.filter(career =>
