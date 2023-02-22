@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import { Button, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
+
 
 const StyledTypography = styled(Typography)({
   fontSize: "20px",
@@ -162,7 +164,10 @@ const EmployersInfoPage = () => {
         <StyledTypography>
           ↓これをクリックすると情報が表示されます
         </StyledTypography>
+      <Link to="noticeOfWork" target="_blank">
         <Button variant="contained">労働条件通知書</Button>
+      </Link>
+      
         </Box>
 
         <br />
