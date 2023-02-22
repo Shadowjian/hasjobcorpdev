@@ -33,11 +33,19 @@ import { destroyAction } from "./pages/admin/CareerCard"
 import ErrorPage from "./pages/error/ErrorPage"
 import AdminSandbox from "./pages/admin/AdminSandbox"
 import { useEffect } from "react"
+import NoticeOfWork from "./components/Employerspage/pdf/NoticeOfWork"
+import HasContract from "./components/Employerspage/pdf/HasContract"
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
+      <Route
+        path="/"
+        element={<RootLayout />}
+        errorElement={<ErrorPage />}
+        loader={careerLoader}
+      >
         <Route index element={<Home />} />
         <Route path="careers" element={<Careers />} loader={careerLoader} />
         <Route
@@ -48,6 +56,9 @@ const router = createBrowserRouter(
 
         <Route path="recruitment" element={<Recruitment />} />
         <Route path="employers" element={<EmployersInfo />} />
+        <Route path="noticeOfWork" element={<NoticeOfWork />} />
+        <Route path="hascontract" element={<HasContract />} />
+      
 
         <Route path="about" element={<AboutLayout />}>
           <Route index element={<Overview />} />
@@ -87,24 +98,6 @@ const router = createBrowserRouter(
 )
 
 function App() {
-  const googleTranslateElementInit = () => {
-    new window.google.translate.TranslateElement(
-      {
-        defaultLanguage: "jp",
-        pageLanguage: "jp"
-      },
-      "google_translate_element"
-    )
-  }
-  useEffect(() => {
-    var addScript = document.createElement("script")
-    addScript.setAttribute(
-      "src",
-      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    )
-    document.body.appendChild(addScript)
-    window.googleTranslateElementInit = googleTranslateElementInit
-  }, []);
 
   const theme = createTheme({
     typography: {
