@@ -112,18 +112,16 @@ export default function Careers() {
             ),
             endAdornment: (
               <InputAdornment position="start">
-                {searchInput && (
-                  <Tooltip title="clear search">
-                    <Clear
-                      onClick={resetFilter}
-                      sx={{
-                        "&:hover": { cursor: "pointer", color: "red" },
-                        color: "#0B3749",
-                        size: ""
-                      }}
-                    />
-                  </Tooltip>
-                )}
+                <Tooltip title="Clear Search">
+                  <Clear
+                    onClick={resetFilter}
+                    sx={{
+                      "&:hover": { cursor: "pointer", color: "red" },
+                      color: "#0B3749",
+                      height: "1rem"
+                    }}
+                  />
+                </Tooltip>
               </InputAdornment>
             )
           }}

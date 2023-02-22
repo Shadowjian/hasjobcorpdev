@@ -9,6 +9,9 @@ import Housekeeping from "../../assets/images/housekeeping.jpg"
 import { useNavigate } from "react-router-dom"
 
 const StyledBox = styled(Box)({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   height: 300,
   cursor: "pointer",
   backgroundRepeat: "no-repeat",
@@ -22,12 +25,14 @@ const StyledBox = styled(Box)({
   }
 })
 const StyledButton = styled(Button)({
-  margin: "35% 50px 25% 50px",
+  // margin: "35% 50px 25% 50px",
   backgroundColor: "#D8AE5E",
   opacity: "0.8",
-  padding: "5px",
+  padding: "10px",
+  width: "50%",
   "&:hover": {
-    color: "white"
+    color: "white",
+    backgroundColor: "#D8AE5E"
   }
 })
 
