@@ -31,20 +31,13 @@ import EmployersInfo from "./pages/employersInfo/EmployersInfo"
 import EditCareerForm, { editAction } from "./pages/admin/AdminEditForm"
 import { destroyAction } from "./pages/admin/CareerCard"
 import ErrorPage from "./pages/error/ErrorPage"
-// import AdminSandbox from "./pages/admin/AdminSandbox";
+import AdminSandbox from "./pages/admin/AdminSandbox"
 import { useEffect } from "react"
-import HasContract from "./components/Employerspage/pdf/HasContract"
-import NoticeOfWork from "./components/Employerspage/pdf/NoticeOfWork"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route
-        path="/"
-        element={<RootLayout />}
-        errorElement={<ErrorPage />}
-        loader={careerLoader}
-      >
+      <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
         <Route index element={<Home />} />
         <Route path="careers" element={<Careers />} loader={careerLoader} />
         <Route
@@ -54,12 +47,7 @@ const router = createBrowserRouter(
         />
 
         <Route path="recruitment" element={<Recruitment />} />
-        <Route path="noticeOfWork" element={<NoticeOfWork />} />
-        <Route path="hascontract" element={<HasContract />} />
-
         <Route path="employers" element={<EmployersInfo />} />
-        {/* <Route path="contractInfo" element={<HasContract />} /> */}
-        {/* </Route> */}
 
         <Route path="about" element={<AboutLayout />}>
           <Route index element={<Overview />} />
