@@ -33,6 +33,9 @@ import { destroyAction } from "./pages/admin/CareerCard"
 import ErrorPage from "./pages/error/ErrorPage"
 import AdminSandbox from "./pages/admin/AdminSandbox"
 import { useEffect } from "react"
+import NoticeOfWork from "./components/Employerspage/pdf/NoticeOfWork"
+import HasContract from "./components/Employerspage/pdf/HasContract"
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -48,6 +51,9 @@ const router = createBrowserRouter(
 
         <Route path="recruitment" element={<Recruitment />} />
         <Route path="employers" element={<EmployersInfo />} />
+        <Route path="noticeOfWork" element={<NoticeOfWork />} />
+        <Route path="hascontract" element={<HasContract />} />
+      
 
         <Route path="about" element={<AboutLayout />}>
           <Route index element={<Overview />} />

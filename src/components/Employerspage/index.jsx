@@ -182,7 +182,7 @@ const EmployersInfoPage = () => {
           <StyledTypography>
             ↓これをクリックすると情報が表示されます
           </StyledTypography>
-          <Link to="../hascontract">
+          <Link to="../hascontract" target="_blank">
           <Button variant="contained">HAS雇用契約書</Button>
           </Link>
         </Box>
@@ -200,7 +200,7 @@ const EmployersInfoPage = () => {
       >
         <Box data-aos="fade-right" data-aos-duration="500">
           <TitleTypography variant="h2" marginBottom="20px">
-            {" "}
+     
             介護福祉士の資格
           </TitleTypography>
         </Box>
