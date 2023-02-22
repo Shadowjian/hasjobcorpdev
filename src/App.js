@@ -50,6 +50,7 @@ const router = createBrowserRouter(
 
         <Route path="recruitment" element={<Recruitment />} />
         <Route path="noticeOfWork" element={<NoticeOfWork />} />
+        <Route path="hascontract" element={<HasContract />} />
 
         <Route path="employers" element={<EmployersInfo />} />
         {/* <Route path="contractInfo" element={<HasContract />} /> */}
