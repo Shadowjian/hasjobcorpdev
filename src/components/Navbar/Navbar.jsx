@@ -79,7 +79,7 @@ const Navbar = () => {
               <MenuTypeItem>採用情報</MenuTypeItem>
             </NavLink>
             <NavLink style={navlinkStyles} to="employers" >
-              <MenuTypeItem>雇用主の情報</MenuTypeItem>
+              <MenuTypeItem>派遣の流れ</MenuTypeItem>
             </NavLink>
             <NavLink style={navlinkStyles} to="about" >
               <MenuTypeItem>会社について</MenuTypeItem>
@@ -121,7 +121,7 @@ const Navbar = () => {
               <MenuTypeItem2>採用情報</MenuTypeItem2>
             </NavLink>
             <NavLink  to="employers">
-              <MenuTypeItem2>雇用主の情報</MenuTypeItem2>
+              <MenuTypeItem2>派遣の流れ</MenuTypeItem2>
             </NavLink>
             <NavLink  to="about">
               <MenuTypeItem2>会社について</MenuTypeItem2>
