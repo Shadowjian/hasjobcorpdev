@@ -116,7 +116,7 @@ function App() {
     )
     document.body.appendChild(addScript)
     window.googleTranslateElementInit = googleTranslateElementInit
-  }, [])
+  }, []);
 
   const theme = createTheme({
     typography: {
