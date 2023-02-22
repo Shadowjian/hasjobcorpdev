@@ -21,6 +21,7 @@ import SearchIcon from "@mui/icons-material/Search"
 import ClearIcon from "@mui/icons-material/Clear"
 import Loader from "../../components/loader"
 import { Clear } from "@mui/icons-material"
+import SearchOffIcon from "@mui/icons-material/SearchOff"
 
 export default function Careers() {
   const fetchedCareers = useLoaderData()
@@ -141,6 +142,7 @@ export default function Careers() {
           {["HealthCare", "Manufacturing", "Housekeeping", "Warehouse"].map(
             el => (
               <Button
+                startIcon={<SearchIcon />}
                 variant="contained"
                 size="small"
                 onClick={handleCategory}
@@ -158,6 +160,7 @@ export default function Careers() {
             )
           )}
           <Button
+            startIcon={<Clear />}
             variant="contained"
             size="small"
             onClick={resetFilter}
@@ -168,6 +171,14 @@ export default function Careers() {
             }}
           >
             Clear
+            {/* <SearchOffIcon
+              sx={{
+                height: "1rem",
+                color: "white",
+                marginLeft: "2px"
+                // border: "solid white 1px"
+              }}
+            /> */}
           </Button>
         </Stack>
         {/* <Button onClick={searchCareers}>Search</Button> */}
