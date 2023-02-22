@@ -182,7 +182,9 @@ const EmployersInfoPage = () => {
           <StyledTypography>
             ↓これをクリックすると情報が表示されます
           </StyledTypography>
+          <Link to="../hascontract">
           <Button variant="contained">HAS雇用契約書</Button>
+          </Link>
         </Box>
       </Container>
 
