@@ -6,19 +6,26 @@ import {
   Container,
   InputAdornment,
   TextField,
+  Tooltip,
   Typography
 } from "@mui/material"
 import { Stack } from "@mui/system"
-import { Link, useLoaderData, useNavigation } from "react-router-dom"
+import {
+  Link,
+  useLoaderData,
+  useNavigation,
+  useOutletContext
+} from "react-router-dom"
 import MediaCard from "./MediaCard"
 import SearchIcon from "@mui/icons-material/Search"
 import ClearIcon from "@mui/icons-material/Clear"
 import Loader from "../../components/loader"
+import { Clear } from "@mui/icons-material"
 
 export default function Careers() {
   const fetchedCareers = useLoaderData()
   const [searchInput, setSearchInput] = useState()
-  const [careers, setCareers] = useState([])
+  const [careers, setCareers] = useOutletContext()
   // const [filters, setFilters] = useState({
   //   searchInput: "",
   //   salaryMin: "",
@@ -27,10 +34,10 @@ export default function Careers() {
   //   showResult: false
   // })
 
-  useEffect(() => {
-    !searchInput && setCareers(fetchedCareers)
-    // setFilters({ ...filters, showResult: false })
-  }, [searchInput])
+  // useEffect(() => {
+  //   !searchInput && setCareers(fetchedCareers)
+  //   setFilters({ ...filters, showResult: false })
+  // }, [searchInput])
 
   // const handleFilters = e => {
   //   const { name, value } = e.target
@@ -40,6 +47,7 @@ export default function Careers() {
   const searchCareers = e => {
     // setFilters({ ...filters, showResult: true })
     setSearchInput(e.target.value)
+
     setCareers(
       careers.filter(career =>
         // parseInt(career.salary_min) === filters.salaryMin &&
@@ -55,6 +63,7 @@ export default function Careers() {
 
   function handleCategory(e) {
     const input = e.target.value
+
     setCareers(
       careers.filter(career =>
         career.job_tags.some(element =>
@@ -91,7 +100,6 @@ export default function Careers() {
         <TextField
           mx="auto"
           size="small"
-          type="search"
           name="searchInput"
           value={searchInput}
           onChange={searchCareers}
@@ -101,11 +109,29 @@ export default function Careers() {
               <InputAdornment position="start">
                 <SearchIcon onClick={searchCareers} />
               </InputAdornment>
+            ),
+            endAdornment: (
+              <InputAdornment position="start">
+                {searchInput && (
+                  <Tooltip title="clear search">
+                    <Clear
+                      onClick={resetFilter}
+                      sx={{
+                        "&:hover": { cursor: "pointer", color: "red" },
+                        color: "#0B3749",
+                        size: ""
+                      }}
+                    />
+                  </Tooltip>
+                )}
+              </InputAdornment>
             )
           }}
           sx={{ width: "90%", alignSelf: "center" }}
         />
-
+        <Typography variant="h6" textAlign="center">
+          Search by Categories
+        </Typography>
         <Stack
           direction="horizontal"
           gap={2}
@@ -129,13 +155,18 @@ export default function Careers() {
               </Button>
             )
           )}
-          <ClearIcon
+          <Button
+            variant="contained"
+            size="small"
             onClick={resetFilter}
             sx={{
-              "&:hover": { cursor: "pointer", color: "red" },
-              color: "#0B3749"
+              bgcolor: "#D8AE5E",
+              color: "#0B3749",
+              "&:hover": { bgcolor: "#0B3749", color: "#D8AE5E" }
             }}
-          />
+          >
+            All
+          </Button>
         </Stack>
         {/* <Button onClick={searchCareers}>Search</Button> */}
         {/* <Stack>
@@ -173,7 +204,7 @@ export default function Careers() {
         </Select>
       </Stack> */}
         {searchInput && (
-          <Typography variant="h6">
+          <Typography variant="h6" textAlign="center">
             Search Results for <i>({searchInput})</i> : {careers.length}
           </Typography>
         )}
