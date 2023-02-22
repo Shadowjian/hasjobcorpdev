@@ -1,13 +1,17 @@
 import { Box, Button, Stack, styled, Typography } from "@mui/material"
-import { Link, redirect } from "react-router-dom"
+import { Link, redirect, useOutletContext } from "react-router-dom"
 import React from "react"
 import HealthCare from "../../assets/images/careworker.jpg"
 import Warehouse from "../../assets/images/warehouse.jpg"
 import Manufacturing from "../../assets/images/manufacturing.jpg"
 import JobOffer from "../../assets/images/joboffer.svg"
 import Housekeeping from "../../assets/images/housekeeping.jpg"
+import { useNavigate } from "react-router-dom"
 
 const StyledBox = styled(Box)({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   height: 300,
   cursor: "pointer",
   backgroundRepeat: "no-repeat",
@@ -20,17 +24,38 @@ const StyledBox = styled(Box)({
       "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px"
   }
 })
-const StyledTypography = styled(Typography)({
-  margin: "35% 50px 25% 50px",
+const StyledButton = styled(Button)({
+  // margin: "35% 50px 25% 50px",
   backgroundColor: "#D8AE5E",
   opacity: "0.8",
-  padding: "5px",
+  padding: "10px",
+  width: "50%",
   "&:hover": {
-    color: "white"
+    color: "white",
+    backgroundColor: "#D8AE5E"
   }
 })
 
 const Categories = () => {
+  const [careers, setCareers] = useOutletContext()
+  const navigate = useNavigate()
+
+  function handleCategory(e) {
+    const input = e.target.value
+
+    setCareers(
+      careers.filter(career =>
+        career.job_tags.some(element =>
+          element.toLowerCase().includes(input.toLowerCase())
+        )
+      )
+    )
+    navigate("careers")
+    console.log(careers)
+    // redirect("careers")
+  }
+
+  console.log(careers)
   return (
     <Box
       sx={{
@@ -87,67 +112,21 @@ const Categories = () => {
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${el.bg})`
             }}
           >
-            <StyledTypography
+            <StyledButton
               align="center"
               variant="h6"
+              value={el.cat}
+              onClick={handleCategory}
               // onClick={handleCategory}
             >
-              <Link to="careers">{el.jap}</Link>
+              {el.jap}
+              {/* <Link to="careers"
+              >
+              </Link> */}
               {/* 介護者 */}
-            </StyledTypography>
+            </StyledButton>
           </StyledBox>
         ))}
-
-        {/* <StyledBox
-          data-aos="fade-right"
-          data-aos-duration="500"
-          sx={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${HealthCare})`
-          }}
-        >
-          <StyledTypography align="center" variant="h6">
-            HealthCare
-            介護者
-          </StyledTypography>
-        </StyledBox>
-
-        <StyledBox
-          data-aos="fade-right"
-          data-aos-duration="500"
-          sx={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Manufacturing})`
-          }}
-        >
-          <StyledTypography align="center" variant="h6">
-            Manufacturing
-            工場内作業
-          </StyledTypography>
-        </StyledBox>
-
-        <StyledBox
-          data-aos="fade-left"
-          data-aos-duration="500"
-          sx={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Housekeeping})`
-          }}
-        >
-          <StyledTypography align="center" variant="h6">
-            Housekeeping
-            清掃
-          </StyledTypography>
-        </StyledBox>
-        <StyledBox
-          data-aos="fade-left"
-          data-aos-duration="500"
-          sx={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${Warehouse})`
-          }}
-        >
-          <StyledTypography align="center" variant="h6">
-            Warehouse
-            倉庫内作業
-          </StyledTypography>
-        </StyledBox> */}
       </Stack>
       <Box data-aos="fade-up" align="center" data-aos-duration="500">
         <Link to="careers">

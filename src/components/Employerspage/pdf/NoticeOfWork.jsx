@@ -1,3 +1,4 @@
+
 import { Box } from '@mui/material'
 import { Container } from '@mui/system'
 import React from 'react'
@@ -10,6 +11,7 @@ const NoticeOfWork = () => {
       </Container>
    
   )
+
 }
 
 export default NoticeOfWork
