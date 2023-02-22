@@ -37,7 +37,12 @@ import { useEffect } from "react"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<RootLayout />} errorElement={<ErrorPage />}>
+      <Route
+        path="/"
+        element={<RootLayout />}
+        errorElement={<ErrorPage />}
+        loader={careerLoader}
+      >
         <Route index element={<Home />} />
         <Route path="careers" element={<Careers />} loader={careerLoader} />
         <Route

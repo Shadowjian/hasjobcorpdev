@@ -140,7 +140,7 @@ export default function Careers() {
                 size="small"
                 onClick={handleCategory}
                 value={el}
-                disabled={catFilter && catFilter !== el && "true"}
+                disabled={catFilter && catFilter !== el && true}
                 sx={{
                   // bgcolor: "#D8AE5E",
                   bgcolor: el === catFilter ? "#0B3749" : "#D8AE5E",
