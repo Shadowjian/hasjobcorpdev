@@ -20,7 +20,7 @@ function LoadingProgress() {
     <div>
       <Backdrop open={true} sx={{ zIndex: theme => theme.zIndex.drawer + 1 }}>
         {/* <CircularProgress sx={{ color: "#D8AE5E" }} /> */}
-        <img src={loaderGif} width="800px" />
+        <img src={loaderGif} width="400px" />
       </Backdrop>
     </div>
   )
