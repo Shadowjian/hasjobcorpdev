@@ -71,7 +71,7 @@ const Hero = () => {
                 "&:hover": { backgroundColor: "#D8AE5E", color: "#0B3749" }
               }}
             >
-            派遣の流れ
+            会社について
             </Button>
             </NavLink>
             </Box>
