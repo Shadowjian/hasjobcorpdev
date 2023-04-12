@@ -59,7 +59,7 @@ const Hero = () => {
             }}
           >
             <Box data-aos="fade-right"  data-aos-duration="500">
-            <NavLink to="employers">
+            <NavLink to="about">
             <Button
               variant="contained"
               endIcon={<ArrowForward />}
