@@ -5,6 +5,8 @@ import Owner from "../../assets/images/owner_has.png"
 
 const OwnerGreeting = () => {
   return (
+    <>
+ 
     <Container
       sx={{
         display: "flex",
@@ -47,6 +49,11 @@ const OwnerGreeting = () => {
          
       </Box>
     </Container>
+    <Box sx={{display:"flex", justifyContent:"center", mb:10}}>
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/7EVDfCmMsVA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </Box>
+
+    </>
   );
 };
 
