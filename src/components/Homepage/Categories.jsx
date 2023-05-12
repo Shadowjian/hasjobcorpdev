@@ -45,7 +45,6 @@ const Categories = () => {
   function handleCategory(e) {
     const input = e.target.value
     setCatFilter(input)
-
     setCareers(
       careers.filter(career =>
         career.job_tags.some(element =>
@@ -54,6 +53,7 @@ const Categories = () => {
       )
     )
     navigate("careers")
+
     console.log(careers)
     // redirect("careers")
   }

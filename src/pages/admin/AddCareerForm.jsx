@@ -37,6 +37,13 @@ export default function AddCareerForm() {
             name="company_name"
             required
           />
+          {/* new field added 05/12/2023 */}
+          <TextField
+            size="small"
+            label="Company Image URL"
+            type="text"
+            name="company_image"
+          />
 
           <FormControl size="small">
             <InputLabel>Industry</InputLabel>
@@ -204,6 +211,7 @@ export async function careerFormAction({ request }) {
   // const errors = {}
   const newCareer = {
     company_name: careerForm.get("company_name"),
+    company_image: careerForm.get("company_image"),
     cat_of_industry: careerForm.get("cat_of_industry"),
     occupation_title: careerForm.get("occupation_title"),
     job_desc: careerForm.get("job_desc"),
