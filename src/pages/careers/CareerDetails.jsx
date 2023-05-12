@@ -95,7 +95,9 @@ export default function CareerDetails() {
         <Box sx={{ maxWidth: { md: "80%" }, width: "100%" }}>
           <Box
             sx={{
-              backgroundImage: `url(${AdsImage})`,
+              backgroundImage: career.company_image
+                ? `url(${career.company_image})`
+                : `url(https://placeholder.pics/svg/300/115573)`,
               boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
               height: "30vh",
               width: "100%",
@@ -327,9 +329,10 @@ export default function CareerDetails() {
               Job Description
             </Typography>
             <Box sx={{ boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px" }}>
-              <pre className="jobDesc"
-              // component="p"
-              // sx={{ fontSize: { xs: "17px" }, padding: "20px" }}
+              <pre
+                className="jobDesc"
+                // component="p"
+                // sx={{ fontSize: { xs: "17px" }, padding: "20px" }}
               >
                 {career.job_desc}
               </pre>

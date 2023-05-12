@@ -20,12 +20,16 @@ function MediaCard({ career }) {
         sx={{
           maxWidth: 345,
           "&:hover": { boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" },
-          marginBottom:"50px"
+          marginBottom: "50px"
         }}
       >
         <CardMedia
           sx={{ height: 140, width: 300 }}
-          image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIEcnJt1Hw8ZrwezrdWT25ji8UGKUFMC77mI_vsGJxAddhKYVkMDKxsbtSGuwdbkYVQdM&usqp=CAU"
+          image={
+            career.company_image
+              ? `${career.company_image}`
+              : "https://placeholder.pics/svg/300/115573"
+          }
         />
         <CardContent>
           <Box sx={{ display: "flex", gap: "30px", alignContent: "center" }}>

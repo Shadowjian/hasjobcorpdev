@@ -35,6 +35,14 @@ export default function AddCareerForm() {
             name="company_name"
             // required
           />
+          <TextField
+            size="small"
+            label="Company Image URL"
+            defaultValue={career.company_image}
+            type="text"
+            name="company_image"
+            // required
+          />
           <FormControl size="small">
             <InputLabel>Industry</InputLabel>
             <Select
