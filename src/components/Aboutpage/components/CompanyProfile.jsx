@@ -73,6 +73,19 @@ const CompanyProfile = () => {
           margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" }
         }}
       >
+        <Typography>顧問社労士</Typography>
+        <Typography>顧問弁護士</Typography>
+      </StyledBox>
+
+      <hr />
+      
+      <StyledBox
+        sx={{
+          flexDirection: { xs: "column", sm: "column", md: "row" },
+          justifyContent: { xs: "center", sm: "center", md: "space-between" },
+          margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" }
+        }}
+      >
         <Typography>設立年月日:</Typography>
         <Typography>2022年10月7日</Typography>
       </StyledBox>
@@ -87,7 +100,19 @@ const CompanyProfile = () => {
         }}
       >
         <Typography>資本金:</Typography>
-        <Typography>2,200万</Typography>
+        <Typography>2,500万</Typography>
+      </StyledBox>
+
+      <hr />
+      <StyledBox
+        sx={{
+          flexDirection: { xs: "column", sm: "column", md: "row" },
+          justifyContent: { xs: "center", sm: "center", md: "space-between" },
+          margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" }
+        }}
+      >
+        <Typography>資本準備金: </Typography>
+        <Typography>300万</Typography>
       </StyledBox>
 
       <hr />

@@ -6,10 +6,19 @@ import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import { Form, redirect } from "react-router-dom"
 import { CurrencyYen } from "@mui/icons-material"
+import CardMedia from "@mui/material/CardMedia"
 
 export default function CareerCard({ career }) {
   return (
     <Card sx={{ minWidth: "300px", maxWidth: "335px" }}>
+        <CardMedia
+          sx={{ height: 140, width: 300 }}
+          image={
+            career.company_image
+              ? `${career.company_image}`
+              : "https://placeholder.pics/svg/300/115573"
+          }
+        />
       <CardContent>
         <Typography>
           Company:{" "}
