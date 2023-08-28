@@ -32,6 +32,7 @@ const CompanyProfile = () => {
       <Box>
         <Typography
           variant="h3"
+          align="center"
           fontSize={{ xs: "40px", sm: "50px", md: "60px" }}
         >
           会社データ
@@ -66,31 +67,7 @@ const CompanyProfile = () => {
       </StyledBox>
 
       <hr />
-      <StyledBox
-        sx={{
-          flexDirection: { xs: "column", sm: "column", md: "row" },
-          justifyContent: { xs: "center", sm: "center", md: "space-between" },
-          margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" }
-        }}
-      >
-        <Typography>顧問弁護士</Typography>
-        <Typography>堤＆パートナーズ法律事務所</Typography>
-      </StyledBox>
-
-      <hr />
-
-      <StyledBox
-        sx={{
-          flexDirection: { xs: "column", sm: "column", md: "row" },
-          justifyContent: { xs: "center", sm: "center", md: "space-between" },
-          margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" }
-        }}
-      >
-        <Typography>顧問社労士</Typography>
-        <Typography>福岡社会保険労務士法人</Typography>
-      </StyledBox>
-
-      <hr />
+      
       
       <StyledBox
         sx={{
@@ -195,6 +172,31 @@ const CompanyProfile = () => {
       >
         <Typography>受付時間:</Typography>
         <Typography>10:00～17:00</Typography>
+      </StyledBox>
+
+      <hr />
+      <StyledBox
+        sx={{
+          flexDirection: { xs: "column", sm: "column", md: "row" },
+          justifyContent: { xs: "center", sm: "center", md: "space-between" },
+          margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" }
+        }}
+      >
+        <Typography>顧問弁護士</Typography>
+        <Typography>堤＆パートナーズ法律事務所</Typography>
+      </StyledBox>
+
+      <hr />
+
+      <StyledBox
+        sx={{
+          flexDirection: { xs: "column", sm: "column", md: "row" },
+          justifyContent: { xs: "center", sm: "center", md: "space-between" },
+          margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" }
+        }}
+      >
+        <Typography>顧問社労士</Typography>
+        <Typography>福岡社会保険労務士法人</Typography>
       </StyledBox>
 
       <hr />

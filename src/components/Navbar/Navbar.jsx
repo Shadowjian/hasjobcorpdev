@@ -97,9 +97,9 @@ const Navbar = () => {
             <NavLink style={navlinkStyles} to="recruitment">
               <MenuTypeItem>採用情報</MenuTypeItem>
             </NavLink>
-            <NavLink style={navlinkStyles} to="employers">
+            {/* <NavLink style={navlinkStyles} to="employers">
               <MenuTypeItem>派遣の流れ</MenuTypeItem>
-            </NavLink>
+            </NavLink> */}
             <NavLink style={navlinkStyles} to="about">
               <MenuTypeItem>会社について</MenuTypeItem>
             </NavLink>
@@ -134,7 +134,7 @@ const Navbar = () => {
               { path: "/", link: "ホームページ" },
               { path: "careers", link: "キャリア" },
               { path: "recruitment", link: "採用情報" },
-              { path: "employers", link: "派遣の流れ" },
+              // { path: "employers", link: "派遣の流れ" },
               { path: "about", link: "会社について" },
               { path: "contact-us", link: "お問い合わせ" }
             ].map(el => (
