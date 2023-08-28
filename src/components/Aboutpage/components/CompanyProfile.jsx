@@ -62,7 +62,7 @@ const CompanyProfile = () => {
         }}
       >
         <Typography>代表者名:</Typography>
-        <Typography>牛島 寛将</Typography>
+        <Typography>代表取締役社長 西山禎則</Typography>
       </StyledBox>
 
       <hr />
@@ -73,8 +73,21 @@ const CompanyProfile = () => {
           margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" }
         }}
       >
-        <Typography>顧問社労士</Typography>
         <Typography>顧問弁護士</Typography>
+        <Typography>堤＆パートナーズ法律事務所</Typography>
+      </StyledBox>
+
+      <hr />
+
+      <StyledBox
+        sx={{
+          flexDirection: { xs: "column", sm: "column", md: "row" },
+          justifyContent: { xs: "center", sm: "center", md: "space-between" },
+          margin: { xs: "20px 0px", sm: "20px 0px", md: "30px 220px" }
+        }}
+      >
+        <Typography>顧問社労士</Typography>
+        <Typography>福岡社会保険労務士法人</Typography>
       </StyledBox>
 
       <hr />
