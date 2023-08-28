@@ -62,7 +62,7 @@ const CompanyProfile = () => {
         }}
       >
         <Typography>代表者名:</Typography>
-        <Typography>代表取締役社長 西山禎則</Typography>
+        <Typography>西山禎則</Typography>
       </StyledBox>
 
       <hr />
