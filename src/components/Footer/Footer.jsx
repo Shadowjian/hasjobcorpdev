@@ -65,9 +65,9 @@ const Footer = () => {
             <NavLink style={navlinkStyle} to="recruitment">
               <Typography>採用情報</Typography>
             </NavLink>
-            <NavLink style={navlinkStyle} to="employers">
+            {/* <NavLink style={navlinkStyle} to="employers">
               <Typography>雇用主の情報</Typography>
-            </NavLink>
+            </NavLink> */}
             <NavLink style={navlinkStyle} to="contact-us">
               <Typography>お問い合わせ</Typography>
             </NavLink>
